@@ -4427,3 +4427,12 @@ body {
   .alchemy-bottom { height: auto; max-height: 40vh; }
   .alchemy-grid { max-height: 32vh; }
 }
+
+/* ================= PC（鼠标设备）：弹窗整体上移一点，视觉更居中 ================= */
+@media (pointer: fine) and (min-width: 721px) {
+  .skill-panel, .bag-panel, .craft-modal, .shop-modal, .guide-modal,
+  .item-modal, .enhance-modal, .sell-modal, .source-modal, .choice-modal,
+  .reward-modal, .confirm-modal, .alchemy-preview-modal, .skill-modal {
+    padding-bottom: 7vh;
+  }
+}
