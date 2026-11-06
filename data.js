@@ -1,5 +1,5 @@
 window.GAME_DATA = {
- "generatedAt": "2026-11-06",
+ "generatedAt": "2026-11-07",
  "monsters": [
   {
    "id": "865",
@@ -79090,7 +79090,7 @@ window.GAME_DATA = {
      "name": "真实瞄准",
      "chance": 10.0,
      "when": null,
-     "desc": ""
+     "desc": "命中提高50，持续3回合"
     },
     {
      "name": "格兰肯的愤怒",
@@ -79352,7 +79352,7 @@ window.GAME_DATA = {
      "name": "真实瞄准",
      "chance": 10.0,
      "when": null,
-     "desc": ""
+     "desc": "命中提高50，持续3回合"
     },
     {
      "name": "格兰肯的愤怒",
@@ -158017,6 +158017,19 @@ window.GAME_DATA = {
       "mr": 0
      },
      "dur": 5
+    }
+   ]
+  },
+  "真实瞄准": {
+   "trigger": "attack",
+   "effects": [
+    {
+     "type": "buff",
+     "target": "self",
+     "stats": {
+      "hit": 50
+     },
+     "dur": 3
     }
    ]
   }
