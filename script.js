@@ -7119,7 +7119,7 @@
       id: "goal", title: "冒险目标", ico: "🎯", hero: "manual/bg_1.jpg",
       body: [
         { type: "p", text: "本游戏支持网页游玩，手机游玩建议横屏进行操作。", cls: "manual-red" },
-        { type: "p", text: "网页版地址：https://a7a9f7c32f1d4f.lhr.life/", cls: "manual-url" },
+        { type: "p", text: "网页版地址：https://xlz114514.github.io/lineage/", cls: "manual-url" },
         { type: "p", text: "欢迎来到亚丁大陆，勇士！" },
         { type: "p", text: "这片大陆拥有无尽的财富，强大的力量，危险的怪物，等待着勇士们创造属于自己的传奇故事。" },
         { type: "p", text: "这本冒险手册能够帮助初次踏入冒险的勇士熟悉基本的生存技巧和操作，以帮助勇士更好的存活下来，您随时可以在界面的右上角找到冒险手册并重新阅读它。" },
