@@ -4428,11 +4428,13 @@ body {
   .alchemy-grid { max-height: 32vh; }
 }
 
-/* ================= PC（鼠标设备）：弹窗整体上移一点，视觉更居中 ================= */
+/* ================= PC（鼠标设备）：商店 / 制作弹窗顶部对齐战斗区顶部 ================= */
 @media (pointer: fine) and (min-width: 721px) {
-  .skill-panel, .bag-panel, .craft-modal, .shop-modal, .guide-modal,
-  .item-modal, .enhance-modal, .sell-modal, .source-modal, .choice-modal,
-  .reward-modal, .confirm-modal, .alchemy-preview-modal, .skill-modal {
-    padding-bottom: 7vh;
+  .shop-modal, .craft-modal {
+    align-items: flex-start;
+    padding-top: 151px;
+    padding-bottom: 10px;
+    overflow-y: auto;
   }
+  .shop-window, .craft-window { max-height: calc(100vh - 170px); }
 }
