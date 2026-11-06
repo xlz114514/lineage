@@ -4307,7 +4307,7 @@ body {
 
 /* ================= 手机横屏：主界面三栏并排 ================= */
 /* ================= 手机横屏：整页缩小，还原 PC 三栏布局 ================= */
-@media (orientation: landscape) and (max-height: 520px) {
+@media (orientation: landscape) and (max-height: 520px) and (pointer: coarse) {
   html { zoom: 0.47; }
   body { width: 212.77vw; height: 212.77vh; overflow: hidden; }
 
@@ -4408,7 +4408,7 @@ body {
 }
 
 /* ================= 手机整体缩放（主界面 65%，弹窗 85%） ================= */
-@media (max-width: 720px) {
+@media (max-width: 720px) and (pointer: coarse) {
   html { zoom: 0.65; }
   body { width: 153.846vw; overflow-x: hidden; }
   /* 弹窗单独放大到约 85%，避免制作材料看不清 */
