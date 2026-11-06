@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>天堂M · 挂机小游戏</title>
+<link rel="stylesheet" href="style.css?v=20261031z604" />
+</head>
+<body>
+<div class="app">
+  <header class="title-bar">
+    <div class="active-buffs" id="activeBuffs"></div>
+    <span class="build-tag">v20261031z604</span>
+    <span class="title-label">地点</span>
+    <h1 id="areaTitle">—</h1>
+    <button id="areaBtn" class="area-btn">选择地区 ▾</button>
+
+    <div class="area-picker" id="areaPicker">
+      <div class="area-picker-inner" id="areaPickerInner"></div>
+    </div>
+
+    <div class="title-actions">
+      <button class="guide-entry" id="bestiaryBtn" type="button">
+        <span class="guide-ico">📖</span><span class="guide-text">怪物图鉴</span>
+      </button>
+      <button class="guide-entry" id="adventureBtn" type="button">
+        <span class="guide-ico">📕</span><span class="guide-text">冒险手册</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="board">
+    <!-- 左侧：玩家面板 -->
+    <aside class="panel player-panel">
+      <div class="player-view" id="playerView">
+        <div class="panel-title lv-title" id="playerTitle"><span id="playerLv">勇者 Lv15</span> <span class="lv-pct" id="playerExpPct">0.00%</span></div>
+
+        <div class="exp-bar"><div class="exp-fill" id="playerExpFill"></div></div>
+
+        <div class="stat-row"><span class="stat-tip-trigger" data-stat="hp" id="statHpTip"><span class="stat-ico">❤️</span><span class="stat-label">HP</span></span><b id="playerHpStat">500 / 500</b></div>
+        <div class="stat-row"><span class="stat-tip-trigger" data-stat="mp" id="statMpTip"><span class="stat-ico">💧</span><span class="stat-label">MP</span></span><b id="playerMpStat">100 / 100</b></div>
+        <div class="stat-row"><span class="stat-tip-trigger" data-stat="atk" id="statAtkTip"><span class="stat-ico">⚔️</span><span class="stat-label">攻击力</span></span><b id="playerAtk">50</b></div>
+        <div class="stat-row"><span class="stat-tip-trigger" data-stat="def" id="statDefTip"><span class="stat-ico">🛡️</span><span class="stat-label">防御等级</span></span><b id="playerDef">0</b></div>
+
+        <div class="panel-actions">
+          <button class="panel-btn" id="equipBtn">装备详情</button>
+          <button class="panel-btn" id="statsBtn">属性详情</button>
+        </div>
+
+        <button class="panel-btn skill-entry" id="skillBtn">技能</button>
+
+        <button class="bag-entry" id="bagBtn">背包</button>
+
+        <div class="gold-row">
+          <img class="coin-ico" src="icons/coin.png" alt="" />
+          <b id="goldText">0</b>
+          <span class="gold-unit">金币</span>
+        </div>
+      </div>
+
+      <div class="equip-view is-hidden" id="equipView">
+        <div class="equip-grid" id="equipGrid"></div>
+        <div class="equip-summary" id="equipSummary"></div>
+        <button class="equip-back" id="equipBack">返回</button>
+      </div>
+
+      <div class="stats-view is-hidden" id="statsView">
+        <div class="stats-title">
+          <button class="stats-arrow" id="statsPrev" type="button" aria-label="上一页">‹</button>
+          <span class="stats-title-main">属性详情<em class="stats-page" id="statsPage">1/2</em></span>
+          <button class="stats-arrow" id="statsNext" type="button" aria-label="下一页">›</button>
+        </div>
+        <div class="stats-list" id="statsList"></div>
+        <button class="equip-back stats-back" id="statsBack">返回</button>
+      </div>
+    </aside>
+
+    <!-- 中间：战斗区 -->
+    <section class="arena">
+      <div class="fighter" id="playerFighter">
+        <div class="fighter-top"></div>
+        <div class="avatar player-avatar" id="playerAvatar">
+          <span class="avatar-name" id="playerAvatarName">勇士</span>
+          <svg class="revive-ring" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="45"></circle>
+          </svg>
+          <div class="float-layer" id="playerFloat"></div>
+        </div>
+        <div class="hp-bar small"><div class="hp-fill player-hp" id="playerHpFill2"></div></div>
+        <div class="mp-bar small"><div class="mp-fill player-mp" id="playerMpFill"></div></div>
+        <div class="fighter-name" id="playerHpText2">HP 500 / 500</div>
+        <div class="fighter-mp" id="playerMpText2">MP 0 / 0</div>
+      </div>
+
+      <div class="vs">VS</div>
+
+      <div class="fighter" id="monsterFighter">
+        <div class="fighter-top"></div>
+        <div class="avatar monster-avatar" id="monsterAvatar">
+          <span class="avatar-name" id="monsterAvatarName">—</span>
+          <svg class="revive-ring" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="45"></circle>
+          </svg>
+          <div class="float-layer" id="monsterFloat"></div>
+        </div>
+        <div class="hp-bar small"><div class="hp-fill monster-hp" id="monsterHpFill"></div></div>
+        <div class="fighter-name" id="monsterHpText">HP —</div>
+      </div>
+
+      <!-- 战斗记录 -->
+      <div class="battle-log">
+        <div class="log-list" id="logList"></div>
+      </div>
+    </section>
+
+    <!-- 右侧：怪物信息 -->
+    <aside class="panel monster-panel">
+      <div class="panel-title">怪物信息</div>
+      <div class="monster-name" id="monsterName">—</div>
+      <div class="monster-stats">
+        <div class="stat-line"><span><span class="stat-ico">💀</span>等级</span><b id="statLevel">—</b></div>
+        <div class="stat-line"><span><span class="stat-ico">⚔️</span>攻击力</span><b id="statAtk">—</b></div>
+        <div class="stat-line"><span><span class="stat-ico">🛡️</span>防御等级</span><b id="statDef">—</b></div>
+        <div class="stat-line"><span><span class="stat-ico">❤️</span>HP</span><b id="statHp">—</b></div>
+      </div>
+      <div class="panel-subtitle">掉落预览</div>
+      <div class="drop-preview" id="dropPreview"></div>
+    </aside>
+  </main>
+
+  <!-- 底部：收益 -->
+  <footer class="loot-bar">
+    <div class="loot-left">
+      <div class="loot-top">
+        <div class="loot-time">
+          <div class="panel-subtitle">挂机时间</div>
+          <div class="timer" id="timer">00:00:00</div>
+        </div>
+        <div class="loot-actions">
+          <button class="loot-btn craft-entry" id="craftBtn" data-panel="制作">制作</button>
+          <button class="loot-btn shop-entry" id="shopBtn" data-panel="商店">商店</button>
+        </div>
+      </div>
+      <div class="panel-subtitle loot-bag-title">战利品</div>
+      <div class="bag" id="bag"></div>
+    </div>
+    <div class="loot-right">
+      <button class="auto-sell-btn" id="autoSellBtn" type="button">自动出售</button>
+      <div class="auto-sell-modal is-hidden" id="autoSellModal">
+        <div class="auto-sell-card">
+          <button class="auto-sell-close" id="autoSellClose" aria-label="关闭">×</button>
+          <div class="auto-sell-title">自动出售</div>
+          <div class="auto-sell-desc">勾选后，掉落的对应品质装备不进收获区，直接折算成金币。</div>
+          <label class="auto-sell-item"><input type="checkbox" id="autoSellWhite" /><span>白色装备</span></label>
+          <label class="auto-sell-item"><input type="checkbox" id="autoSellGreen" /><span>绿色装备</span></label>
+        </div>
+      </div>
+      <div class="bag-total">总价值 <b id="bagValue">0</b></div>
+      <button id="sellBtn" class="sell-btn"><i class="sell-deco" aria-hidden="true"></i>收获战利品</button>
+    </div>
+  </footer>
+</div>
+
+<div id="skillPanel" class="skill-panel is-hidden">
+  <div class="skill-window">
+    <div class="skill-head">
+      <span class="skill-title">技能</span>
+      <div class="skill-head-stats" id="skillHeadStats">
+        <span class="skill-carried is-active" id="skillActiveCount">主动（0/5）已激活</span>
+        <span class="skill-carried is-passive" id="skillPassiveCount">被动（0/5）已激活</span>
+      </div>
+      <button class="skill-close" id="skillClose" aria-label="关闭">×</button>
+    </div>
+    <div class="skill-grid" id="skillGrid"></div>
+    <div class="skill-tabs" id="skillTabs">
+      <button class="skill-tab active" data-tab="mine">我的技能</button>
+      <button class="skill-tab q1" data-tab="common">普通</button>
+      <button class="skill-tab q4" data-tab="hero">英雄</button>
+      <button class="skill-tab q5" data-tab="legend">传说</button>
+      <button class="skill-tab q6" data-tab="myth">神话</button>
+    </div>
+  </div>
+</div>
+
+<div id="skillModal" class="skill-modal is-hidden">
+  <div class="skill-card">
+    <button class="skill-close" id="skillModalClose" aria-label="关闭">×</button>
+    <div class="skill-card-head">
+      <div class="skill-card-icon"><img id="smIcon" alt="" /></div>
+      <div class="skill-card-meta">
+        <div class="skill-card-name" id="smName">—</div>
+        <div class="skill-card-lv">
+          <span class="skill-type-tag" id="smType">被动</span>
+          <span id="smLv">Lv1</span>
+          <span class="skill-mp-tag" id="smMp"></span>
+        </div>
+      </div>
+      <button class="skill-carry" id="smCarry">携带</button>
+    </div>
+    <div class="skill-card-desc" id="smDesc"></div>
+    <div class="skill-levels is-hidden" id="smLevels"></div>
+    <div class="skill-card-upgrade">
+      <div class="skill-mat">
+        <img id="smMatIcon" alt="" />
+        <span id="smMatCount">0/5</span>
+        <span class="skill-gold" id="smGoldRow"><img class="coin-ico" src="icons/coin.png" alt="" /><b id="smGoldCost">—</b></span>
+      </div>
+      <button class="skill-up-btn" id="smUpgrade">升级</button>
+    </div>
+  </div>
+</div>
+
+<div id="bagPanel" class="bag-panel is-hidden">
+  <div class="bag-window" id="bagWindow">
+    <div class="bag-head">
+      <div class="bag-tabs" id="bagTabs">
+        <button class="bag-tab active" data-tab="equip">装备</button>
+        <button class="bag-tab" data-tab="consumable">消耗品</button>
+        <button class="bag-tab" data-tab="other">其他</button>
+        <button class="bag-tab" data-tab="material">材料</button>
+      </div>
+      <button class="bag-close" id="bagClose" aria-label="关闭">×</button>
+    </div>
+    <div class="bag-grid" id="bagGrid"></div>
+    <div class="bag-foot">
+      <span class="bag-gold"><img class="coin-ico" src="icons/coin.png" alt="" /><b id="bagPanelGold">0</b></span>
+      <button class="bag-sort" id="bagSort">整理</button>
+    </div>
+  </div>
+</div>
+
+<div id="craftPanel" class="craft-modal is-hidden">
+  <div class="craft-window">
+    <div class="craft-top">
+      <div class="craft-tabs" id="craftTabs">
+        <button class="craft-tab active" data-tab="equip" type="button">装备</button>
+        <button class="craft-tab" data-tab="box" type="button">宝箱</button>
+        <button class="craft-tab" data-tab="material" type="button">材料</button>
+        <button class="craft-tab" data-tab="other" type="button">其他</button>
+      </div>
+      <button class="bag-close" id="craftClose" aria-label="关闭">×</button>
+    </div>
+    <div class="craft-main" id="craftMain">
+      <div class="craft-groups" id="craftGroups"></div>
+      <div class="craft-list" id="craftList"></div>
+      <div class="craft-detail" id="craftDetail">
+        <div class="craft-empty" id="craftEmpty">选择要制作的物品</div>
+        <div class="craft-content is-hidden" id="craftContent">
+          <button class="craft-back" id="craftBack" type="button">‹ 返回</button>
+          <div class="craft-head">
+            <div class="item-icon"><img id="craftIcon" alt="" /></div>
+            <div class="craft-meta">
+              <div class="craft-name" id="craftName">—</div>
+              <div class="craft-tags">
+                <span class="item-tag" id="craftType">制作</span>
+                <span class="item-tag item-tag-safe" id="craftRate">成功率：100%</span>
+              </div>
+            </div>
+          </div>
+          <div class="craft-mats" id="craftMats"></div>
+          <div class="craft-qty">
+            <button class="craft-step" id="craftQtyMinus" type="button">−</button>
+            <b id="craftQty">1</b>
+            <button class="craft-step" id="craftQtyPlus" type="button">+</button>
+            <button class="craft-all" id="craftQtyMax" type="button">最大</button>
+          </div>
+          <div class="craft-cost">
+            <span class="bag-gold"><img class="coin-ico" src="icons/coin.png" alt="" /><b id="craftGold">0</b></span>
+            <button class="item-btn primary" id="craftDo" type="button">制作</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="craft-foot">
+      <span class="craft-hint" id="craftHint"></span>
+      <span class="bag-gold"><img class="coin-ico" src="icons/coin.png" alt="" /><b id="craftWallet">0</b></span>
+    </div>
+  </div>
+</div>
+
+<div id="shopPanel" class="shop-modal is-hidden">
+  <div class="shop-window">
+    <div class="shop-banner" id="shopBanner">
+      <span id="shopBannerText">欢迎，这里出售各种常见的冒险物资</span>
+      <span class="shop-refresh is-hidden" id="shopRefresh"></span>
+    </div>
+    <div class="shop-top">
+      <div class="shop-tabs" id="shopTabs">
+        <button class="shop-tab active" data-shop="grocery" type="button">杂货店</button>
+        <button class="shop-tab" data-shop="blacksmith" type="button">铁匠铺</button>
+        <button class="shop-tab" data-shop="blackmarket" type="button">黑市</button>
+        <button class="shop-tab" data-shop="alchemy" type="button">炼金工房</button>
+      </div>
+      <button class="bag-close" id="shopClose" aria-label="关闭">×</button>
+    </div>
+    <div class="shop-body">
+      <div class="shop-grid" id="shopGrid"></div>
+      <div class="shop-empty is-hidden" id="shopEmpty">该商店暂未开放</div>
+      <div class="alchemy-panel is-hidden" id="alchemyPanel">
+        <div class="alchemy-top">
+          <button class="alchemy-btn" id="alchemyPreview" type="button">掉落预览</button>
+        </div>
+        <div class="alchemy-stage">
+          <div class="alchemy-triangle">
+            <svg class="alchemy-circle" viewBox="0 0 300 220" aria-hidden="true">
+              <circle cx="150" cy="126" r="112" class="ring outer" />
+              <circle cx="150" cy="126" r="88" class="ring inner" />
+              <polygon points="150,34 54,186 246,186" class="tri" />
+              <rect x="132" y="117" width="36" height="36" class="core" />
+            </svg>
+            <div class="alchemy-slot" data-slot="0"></div>
+            <div class="alchemy-slot" data-slot="1"></div>
+            <div class="alchemy-slot" data-slot="2"></div>
+            <div class="alchemy-result" id="alchemyResult"></div>
+          </div>
+          <div class="alchemy-tip">消耗 3 个 <span class="q3">稀有</span> 以上<br>装备或技能书进行炼金</div>
+          <button class="alchemy-start" id="alchemyStart" type="button" disabled>炼金开始</button>
+        </div>
+        <div class="alchemy-bottom">
+          <div class="alchemy-kinds" id="alchemyKinds">
+            <button class="alchemy-kind active" data-kind="equip" type="button">装备</button>
+            <button class="alchemy-kind" data-kind="book" type="button">技能书</button>
+          </div>
+          <div class="alchemy-grid" id="alchemyGrid"></div>
+        </div>
+      </div>
+    </div>
+    <div class="shop-foot">
+      <span class="bag-gold"><img class="coin-ico" src="icons/coin.png" alt="" /><b id="shopGold">0</b></span>
+    </div>
+  </div>
+</div>
+
+<div id="alchemyPreviewModal" class="alchemy-preview-modal is-hidden">
+  <div class="alchemy-preview-card">
+    <button class="bag-close" id="alchemyPreviewClose" aria-label="关闭">×</button>
+    <div class="alchemy-preview-title">掉落预览</div>
+    <div class="alchemy-preview-tabs" id="alchemyPreviewTabs">
+      <button class="alchemy-preview-tab active" data-q="3" type="button">稀有炼金</button>
+      <button class="alchemy-preview-tab" data-q="4" type="button">英雄炼金</button>
+      <button class="alchemy-preview-tab" data-q="5" type="button">传说炼金</button>
+    </div>
+    <div class="alchemy-preview-body" id="alchemyPreviewBody"></div>
+  </div>
+</div>
+
+<div id="bestiaryPanel" class="guide-modal is-hidden">
+  <div class="guide-card bestiary-card">
+    <div class="guide-head">
+      <span class="guide-title">怪物图鉴</span>
+      <button class="guide-close" id="bestiaryClose" aria-label="关闭">×</button>
+    </div>
+    <div class="guide-body bestiary-body" id="bestiaryBody">
+      <div class="bestiary-layout">
+        <div class="bestiary-cats" id="bestiaryCats"></div>
+        <div class="bestiary-areas" id="bestiaryAreas"></div>
+        <div class="bestiary-mobs" id="bestiaryMobs"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="adventurePanel" class="guide-modal is-hidden">
+  <div class="manual-book">
+    <button class="manual-close" id="adventureClose" aria-label="关闭">×</button>
+    <div class="manual-left">
+      <div class="manual-brand">冒险手册</div>
+      <nav class="manual-tabs" id="manualTabs"></nav>
+    </div>
+    <div class="manual-right">
+      <div class="manual-hero" id="manualHero"></div>
+      <div class="manual-content" id="manualContent"></div>
+    </div>
+  </div>
+</div>
+
+<div id="itemModal" class="item-modal" aria-hidden="true">
+  <div class="item-card" id="itemCard">
+    <button class="item-close" id="itemClose" aria-label="关闭">×</button>
+    <div class="item-head">
+      <div class="item-icon"><img id="itemIcon" alt="" /></div>
+      <div class="item-meta">
+        <div class="item-title-row">
+          <div class="item-title" id="itemName">—</div>
+          <div class="item-hold" id="itemHold"></div>
+        </div>
+        <div class="item-tags">
+          <div class="item-tag" id="itemType">—</div>
+          <div class="item-tag item-tag-safe is-hidden" id="itemSafe"></div>
+        </div>
+      </div>
+    </div>
+    <div class="item-attrs" id="itemAttrs"></div>
+    <div class="item-set is-hidden" id="itemSet"></div>
+    <div class="item-desc" id="itemDesc"></div>
+    <div class="item-recipes is-hidden" id="itemRecipes"></div>
+    <div class="item-foot-row">
+      <div class="item-source is-hidden" id="itemSource"></div>
+      <div class="item-value" id="itemValue"></div>
+    </div>
+    <div class="item-actions" id="itemActions"></div>
+  </div>
+</div>
+
+<div id="confirmModal" class="confirm-modal is-hidden">
+  <div class="confirm-card">
+    <div class="confirm-text" id="confirmText"></div>
+    <div class="confirm-actions">
+      <button class="confirm-btn confirm-ok" id="confirmOk" type="button">确定</button>
+      <button class="confirm-btn confirm-cancel" id="confirmCancel" type="button">取消</button>
+    </div>
+  </div>
+</div>
+
+<div id="choiceModal" class="choice-modal is-hidden">
+  <div class="choice-card">
+    <button class="choice-close" id="choiceClose" aria-label="关闭">×</button>
+    <div class="choice-title" id="choiceTitle">选择</div>
+    <div class="choice-hint" id="choiceHint"></div>
+    <div class="choice-list" id="choiceList"></div>
+    <div class="choice-qty is-hidden" id="choiceQty">
+      <button class="choice-step" id="choiceMinus" type="button">−</button>
+      <b id="choiceCount">1</b>
+      <button class="choice-step" id="choicePlus" type="button">＋</button>
+      <button class="choice-all" id="choiceMax" type="button">全部</button>
+    </div>
+    <button class="choice-confirm is-hidden" id="choiceConfirm" type="button">确定</button>
+  </div>
+</div>
+
+<div id="rewardModal" class="reward-modal is-hidden">
+  <div class="reward-card">
+    <button class="reward-close" id="rewardClose" aria-label="关闭">×</button>
+    <div class="reward-title" id="rewardTitle">获得道具</div>
+    <div class="reward-list" id="rewardList"></div>
+    <button class="reward-ok" id="rewardOk" type="button">确定</button>
+  </div>
+</div>
+
+<div id="enhanceModal" class="enhance-modal is-hidden">
+  <div class="enhance-card">
+    <button class="enhance-close" id="enhanceClose" aria-label="关闭">×</button>
+    <div class="enhance-head">
+      <div class="enhance-icon"><img id="enhIcon" alt="" /><span class="enh" id="enhIconBadge"></span></div>
+      <div class="enhance-name" id="enhName">—</div>
+    </div>
+    <div class="enhance-compare" id="enhCompare">
+      <div class="enhance-col">
+        <div class="enhance-col-title">强化前属性</div>
+        <div class="enhance-list" id="enhBefore"></div>
+      </div>
+      <div class="enhance-arrow">→</div>
+      <div class="enhance-col">
+        <div class="enhance-col-title" id="enhAfterTitle">强化后属性</div>
+        <div class="enhance-list" id="enhAfter"></div>
+      </div>
+    </div>
+    <div class="enhance-scrolls" id="enhScrolls"></div>
+    <button class="enhance-do" id="enhDo" type="button">强化</button>
+  </div>
+</div>
+
+<div id="sellModal" class="sell-modal is-hidden">
+  <div class="sell-card">
+    <div class="sell-title">出售 <span id="sellName">—</span></div>
+    <div class="sell-qty">
+      <button id="sellMinus" class="sell-step" type="button">−</button>
+      <b id="sellCount">1</b>
+      <button id="sellPlus" class="sell-step" type="button">＋</button>
+      <button id="sellMax" class="sell-all" type="button">全部</button>
+    </div>
+    <div class="sell-gain">获得 <b id="sellGain">0</b> 金币</div>
+    <div class="sell-actions">
+      <button id="sellCancel" class="item-btn" type="button">取消</button>
+      <button id="sellConfirm" class="item-btn primary" type="button">确认出售</button>
+    </div>
+  </div>
+</div>
+
+<div id="sourceModal" class="source-modal is-hidden">
+  <div class="source-card">
+    <div class="source-title" id="sourceTitle">获得来源</div>
+    <div class="source-list" id="sourceList"></div>
+  </div>
+</div>
+<div id="statTip" class="stat-tip"></div>
+<div id="toast" class="toast"></div>
+
+<script src="data.js?v=20261031z604"></script>
+<script src="script.js?v=20261031z604"></script>
+</body>
+</html>
