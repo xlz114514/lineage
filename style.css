@@ -4438,6 +4438,6 @@ body {
   }
   .shop-window, .craft-window { max-height: calc(100vh - 170px); }
 
-  /* 图鉴 / 手册：整体上移一些 */
-  .guide-modal { padding-bottom: 8vh; }
+  /* 图鉴 / 手册 / 技能：整体上移一些 */
+  .guide-modal, .skill-panel { padding-bottom: 8vh; }
 }
