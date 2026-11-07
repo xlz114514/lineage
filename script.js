@@ -302,6 +302,9 @@
     itemHold: $("itemHold"), itemValue: $("itemValue"),
     itemAttrs: $("itemAttrs"), itemSet: $("itemSet"), itemDesc: $("itemDesc"), itemActions: $("itemActions"),
     itemSource: $("itemSource"), itemSafe: $("itemSafe"), itemRecipes: $("itemRecipes"),
+    itemCompare: $("itemCompare"),
+    manualRedeem: $("manualRedeem"), redeemModal: $("redeemModal"), redeemInput: $("redeemInput"),
+    redeemMsg: $("redeemMsg"), redeemConfirm: $("redeemConfirm"), redeemClose: $("redeemClose"),
     enhanceModal: $("enhanceModal"), enhanceClose: $("enhanceClose"),
     enhIcon: $("enhIcon"), enhIconBadge: $("enhIconBadge"), enhName: $("enhName"), enhBefore: $("enhBefore"), enhAfter: $("enhAfter"),
     enhCompare: $("enhCompare"), enhAfterTitle: $("enhAfterTitle"),
@@ -2409,7 +2412,7 @@
   const GEAR_NAME = {
     hp: "HP", atk: "攻击力", def: "防御等级", str: "力量", int: "智力", dex: "敏捷",
     wis: "精神", con: "体质", luk: "幸运", hit: "命中", magicHit: "魔法命中", crit: "暴击", dodge: "闪避等级",
-    mr: "魔抗", dr: "伤害减免", dmgAdd: "伤害增加", dmgAddPct: "伤害增加", drPct: "伤害减免",
+    mr: "魔抗", dr: "伤害减免", dmgAdd: "伤害增加", dmgAddPct: "伤害增加率", drPct: "伤害减免率",
     mp: "MP", mpRegen: "MP回复", hpRegen: "HP回复",
     expBonus: "经验值获得量",
   };
@@ -6191,6 +6194,107 @@
     return itemNameIdx;
   }
 
+  // ===== 装备对比：当前物品 vs 身上同部位装备 =====
+  function cmpAttrMap(it) {
+    const m = new Map();
+    for (const a of (it && it.attrs) || []) {
+      if (!a || !a.key) continue;
+      const mk = a.pct ? `${a.key}%` : a.key;
+      const cur = m.get(mk);
+      m.set(mk, {
+        key: a.key,
+        name: GEAR_NAME[a.key] || a.name || a.key,
+        value: (cur ? cur.value : 0) + toInt(a.value, 0),
+        pct: !!a.pct,
+      });
+    }
+    return m;
+  }
+
+  function renderItemCompare(curItem, eqItem) {
+    const box = els.itemCompare;
+    if (!box) return;
+    const a = cmpAttrMap(eqItem);    // 左：已装备
+    const b = cmpAttrMap(curItem);   // 右：正在查看的装备
+    const valOf = (m, k) => (m.get(k) ? m.get(k).value : 0);
+    // 双方都没有（0）的属性直接不列出来，避免满屏「0」
+    const keys = [...new Set([...a.keys(), ...b.keys()])].filter(k => valOf(a, k) !== 0 || valOf(b, k) !== 0);
+    const rank = k => (k === "atk" ? 0 : k === "def" ? 1 : 2);
+    keys.sort((x, y) => rank(x) - rank(y));
+
+    const colHtml = (m, other, isRight, it) => {
+      let out = "";
+      if (!keys.length) {
+        out += '<div class="cmp-empty">没有可比较的属性</div>';
+      } else {
+        out += keys.map(k => {
+          const cur = m.get(k);
+          const v = cur ? cur.value : 0;
+          // 这件装备没有这条属性（或为 0）→ 直接跳过，不写 0
+          if (!cur || v === 0) return "";
+          const ov0 = other.get(k);
+          const ov = ov0 ? ov0.value : 0;
+          const unit = (cur.pct || isPctAttr(cur.key)) ? "%" : "";
+          const name = cur.name || GEAR_NAME[k.replace(/%$/, "")] || k;
+          let cls = "";
+          if (isRight) cls = v > ov ? "plus" : (v < ov ? "minus" : "");
+          const val = cls ? `<span class="${cls}">${v}${unit}</span>` : `${v}${unit}`;
+          return `<div class="cmp-line">${esc(name)} ${val}</div>`;
+        }).join("");
+      }
+      // 武器技能（触发效果）也一起列出来，方便对比
+      for (const t of (it && it.triggers) || []) {
+        if (!t || !t.name) continue;
+        const label = t.chance == null ? t.name : `发动：${t.name} ${t.chance}%`;
+        out += `<div class="cmp-line cmp-trigger">${esc(label)}</div>`;
+      }
+      return out;
+    };
+
+    const eqColor = QCOLOR[eqItem.quality] || "#fff";
+    const curColor = QCOLOR[curItem.quality] || "#fff";
+    box.innerHTML =
+      `<div class="enhance-compare cmp-pair">` +
+        `<div class="enhance-col">` +
+          `<div class="enhance-col-title cmp-eq">已装备：<span style="color:${eqColor}">${esc(eqItem.name)}</span></div>` +
+          `<div class="enhance-list">${colHtml(a, b, false, eqItem)}</div>` +
+        `</div>` +
+        `<div class="enhance-arrow">→</div>` +
+        `<div class="enhance-col">` +
+          `<div class="enhance-col-title cmp-cur"><span style="color:${curColor}">${esc(curItem.name)}</span></div>` +
+          `<div class="enhance-list">${colHtml(b, a, true, curItem)}</div>` +
+        `</div>` +
+      `</div>`;
+    box.classList.remove("is-hidden");
+  }
+
+  let cmpShownFor = null;
+  function toggleItemCompare(curItem, eqItem) {
+    const box = els.itemCompare;
+    if (!box) return;
+    const same = cmpShownFor === curItem.id && !box.classList.contains("is-hidden");
+    if (same) {
+      box.classList.add("is-hidden");
+      cmpShownFor = null;
+      return;
+    }
+    cmpShownFor = curItem.id;
+    renderItemCompare(curItem, eqItem);
+    // 小屏（尤其横屏）弹窗内容会超出一屏，展开后自动滚到对比区，避免看起来像被裁断
+    try {
+      const card = els.itemCard;
+      if (card) {
+        const cardRect = card.getBoundingClientRect();
+        const boxRect = box.getBoundingClientRect();
+        const boxTop = boxRect.top - cardRect.top + card.scrollTop;
+        const boxH = boxRect.height;
+        if (boxTop + boxH > card.scrollTop + card.clientHeight - 6) {
+          card.scrollTop = Math.max(0, boxTop + boxH - card.clientHeight + 6);
+        }
+      }
+    } catch (e) {}
+  }
+
   function renderItemSet(item) {
     const box = els.itemSet;
     if (!box) return;
@@ -6388,6 +6492,8 @@
     // 记住详情来源（背包 / 收获区），出售时按它决定从哪个箱子扣
     detailOrigin = origin === "harvest" ? "harvest" : "bag";
     itemSetOpen = false;   // 每次打开详情，套装栏默认收起
+    if (els.itemCompare) els.itemCompare.classList.add("is-hidden");  // 对比面板默认收起
+    cmpShownFor = null;
     const enhance = parsed.enhance;
     const suffix = keySuffix(key);
 
@@ -6550,7 +6656,8 @@
           const skill = t.name
             ? (DATA.skills || []).find(s => s.name === t.name)
             : null;
-          const descText = t.desc || (skill && skill.desc) || "效果待配置";
+          const equipCfg = DATA.equipSkills && DATA.equipSkills[t.name];
+          const descText = t.desc || (skill && skill.desc) || (equipCfg && equipCfg.desc) || "效果待配置";
           let panel = null;
           line.addEventListener("click", ev => {
             ev.stopPropagation();
@@ -6590,23 +6697,29 @@
     // 制作配方预览（该道具作为材料）
     renderItemRecipes(item);
 
-    // 获得来源 / 箱子内容预览（两个入口并排）
+    // 获得来源 / 箱子内容预览 / 装备对比（同一排入口）
     const srcText = (DATA.skillSources || {})[item.id];
     const useKind = item.use ? item.use.kind : "";
     const hasRandomRows = useKind === "box" && (((DATA.boxes || {})[String(item.id)] || []).length > 0);
     const hasFixedRows = useKind === "choose" || useKind === "bundle";
     const hasQualityRows = useKind === "equipBox" || useKind === "qualityEquip";
+    // 装备对比：该部位已有装备，且不是同一件
+    const cmpEqKey = item.type === 3 && item.slot ? equipment[item.slot] : null;
+    const cmpEqItem = cmpEqKey ? keyItem(cmpEqKey) : null;
+    const canCompare = !!cmpEqItem && String(cmpEqItem.id) !== String(item.id);
     if (els.itemSource) {
       let links = "";
       if (srcText) links += '<span class="item-source-link" data-act="source">获得来源 ▸</span>';
       if (hasRandomRows || hasFixedRows || hasQualityRows) {
         links += '<span class="item-source-link" data-act="box">内容预览 ▸</span>';
       }
+      if (canCompare) links += '<span class="item-source-link" data-act="compare">装备对比 ▸</span>';
       els.itemSource.innerHTML = links;
       els.itemSource.classList.toggle("is-hidden", !links);
       els.itemSource.onclick = links ? (ev) => {
         const act = ev && ev.target && ev.target.dataset ? ev.target.dataset.act : "source";
         if (act === "box") openBoxPreview(item);
+        else if (act === "compare") toggleItemCompare(item, cmpEqItem);
         else openSource(item.id);
       } : null;
     }
@@ -7502,6 +7615,62 @@
   }
 
   setInterval(tick, 1000);
+  // ===== 兑换码 =====
+  // 每个码只能兑换一次，记录在 state.redeemedCodes
+  const REDEEM_CODES = {
+    lineage: {
+      label: "对武器施法的卷轴 ×10 + 对盔甲施法的卷轴 ×10",
+      grants: [[2511, 10], [2509, 10]],
+    },
+    "114514": {
+      label: "114514 金币 + 英雄技能箱 ×1",
+      gold: 114514,
+      grants: [[2647, 1]],
+    },
+  };
+
+  function openRedeemModal() {
+    if (!els.redeemModal) return;
+    els.redeemModal.classList.remove("is-hidden");
+    els.redeemMsg.textContent = "";
+    els.redeemInput.value = "";
+    setTimeout(() => { try { els.redeemInput.focus(); } catch (e) {} }, 60);
+  }
+
+  function closeRedeemModal() {
+    if (els.redeemModal) els.redeemModal.classList.add("is-hidden");
+  }
+
+  function doRedeem() {
+    if (!els.redeemInput || !els.redeemMsg) return;
+    const raw = String(els.redeemInput.value || "").trim();
+    const key = raw.toLowerCase();
+    if (!key) { els.redeemMsg.textContent = "请输入兑换码"; return; }
+    const cfg = REDEEM_CODES[key];
+    if (!cfg) { els.redeemMsg.textContent = "兑换码无效"; return; }
+    if (!Array.isArray(state.redeemedCodes)) state.redeemedCodes = [];
+    if (state.redeemedCodes.includes(key)) { els.redeemMsg.textContent = "这个兑换码已经用过了"; return; }
+    if (cfg.gold) state.player.gold += cfg.gold;
+    let ok = true;
+    for (const pair of cfg.grants || []) {
+      const id = pair[0];
+      const n = pair[1];
+      if (!grantItem(id, n)) ok = false;
+    }
+    state.redeemedCodes.push(key);
+    saveState();
+    renderBag();
+    renderBagPanel();
+    renderPlayer();
+    els.redeemMsg.textContent = ok ? `兑换成功：${cfg.label}` : "兑换成功，但部分奖励发放失败";
+  }
+
+  if (els.manualRedeem) els.manualRedeem.addEventListener("click", openRedeemModal);
+  if (els.redeemClose) els.redeemClose.addEventListener("click", closeRedeemModal);
+  if (els.redeemConfirm) els.redeemConfirm.addEventListener("click", doRedeem);
+  if (els.redeemInput) els.redeemInput.addEventListener("keydown", ev => { if (ev.key === "Enter") doRedeem(); });
+  if (els.redeemModal) els.redeemModal.addEventListener("click", ev => { if (ev.target === els.redeemModal) closeRedeemModal(); });
+
   setInterval(renderTimer, 1000);
   setInterval(saveState, 10000);
   setInterval(tickCooldownMasks, 1000);

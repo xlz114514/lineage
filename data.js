@@ -77923,7 +77923,7 @@ window.GAME_DATA = {
      "name": "白恶灵逆袭",
      "chance": 4.0,
      "when": null,
-     "desc": ""
+     "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
     }
    ],
    "slot": "weapon",
@@ -77980,7 +77980,7 @@ window.GAME_DATA = {
      "name": "艾保罗泰因的徽章",
      "chance": 10.0,
      "when": null,
-     "desc": ""
+     "desc": "提高自身 100 魔抗，持续 3 回合"
     },
     {
      "name": "格兰肯的愤怒",
@@ -78169,7 +78169,7 @@ window.GAME_DATA = {
      "name": "乌格努斯的烙印",
      "chance": 10.0,
      "when": null,
-     "desc": ""
+     "desc": "降低敌人 5 点力量、智力、敏捷、精神、体质，持续 3 回合"
     },
     {
      "name": "格兰肯的愤怒",
@@ -78319,7 +78319,7 @@ window.GAME_DATA = {
      "name": "蓝恶灵夺魔",
      "chance": 4.0,
      "when": null,
-     "desc": ""
+     "desc": "造成 50+2×智力 点伤害，并降低敌人 10 智力，持续 3 回合"
     }
    ],
    "slot": "weapon",
@@ -78592,7 +78592,7 @@ window.GAME_DATA = {
      "name": "白恶灵逆袭",
      "chance": 4.0,
      "when": null,
-     "desc": ""
+     "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
     }
    ],
    "slot": "weapon",
@@ -78656,7 +78656,7 @@ window.GAME_DATA = {
      "name": "暴击烈炎",
      "chance": 9.0,
      "when": null,
-     "desc": ""
+     "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
     }
    ],
    "slot": "weapon",
@@ -78828,7 +78828,7 @@ window.GAME_DATA = {
      "name": "蓝恶灵夺魔",
      "chance": 4.0,
      "when": null,
-     "desc": ""
+     "desc": "造成 50+2×智力 点伤害，并降低敌人 10 智力，持续 3 回合"
     }
    ],
    "slot": "weapon",
@@ -78997,7 +78997,7 @@ window.GAME_DATA = {
      "name": "白恶灵逆袭",
      "chance": 4.0,
      "when": null,
-     "desc": ""
+     "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
     }
    ],
    "slot": "weapon",
@@ -79243,7 +79243,7 @@ window.GAME_DATA = {
      "name": "蓝恶灵夺魔",
      "chance": 4.0,
      "when": null,
-     "desc": ""
+     "desc": "造成 50+2×智力 点伤害，并降低敌人 10 智力，持续 3 回合"
     }
    ],
    "slot": "weapon",
@@ -79548,7 +79548,7 @@ window.GAME_DATA = {
      "name": "白恶灵逆袭",
      "chance": 4.0,
      "when": null,
-     "desc": ""
+     "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
     }
    ],
    "slot": "weapon",
@@ -149653,7 +149653,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 1.0
+       "chance": 1.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149665,7 +149666,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 2.0
+       "chance": 2.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149677,7 +149679,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 3.0
+       "chance": 3.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149689,7 +149692,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 4.0
+       "chance": 4.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149701,7 +149705,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 5.0
+       "chance": 5.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149713,7 +149718,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 6.0
+       "chance": 6.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149725,7 +149731,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 7.0
+       "chance": 7.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149737,7 +149744,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 8.0
+       "chance": 8.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149749,7 +149757,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 9.0
+       "chance": 9.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149761,7 +149770,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 10.0
+       "chance": 10.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149773,7 +149783,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 11.0
+       "chance": 11.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149785,7 +149796,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 12.0
+       "chance": 12.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149797,7 +149809,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 13.0
+       "chance": 13.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -149809,7 +149822,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 14.0
+       "chance": 14.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     }
@@ -150879,7 +150893,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 1.0
+       "chance": 1.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -150891,7 +150906,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 2.0
+       "chance": 2.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -150903,7 +150919,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 3.0
+       "chance": 3.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -150915,7 +150932,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 4.0
+       "chance": 4.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -150927,7 +150945,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 5.0
+       "chance": 5.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -150939,7 +150958,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 6.0
+       "chance": 6.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -150951,7 +150971,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 7.0
+       "chance": 7.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -150963,7 +150984,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 8.0
+       "chance": 8.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -150975,7 +150997,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 9.0
+       "chance": 9.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -150987,7 +151010,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 10.0
+       "chance": 10.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -150999,7 +151023,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 11.0
+       "chance": 11.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151011,7 +151036,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 12.0
+       "chance": 12.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151023,7 +151049,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 13.0
+       "chance": 13.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151035,7 +151062,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 14.0
+       "chance": 14.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     }
@@ -151401,7 +151429,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "暴击烈炎",
-       "chance": 3.0
+       "chance": 3.0,
+       "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
       }
      ]
     },
@@ -151413,7 +151442,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "暴击烈炎",
-       "chance": 4.0
+       "chance": 4.0,
+       "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
       }
      ]
     },
@@ -151425,7 +151455,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "暴击烈炎",
-       "chance": 5.0
+       "chance": 5.0,
+       "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
       }
      ]
     },
@@ -151437,7 +151468,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "暴击烈炎",
-       "chance": 6.0
+       "chance": 6.0,
+       "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
       }
      ]
     },
@@ -151450,7 +151482,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "暴击烈炎",
-       "chance": 7.0
+       "chance": 7.0,
+       "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
       }
      ]
     },
@@ -151463,7 +151496,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "暴击烈炎",
-       "chance": 8.0
+       "chance": 8.0,
+       "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
       }
      ]
     },
@@ -151489,7 +151523,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "暴击烈炎",
-       "chance": 10.0
+       "chance": 10.0,
+       "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
       }
      ]
     },
@@ -151502,7 +151537,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "暴击烈炎",
-       "chance": 11.0
+       "chance": 11.0,
+       "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
       }
      ]
     },
@@ -151515,7 +151551,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "暴击烈炎",
-       "chance": 12.0
+       "chance": 12.0,
+       "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
       }
      ]
     },
@@ -151528,7 +151565,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "暴击烈炎",
-       "chance": 13.0
+       "chance": 13.0,
+       "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
       }
      ]
     },
@@ -151541,7 +151579,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "暴击烈炎",
-       "chance": 14.0
+       "chance": 14.0,
+       "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
       }
      ]
     }
@@ -151842,7 +151881,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 1.0
+       "chance": 1.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151854,7 +151894,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 2.0
+       "chance": 2.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151866,7 +151907,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 3.0
+       "chance": 3.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151878,7 +151920,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 4.0
+       "chance": 4.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151890,7 +151933,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 5.0
+       "chance": 5.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151902,7 +151946,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 6.0
+       "chance": 6.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151914,7 +151959,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 7.0
+       "chance": 7.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151926,7 +151972,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 8.0
+       "chance": 8.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151938,7 +151985,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 9.0
+       "chance": 9.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151950,7 +151998,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 10.0
+       "chance": 10.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151962,7 +152011,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 11.0
+       "chance": 11.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151974,7 +152024,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 12.0
+       "chance": 12.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151986,7 +152037,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 13.0
+       "chance": 13.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -151998,7 +152050,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 14.0
+       "chance": 14.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     }
@@ -153225,7 +153278,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 1.0
+       "chance": 1.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153237,7 +153291,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 2.0
+       "chance": 2.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153249,7 +153304,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 3.0
+       "chance": 3.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153261,7 +153317,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 4.0
+       "chance": 4.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153273,7 +153330,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 5.0
+       "chance": 5.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153285,7 +153343,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 6.0
+       "chance": 6.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153297,7 +153356,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 7.0
+       "chance": 7.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153309,7 +153369,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 8.0
+       "chance": 8.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153321,7 +153382,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 9.0
+       "chance": 9.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153333,7 +153395,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 10.0
+       "chance": 10.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153345,7 +153408,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 11.0
+       "chance": 11.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153357,7 +153421,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 12.0
+       "chance": 12.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153369,7 +153434,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 13.0
+       "chance": 13.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     },
@@ -153381,7 +153447,8 @@ window.GAME_DATA = {
      "triggers": [
       {
        "name": "白恶灵逆袭",
-       "chance": 14.0
+       "chance": 14.0,
+       "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
       }
      ]
     }
@@ -157545,7 +157612,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "减少敌人2点力量智力敏捷精神体质，并增加自己对应属性，持续3回合"
   },
   "伊莎贝的猜忌": {
    "trigger": "attack",
@@ -157568,7 +157636,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "减少敌人5命中和5闪避等级，并增加自己对应属性，持续3回合"
   },
   "心灵破坏": {
    "trigger": "attack",
@@ -157581,7 +157650,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "减少敌人20点智力，持续3回合"
   },
   "消除圣结界": {
    "trigger": "attack",
@@ -157595,7 +157665,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "降低敌人100防御等级和伤害减免，持续3回合"
   },
   "极道落雷": {
    "trigger": "attack",
@@ -157605,7 +157676,8 @@ window.GAME_DATA = {
      "base": 50,
      "int": 9
     }
-   ]
+   ],
+   "desc": "造成50+9*智力点伤害"
   },
   "混沌狂袭": {
    "trigger": "attack",
@@ -157620,7 +157692,8 @@ window.GAME_DATA = {
      "name": "晕眩",
      "dur": 1
     }
-   ]
+   ],
+   "desc": "造成100点伤害并晕眩敌人一回合"
   },
   "混沌底比斯": {
    "trigger": "attack",
@@ -157634,7 +157707,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "使敌人生命回复降低100，暴击率降低5%，持续3回合"
   },
   "海神之怒": {
    "trigger": "attack",
@@ -157652,7 +157726,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "造成100+3*智力点伤害，并降低敌人5闪避等级3回合"
   },
   "贯通效果": {
    "trigger": "passive",
@@ -157661,7 +157736,8 @@ window.GAME_DATA = {
      "type": "ignoreDodge",
      "value": 10
     }
-   ]
+   ],
+   "desc": "攻击时无视敌人10闪避率"
   },
   "格兰肯的愤怒": {
    "trigger": "attack",
@@ -157679,7 +157755,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "造成100+10*智力点伤害，并增加自己50攻击力，持续3回合"
   },
   "绯红旋涡": {
    "trigger": "attack",
@@ -157694,7 +157771,8 @@ window.GAME_DATA = {
      "resource": "hp",
      "pct": 100
     }
-   ]
+   ],
+   "desc": "造成40+3*智力点伤害，回复伤害量hp"
   },
   "地狱之火": {
    "trigger": "attack",
@@ -157712,7 +157790,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "造成150+2*智力点伤害，并降低敌人15防御等级3回合"
   },
   "地裂术": {
    "trigger": "attack",
@@ -157722,7 +157801,8 @@ window.GAME_DATA = {
      "base": 60,
      "int": 7
     }
-   ]
+   ],
+   "desc": "造成60+7*智力点伤害"
   },
   "波塞冬的诅咒": {
    "trigger": "attack",
@@ -157736,7 +157816,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "使敌人命中率和闪避等级降低10，持续3回合"
   },
   "MP吸收": {
    "trigger": "passive",
@@ -157746,7 +157827,8 @@ window.GAME_DATA = {
      "resource": "mp",
      "pct": 1
     }
-   ]
+   ],
+   "desc": "普通攻击伤害量1%转化为mp"
   },
   "HP吸收": {
    "trigger": "passive",
@@ -157756,7 +157838,8 @@ window.GAME_DATA = {
      "resource": "hp",
      "pct": 1
     }
-   ]
+   ],
+   "desc": "普通攻击伤害量1%转化为hp"
   },
   "月光地裂": {
    "trigger": "attack",
@@ -157766,7 +157849,8 @@ window.GAME_DATA = {
      "base": 50,
      "int": 2
     }
-   ]
+   ],
+   "desc": "造成50+2*智力点伤害"
   },
   "亡灵转化": {
    "trigger": "attack",
@@ -157780,7 +157864,8 @@ window.GAME_DATA = {
      },
      "dur": 0
     }
-   ]
+   ],
+   "desc": "使敌人攻击力+5，防御等级-10"
   },
   "起死回生术": {
    "trigger": "battleStart",
@@ -157789,7 +157874,8 @@ window.GAME_DATA = {
      "type": "damage",
      "int": 8
     }
-   ]
+   ],
+   "desc": "战斗开始时，造成8*智力点伤害"
   },
   "魔法封印": {
    "trigger": "attack",
@@ -157800,7 +157886,8 @@ window.GAME_DATA = {
      "name": "沉默",
      "dur": 2
     }
-   ]
+   ],
+   "desc": "使敌人沉默2回合"
   },
   "猛爆剧毒": {
    "trigger": "roundStart",
@@ -157810,7 +157897,8 @@ window.GAME_DATA = {
      "base": 30,
      "int": 3
     }
-   ]
+   ],
+   "desc": "回合开始时，造成30+3*智力点伤害"
   },
   "狂暴喷发": {
    "trigger": "attack",
@@ -157820,7 +157908,8 @@ window.GAME_DATA = {
      "base": 50,
      "int": 4
     }
-   ]
+   ],
+   "desc": "造成50+4*智力点伤害"
   },
   "狂暴爆发": {
    "trigger": "attack",
@@ -157834,7 +157923,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "增加10攻击力和5暴击，持续三回合"
   },
   "库库尔之吻": {
    "trigger": "attack",
@@ -157848,7 +157938,8 @@ window.GAME_DATA = {
      "resource": "hp",
      "pct": 100
     }
-   ]
+   ],
+   "desc": "对敌人造成40点伤害，回复自身伤害量的生命值"
   },
   "精灵之箭": {
    "trigger": "attack",
@@ -157858,7 +157949,8 @@ window.GAME_DATA = {
      "base": 30,
      "dex": 3
     }
-   ]
+   ],
+   "desc": "造成30+3*敏捷点伤害"
   },
   "黑暗闪电": {
    "trigger": "attack",
@@ -157876,7 +157968,8 @@ window.GAME_DATA = {
      },
      "dur": 2
     }
-   ]
+   ],
+   "desc": "造成20+2*智力点伤害，并降低敌人5命中2回合"
   },
   "共鸣冲击": {
    "trigger": "attack",
@@ -157894,7 +157987,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "造成30+1*智力点伤害，增加自己10攻击力3回合"
   },
   "恶魔之吻": {
    "trigger": "attack",
@@ -157909,7 +158003,8 @@ window.GAME_DATA = {
      "resource": "hp",
      "pct": 100
     }
-   ]
+   ],
+   "desc": "造成20+2*智力伤害量，回复伤害量hp"
   },
   "电击": {
    "trigger": "attack",
@@ -157919,7 +158014,8 @@ window.GAME_DATA = {
      "base": 40,
      "int": 3
     }
-   ]
+   ],
+   "desc": "造成40+3*智力点伤害"
   },
   "冰冷追击": {
    "trigger": "attack",
@@ -157932,7 +158028,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "降低敌人10点闪避3回合"
   },
   "依照指定概率的附加伤害": {
    "trigger": "attack",
@@ -157941,7 +158038,8 @@ window.GAME_DATA = {
      "type": "damage",
      "base": 100
     }
-   ]
+   ],
+   "desc": "攻击时1%概率附加100点伤害"
   },
   "神秘混沌": {
    "trigger": "attack",
@@ -157970,7 +158068,8 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "攻击时，使敌人力量智力敏捷精神体质降低50点，自己提高对应属性，持续3回合"
   },
   "席琳的庇护": {
    "trigger": "hurt",
@@ -157987,7 +158086,8 @@ window.GAME_DATA = {
      },
      "dur": 5
     }
-   ]
+   ],
+   "desc": "受到攻击时有5%概率回复1000点生命值，并提高100点伤害减免5回合"
   },
   "金龙之力": {
    "trigger": "passive",
@@ -157995,7 +158095,8 @@ window.GAME_DATA = {
     {
      "type": "immuneStatDown"
     }
-   ]
+   ],
+   "desc": "免疫属性降低效果（属性不会因为负面效果而降低）"
   },
   "流星雨:古代": {
    "trigger": "attack",
@@ -158005,7 +158106,8 @@ window.GAME_DATA = {
      "base": 200,
      "int": 13
     }
-   ]
+   ],
+   "desc": "造成200+13*智力点伤害"
   },
   "艾莉丝的憎恨": {
    "trigger": "attack",
@@ -158018,7 +158120,8 @@ window.GAME_DATA = {
      },
      "dur": 5
     }
-   ]
+   ],
+   "desc": "使敌人魔抗降低为0，持续5回合"
   },
   "真实瞄准": {
    "trigger": "attack",
@@ -158031,7 +158134,97 @@ window.GAME_DATA = {
      },
      "dur": 3
     }
-   ]
+   ],
+   "desc": "命中提高50，持续3回合"
+  },
+  "白恶灵逆袭": {
+   "trigger": "attack",
+   "effects": [
+    {
+     "type": "damage",
+     "base": 50,
+     "int": 2
+    },
+    {
+     "type": "buff",
+     "target": "enemy",
+     "stats": {
+      "atk": -10
+     },
+     "dur": 3
+    }
+   ],
+   "desc": "造成 50+2×智力 点伤害，并降低敌人 10 攻击力，持续 3 回合"
+  },
+  "蓝恶灵夺魔": {
+   "trigger": "attack",
+   "effects": [
+    {
+     "type": "damage",
+     "base": 50,
+     "int": 2
+    },
+    {
+     "type": "buff",
+     "target": "enemy",
+     "stats": {
+      "int": -10
+     },
+     "dur": 3
+    }
+   ],
+   "desc": "造成 50+2×智力 点伤害，并降低敌人 10 智力，持续 3 回合"
+  },
+  "暴击烈炎": {
+   "trigger": "attack",
+   "effects": [
+    {
+     "type": "damage",
+     "base": 80,
+     "int": 10
+    },
+    {
+     "type": "buff",
+     "target": "self",
+     "stats": {
+      "crit": 8
+     },
+     "dur": 3
+    }
+   ],
+   "desc": "造成 80+10×智力 点伤害，并提高自身 8 暴击，持续 3 回合"
+  },
+  "乌格努斯的烙印": {
+   "trigger": "attack",
+   "effects": [
+    {
+     "type": "buff",
+     "target": "enemy",
+     "stats": {
+      "str": -5,
+      "int": -5,
+      "dex": -5,
+      "wis": -5,
+      "con": -5
+     },
+     "dur": 3
+    }
+   ],
+   "desc": "降低敌人 5 点力量、智力、敏捷、精神、体质，持续 3 回合"
+  },
+  "艾保罗泰因的徽章": {
+   "trigger": "attack",
+   "effects": [
+    {
+     "type": "buff",
+     "target": "self",
+     "stats": {
+      "mr": 100
+     },
+     "dur": 3
+    }
+   ],
+   "desc": "提高自身 100 魔抗，持续 3 回合"
   }
  }
 };

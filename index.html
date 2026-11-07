@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>天堂M · 挂机小游戏</title>
-<link rel="stylesheet" href="style.css?v=20261031z613" />
+<link rel="stylesheet" href="style.css?v=20261031z614" />
 </head>
 <body>
 <div class="app">
   <header class="title-bar">
     <div class="active-buffs" id="activeBuffs"></div>
-    <span class="build-tag">v20261031z613</span>
+    <span class="build-tag">v20261031z614</span>
     <span class="title-label">地点</span>
     <h1 id="areaTitle">—</h1>
     <button id="areaBtn" class="area-btn">选择地区 ▾</button>
@@ -366,11 +366,25 @@
     <div class="manual-left">
       <div class="manual-brand">冒险手册</div>
       <nav class="manual-tabs" id="manualTabs"></nav>
+      <button class="manual-redeem" id="manualRedeem" type="button">🎁 兑换码</button>
     </div>
     <div class="manual-right">
       <div class="manual-hero" id="manualHero"></div>
       <div class="manual-content" id="manualContent"></div>
     </div>
+  </div>
+</div>
+
+<div id="redeemModal" class="redeem-modal is-hidden">
+  <div class="redeem-card">
+    <button class="redeem-close" id="redeemClose" aria-label="关闭">×</button>
+    <div class="redeem-title">兑换码</div>
+    <div class="redeem-hint">输入兑换码领取奖励，每个兑换码只能使用一次。</div>
+    <input id="redeemInput" class="redeem-input" type="text" maxlength="24" placeholder="输入兑换码" autocomplete="off" spellcheck="false" />
+    <div class="redeem-actions">
+      <button class="redeem-btn" id="redeemConfirm" type="button">兑换</button>
+    </div>
+    <div class="redeem-msg" id="redeemMsg"></div>
   </div>
 </div>
 
@@ -393,6 +407,7 @@
     <div class="item-attrs" id="itemAttrs"></div>
     <div class="item-set is-hidden" id="itemSet"></div>
     <div class="item-desc" id="itemDesc"></div>
+    <div class="item-compare is-hidden" id="itemCompare"></div>
     <div class="item-recipes is-hidden" id="itemRecipes"></div>
     <div class="item-foot-row">
       <div class="item-source is-hidden" id="itemSource"></div>
@@ -486,7 +501,7 @@
 <div id="statTip" class="stat-tip"></div>
 <div id="toast" class="toast"></div>
 
-<script src="data.js?v=20261031z613"></script>
-<script src="script.js?v=20261031z613"></script>
+<script src="data.js?v=20261031z614"></script>
+<script src="script.js?v=20261031z614"></script>
 </body>
 </html>
