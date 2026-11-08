@@ -276,6 +276,7 @@
     kills: 0,                  // 累计击杀怪物数
     lootValue: 0,              // 累计掉落战利品价值（道具价值总和）
     autoSell: { white: false, green: false }, // 自动出售：白色 / 绿色装备
+    redeemedCodes: [],         // 已兑换的兑换码（每个码只能领一次）
     shopStock: null,           // 铁匠铺库存：{ next, items:[{id, price, quality}] }
     death: null,               // null | "player" | "monster"，存档不保存
   };
@@ -515,6 +516,7 @@
       autoUse: [...state.autoUse],
       useCounts: [...state.useCounts],
       dominateCooldowns: [...state.dominateCooldowns],
+      redeemedCodes: [...(state.redeemedCodes || [])],
       shopStock: state.shopStock,
       elapsed: elapsedSeconds(),
       // 最后一次真正战斗/进入后台的时间，离线结算用它而不是 savedAt，
@@ -637,6 +639,11 @@
       if (it && it.use && it.use.kind === "dominateBoss" && t > Date.now()) dc.set(k, t);
     }
     state.dominateCooldowns = dc;
+
+    // 已兑换的兑换码：只认字符串，防止重复领
+    state.redeemedCodes = Array.isArray(saved.redeemedCodes)
+      ? saved.redeemedCodes.filter(x => typeof x === "string")
+      : [];
 
     // 装备：只接受「道具存在 + 类型是装备 + 部位匹配」的条目，脏数据直接跳过。
     // 装备栏存的是完整实例键（含强化/祝福），卸下时才回到背包。
@@ -7626,6 +7633,10 @@
       label: "114514 金币 + 英雄技能箱 ×1",
       gold: 114514,
       grants: [[2647, 1]],
+    },
+    "1128977606": {
+      label: "英雄技能箱 ×1 + 刻印装备箱 ×20",
+      grants: [[2647, 1], [2606, 20]],
     },
   };
 
