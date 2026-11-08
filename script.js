@@ -4335,15 +4335,31 @@
       .join("");
   }
 
-  function openEnhance(key) {
+  function openEnhance(key, source) {
     const item = keyItem(key);
     if (!item || item.type !== 3) return;
     enhanceKey = key;
-    // 判断这个实例在装备栏还是背包（装备栏强化失败会直接消失）
-    enhanceSource = Object.values(equipment).includes(key) ? "equip" : "bag";
+    // 来源决定强化失败/成功时扣哪一边：装备栏直接换实例，背包/收获区按来源扣
+    enhanceSource = source || (Object.values(equipment).includes(key) ? "equip" : "bag");
     enhanceScroll = null;
     renderEnhance();
     if (els.enhanceModal) els.enhanceModal.classList.remove("is-hidden");
+  }
+
+  // 从指定容器扣 1 件（严格按来源，避免同 key 时扣错箱子）
+  function takeFromSource(key, source) {
+    if (source === "harvest") {
+      const h = state.harvest.get(key) || 0;
+      if (h > 0) {
+        if (h > 1) state.harvest.set(key, h - 1);
+        else state.harvest.delete(key);
+        return true;
+      }
+    }
+    if (source === "bag") {
+      return takeBagKey(key);
+    }
+    return takeKey(key);
   }
 
   function closeEnhance() {
@@ -4527,7 +4543,8 @@
       if (onEquip && slotOfItem && equipment[slotOfItem] === key) {
         equipment[slotOfItem] = newKey;   // 装备栏直接换实例键
       } else {
-        takeBagKey(key);
+        // 背包 / 收获区：按来源扣掉旧实例，再把新实例放回背包
+        takeFromSource(key, enhanceSource);
         addBagKey(newKey, 1);
       }
       state.lastEnhanceKey = newKey;
@@ -4539,7 +4556,7 @@
       if (onEquip && slotOfItem && equipment[slotOfItem] === key) {
         delete equipment[slotOfItem];
       } else {
-        takeBagKey(key);
+        takeFromSource(key, enhanceSource);
       }
       enhanceKey = null;
       showToast("强化失败，装备消失了");
@@ -6790,7 +6807,9 @@
       // 装备：第一个按钮是「强化」（背包和已装备的都支持；变身/娃娃卡不能强化）
       const isCardSlot = slotKey === "transform" || slotKey === "doll";
       if (!isCardSlot && (countKey(key) > 0 || fromEquip)) {
-        addItemAction("强化", true, () => openEnhance(key));
+        // 按点开的位置决定强化对象：装备格 / 收获区 / 背包
+        const enhSource = fromEquip ? "equip" : (origin === "harvest" ? "harvest" : "bag");
+        addItemAction("强化", true, () => openEnhance(key, enhSource));
       }
       // 只有「从装备格点开」才算已装备；背包里的同款道具应该显示「装备」
       const equipped = fromEquip && !!slotKey && equipment[slotKey] === key;
