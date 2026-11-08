@@ -68,6 +68,8 @@ body {
   letter-spacing: 2px;
 }
 .area-btn {
+  position: relative;
+  z-index: 10;
   margin-top: 10px;
   padding: 7px 18px;
   background: var(--panel-2);
@@ -2254,7 +2256,9 @@ body {
   gap: 8px;
   /* 一行最多 7 个（7×34 + 6×8 = 286），超过自动换到上一排 */
   max-width: 290px;
-  z-index: 5;
+  /* 层级压到按钮下面：竖屏时不会挡住「选择地区 / 图鉴 / 手册 / 设置」的点击 */
+  z-index: 1;
+  pointer-events: none;
 }
 .active-buff {
   position: relative;
@@ -3589,6 +3593,7 @@ body {
   transform: translateY(-50%);
   display: flex;
   gap: 18px;
+  z-index: 10;
 }
 .guide-entry {
   position: relative;
@@ -3714,7 +3719,9 @@ body {
 }
 @media (max-width: 1080px) {
   .title-actions {
-    position: static;
+    /* relative 而不是 static：z-index 只对定位元素生效，这样才盖得住 buff 图标 */
+    position: relative;
+    z-index: 10;
     transform: none;
     justify-content: center;
     margin-top: 10px;
