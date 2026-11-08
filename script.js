@@ -302,6 +302,8 @@
     bagSellAll: $("bagSellAll"), sellAllModal: $("sellAllModal"),
     sellAllWhite: $("sellAllWhite"), sellAllGreen: $("sellAllGreen"),
     sellAllGain: $("sellAllGain"), sellAllConfirm: $("sellAllConfirm"), sellAllCancel: $("sellAllCancel"),
+    settingsBtn: $("settingsBtn"), settingsModal: $("settingsModal"), settingsClose: $("settingsClose"),
+    settingsOrient: $("settingsOrient"),
     itemIcon: $("itemIcon"), itemName: $("itemName"), itemType: $("itemType"),
     itemHold: $("itemHold"), itemValue: $("itemValue"),
     itemAttrs: $("itemAttrs"), itemSet: $("itemSet"), itemDesc: $("itemDesc"), itemActions: $("itemActions"),
@@ -4829,11 +4831,11 @@
   /* ---------------- 商店 ---------------- */
   const SHOP_TABS = [
     { key: "grocery", name: "杂货店", slogan: "欢迎，这里出售各种常见的冒险物资" },
-    { key: "blacksmith", name: "铁匠铺", slogan: "都是每天新鲜出炉！记得来看看！" },
+    { key: "blacksmith", name: "铁匠铺", slogan: "都是新鲜出炉的！记得来看看！" },
     { key: "blackmarket", name: "黑市", slogan: "只要有钱...没有买不到的东西" },
     { key: "alchemy", name: "炼金工房", slogan: "想试试自己的运气吗？" },
   ];
-  const SHOP_REFRESH_MS = 24 * 3600 * 1000;
+  const SHOP_REFRESH_MS = 12 * 3600 * 1000;   // 铁匠铺 / 黑市 12 小时刷新一次
   // 铁匠铺按品质的定价区间
   const BLACKSMITH_PRICE = {
     2: [2000, 4000],
@@ -7774,6 +7776,79 @@
   if (els.sellAllWhite) els.sellAllWhite.addEventListener("change", updateSellAllPreview);
   if (els.sellAllGreen) els.sellAllGreen.addEventListener("change", updateSellAllPreview);
   if (els.sellAllModal) els.sellAllModal.addEventListener("click", ev => { if (ev.target === els.sellAllModal) closeSellAllModal(); });
+
+  // ===== 游戏设置（仅 APP）：屏幕方向锁定 =====
+  const SETTINGS_KEY = "lineagem_idle_settings_v1";
+
+  function loadAppSettings() {
+    try {
+      const raw = localStorage.getItem(SETTINGS_KEY);
+      return raw ? (JSON.parse(raw) || {}) : {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveAppSettings(obj) {
+    try {
+      localStorage.setItem(SETTINGS_KEY, JSON.stringify(obj || {}));
+    } catch (e) { /* 忽略 */ }
+  }
+
+  function isAppEnv() {
+    return !!(window.Capacitor && typeof window.Capacitor.isNativePlatform === "function" && window.Capacitor.isNativePlatform());
+  }
+
+  let appSettings = loadAppSettings();
+
+  function applyScreenLock(mode) {
+    const P = window.Capacitor && window.Capacitor.Plugins ? window.Capacitor.Plugins.ScreenOrientation : null;
+    if (!P) return;
+    try {
+      if (mode === "portrait" || mode === "landscape") {
+        P.lock({ orientation: mode });
+      } else {
+        P.unlock();
+      }
+    } catch (e) { /* 插件异常不影响游戏 */ }
+  }
+
+  function renderSettingsOrient() {
+    if (!els.settingsOrient) return;
+    const cur = appSettings.orient || "auto";
+    for (const btn of els.settingsOrient.querySelectorAll(".seg-btn")) {
+      btn.classList.toggle("active", btn.dataset.orient === cur);
+    }
+  }
+
+  function openSettingsModal() {
+    if (!els.settingsModal) return;
+    renderSettingsOrient();
+    els.settingsModal.classList.remove("is-hidden");
+  }
+
+  function closeSettingsModal() {
+    if (els.settingsModal) els.settingsModal.classList.add("is-hidden");
+  }
+
+  if (els.settingsBtn) {
+    if (isAppEnv()) els.settingsBtn.classList.remove("is-hidden");
+    els.settingsBtn.addEventListener("click", openSettingsModal);
+  }
+  if (els.settingsClose) els.settingsClose.addEventListener("click", closeSettingsModal);
+  if (els.settingsModal) els.settingsModal.addEventListener("click", ev => { if (ev.target === els.settingsModal) closeSettingsModal(); });
+  if (els.settingsOrient) {
+    els.settingsOrient.addEventListener("click", ev => {
+      const btn = ev.target && ev.target.closest ? ev.target.closest(".seg-btn") : null;
+      if (!btn) return;
+      const mode = btn.dataset.orient || "auto";
+      appSettings.orient = mode;
+      saveAppSettings(appSettings);
+      renderSettingsOrient();
+      applyScreenLock(mode);
+    });
+  }
+  if (isAppEnv()) applyScreenLock(appSettings.orient || "auto");
 
   setInterval(renderTimer, 1000);
   setInterval(saveState, 10000);

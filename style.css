@@ -4553,3 +4553,38 @@ body {
 .sellall-opt .q1 { color: #cfd3da; }
 .sellall-opt .q2 { color: #63c46c; }
 .sellall-gain { margin: 10px 0 4px; font-size: 13px; color: #e8cf98; min-height: 18px; }
+/* ===== 游戏设置（仅 APP） ===== */
+.settings-card { max-width: 420px; }
+.settings-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: 0;
+  background: none;
+  color: #8a93a6;
+  font-size: 22px;
+  cursor: pointer;
+}
+.settings-title { font-size: 17px; font-weight: 700; color: #e8cf98; margin-bottom: 14px; }
+.settings-row { margin-bottom: 12px; }
+.settings-label { font-size: 13px; color: #9aa3b5; margin-bottom: 8px; }
+.settings-seg { display: flex; gap: 8px; flex-wrap: wrap; }
+.seg-btn {
+  flex: 1 1 auto;
+  min-width: 92px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid #2c313c;
+  background: #14171d;
+  color: #b9c0cc;
+  font-size: 13px;
+  cursor: pointer;
+}
+.seg-btn:hover { border-color: rgba(232, 207, 152, .45); color: #e8cf98; }
+.seg-btn.active {
+  border-color: rgba(232, 207, 152, .8);
+  background: rgba(232, 207, 152, .14);
+  color: #f2dba8;
+  font-weight: 700;
+}
+.settings-hint { margin-top: 10px; font-size: 12px; line-height: 1.6; color: #7c8598; }

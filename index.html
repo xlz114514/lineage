@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>亚丁大陆</title>
-<link rel="stylesheet" href="style.css?v=20261031z618" />
+<link rel="stylesheet" href="style.css?v=20261031z619" />
 </head>
 <body>
 <div class="app">
   <header class="title-bar">
     <div class="active-buffs" id="activeBuffs"></div>
-    <span class="build-tag">v20261031z618</span>
+    <span class="build-tag">v20261031z619</span>
     <span class="title-label">地点</span>
     <h1 id="areaTitle">—</h1>
     <button id="areaBtn" class="area-btn">选择地区 ▾</button>
@@ -25,6 +25,9 @@
       </button>
       <button class="guide-entry" id="adventureBtn" type="button">
         <span class="guide-ico">📕</span><span class="guide-text">冒险手册</span>
+      </button>
+      <button class="guide-entry is-hidden" id="settingsBtn" type="button">
+        <span class="guide-ico">⚙️</span><span class="guide-text">游戏设置</span>
       </button>
     </div>
   </header>
@@ -442,6 +445,22 @@
   </div>
 </div>
 
+<div id="settingsModal" class="confirm-modal settings-modal is-hidden">
+  <div class="confirm-card settings-card">
+    <button class="settings-close" id="settingsClose" type="button" aria-label="关闭">×</button>
+    <div class="settings-title">⚙️ 游戏设置</div>
+    <div class="settings-row">
+      <div class="settings-label">屏幕方向</div>
+      <div class="settings-seg" id="settingsOrient">
+        <button class="seg-btn" data-orient="auto" type="button">自动旋转</button>
+        <button class="seg-btn" data-orient="portrait" type="button">锁定竖屏</button>
+        <button class="seg-btn" data-orient="landscape" type="button">锁定横屏</button>
+      </div>
+    </div>
+    <div class="settings-hint">仅 APP 版本生效，选择后立即应用；网页版不受影响。</div>
+  </div>
+</div>
+
 <div id="choiceModal" class="choice-modal is-hidden">
   <div class="choice-card">
     <button class="choice-close" id="choiceClose" aria-label="关闭">×</button>
@@ -516,7 +535,7 @@
 <div id="statTip" class="stat-tip"></div>
 <div id="toast" class="toast"></div>
 
-<script src="data.js?v=20261031z618"></script>
-<script src="script.js?v=20261031z618"></script>
+<script src="data.js?v=20261031z619"></script>
+<script src="script.js?v=20261031z619"></script>
 </body>
 </html>
