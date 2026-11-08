@@ -299,6 +299,9 @@
     sellModal: $("sellModal"), sellName: $("sellName"), sellCount: $("sellCount"),
     sellMinus: $("sellMinus"), sellPlus: $("sellPlus"), sellMax: $("sellMax"),
     sellGain: $("sellGain"), sellCancel: $("sellCancel"), sellConfirm: $("sellConfirm"),
+    bagSellAll: $("bagSellAll"), sellAllModal: $("sellAllModal"),
+    sellAllWhite: $("sellAllWhite"), sellAllGreen: $("sellAllGreen"),
+    sellAllGain: $("sellAllGain"), sellAllConfirm: $("sellAllConfirm"), sellAllCancel: $("sellAllCancel"),
     itemIcon: $("itemIcon"), itemName: $("itemName"), itemType: $("itemType"),
     itemHold: $("itemHold"), itemValue: $("itemValue"),
     itemAttrs: $("itemAttrs"), itemSet: $("itemSet"), itemDesc: $("itemDesc"), itemActions: $("itemActions"),
@@ -6938,6 +6941,69 @@
   let sellQty = 1;
   let sellMax = 1;
 
+  // ===== 一键出售：背包里未装备的白色 / 绿色装备 =====
+  function sellAllCandidates(includeWhite, includeGreen) {
+    const out = [];
+    // 注意：装备栏里的实例不在背包里（穿上时已从背包扣走），
+    // 所以背包里的同款都是「多余的」，可以全部卖掉，不能按装备数量扣减。
+    for (const [key, count] of state.bag) {
+      const it = keyItem(key);
+      if (!it || it.type !== 3) continue;
+      const q = Number(it.quality) || 1;
+      if (q !== 1 && q !== 2) continue;             // 只处理白 / 绿
+      if (q === 1 && !includeWhite) continue;
+      if (q === 2 && !includeGreen) continue;
+      out.push({ key, count, value: Number(it.value) || 0 });
+    }
+    return out;
+  }
+
+  function updateSellAllPreview() {
+    if (!els.sellAllGain) return;
+    const w = els.sellAllWhite ? els.sellAllWhite.checked : true;
+    const g = els.sellAllGreen ? els.sellAllGreen.checked : true;
+    const list = sellAllCandidates(w, g);
+    const n = list.reduce((s, x) => s + x.count, 0);
+    const gold = list.reduce((s, x) => s + x.value * x.count, 0);
+    els.sellAllGain.textContent = n > 0 ? `将出售 ${n} 件，预计获得 ${fmt(gold)} 金币` : "没有可出售的装备";
+  }
+
+  function openSellAllModal() {
+    if (!els.sellAllModal) return;
+    els.sellAllModal.classList.remove("is-hidden");
+    updateSellAllPreview();
+  }
+
+  function closeSellAllModal() {
+    if (els.sellAllModal) els.sellAllModal.classList.add("is-hidden");
+  }
+
+  function doSellAll() {
+    const w = els.sellAllWhite ? els.sellAllWhite.checked : true;
+    const g = els.sellAllGreen ? els.sellAllGreen.checked : true;
+    const list = sellAllCandidates(w, g);
+    if (!list.length) {
+      showToast("没有可出售的装备");
+      return;
+    }
+    let gold = 0;
+    let n = 0;
+    for (const row of list) {
+      gold += row.value * row.count;
+      n += row.count;
+      const left = (state.bag.get(row.key) || 0) - row.count;
+      if (left > 0) state.bag.set(row.key, left);
+      else state.bag.delete(row.key);
+    }
+    state.player.gold += gold;
+    saveState();
+    renderBag();
+    renderBagPanel();
+    renderPlayer();
+    closeSellAllModal();
+    showToast(`已出售 ${n} 件装备，获得 ${fmt(gold)} 金币`);
+  }
+
   function openSellModal(key, origin = "bag") {
     const have = originCount(key, origin);
     if (have <= 0) return;
@@ -7700,6 +7766,14 @@
   if (els.redeemConfirm) els.redeemConfirm.addEventListener("click", doRedeem);
   if (els.redeemInput) els.redeemInput.addEventListener("keydown", ev => { if (ev.key === "Enter") doRedeem(); });
   if (els.redeemModal) els.redeemModal.addEventListener("click", ev => { if (ev.target === els.redeemModal) closeRedeemModal(); });
+
+  // 一键出售
+  if (els.bagSellAll) els.bagSellAll.addEventListener("click", openSellAllModal);
+  if (els.sellAllCancel) els.sellAllCancel.addEventListener("click", closeSellAllModal);
+  if (els.sellAllConfirm) els.sellAllConfirm.addEventListener("click", doSellAll);
+  if (els.sellAllWhite) els.sellAllWhite.addEventListener("change", updateSellAllPreview);
+  if (els.sellAllGreen) els.sellAllGreen.addEventListener("change", updateSellAllPreview);
+  if (els.sellAllModal) els.sellAllModal.addEventListener("click", ev => { if (ev.target === els.sellAllModal) closeSellAllModal(); });
 
   setInterval(renderTimer, 1000);
   setInterval(saveState, 10000);

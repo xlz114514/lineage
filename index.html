@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>天堂M · 挂机小游戏</title>
-<link rel="stylesheet" href="style.css?v=20261031z617" />
+<link rel="stylesheet" href="style.css?v=20261031z618" />
 </head>
 <body>
 <div class="app">
   <header class="title-bar">
     <div class="active-buffs" id="activeBuffs"></div>
-    <span class="build-tag">v20261031z617</span>
+    <span class="build-tag">v20261031z618</span>
     <span class="title-label">地点</span>
     <h1 id="areaTitle">—</h1>
     <button id="areaBtn" class="area-btn">选择地区 ▾</button>
@@ -224,6 +224,7 @@
     <div class="bag-grid" id="bagGrid"></div>
     <div class="bag-foot">
       <span class="bag-gold"><img class="coin-ico" src="icons/coin.png" alt="" /><b id="bagPanelGold">0</b></span>
+      <button class="bag-sort bag-sellall" id="bagSellAll">一键出售</button>
       <button class="bag-sort" id="bagSort">整理</button>
     </div>
   </div>
@@ -427,6 +428,20 @@
   </div>
 </div>
 
+<div id="sellAllModal" class="confirm-modal sellall-modal is-hidden">
+  <div class="confirm-card sellall-card">
+    <div class="sellall-title">一键出售</div>
+    <div class="sellall-desc">出售背包里<strong>未装备</strong>的白色 / 绿色装备，已装备的不会被卖掉。</div>
+    <label class="sellall-opt"><input type="checkbox" id="sellAllWhite" checked /><span>出售<em class="q1">白色</em>装备</span></label>
+    <label class="sellall-opt"><input type="checkbox" id="sellAllGreen" checked /><span>出售<em class="q2">绿色</em>装备</span></label>
+    <div class="sellall-gain" id="sellAllGain">—</div>
+    <div class="confirm-actions">
+      <button class="confirm-btn confirm-ok" id="sellAllConfirm" type="button">出售</button>
+      <button class="confirm-btn confirm-cancel" id="sellAllCancel" type="button">取消</button>
+    </div>
+  </div>
+</div>
+
 <div id="choiceModal" class="choice-modal is-hidden">
   <div class="choice-card">
     <button class="choice-close" id="choiceClose" aria-label="关闭">×</button>
@@ -501,7 +516,7 @@
 <div id="statTip" class="stat-tip"></div>
 <div id="toast" class="toast"></div>
 
-<script src="data.js?v=20261031z617"></script>
-<script src="script.js?v=20261031z617"></script>
+<script src="data.js?v=20261031z618"></script>
+<script src="script.js?v=20261031z618"></script>
 </body>
 </html>

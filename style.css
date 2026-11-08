@@ -4529,3 +4529,27 @@ body {
   background: linear-gradient(#e8cf98, #c9a865);
 }
 .redeem-msg { margin-top: 10px; min-height: 16px; font-size: 12px; color: #8fd49f; }
+/* ===== 一键出售 ===== */
+.bag-sellall { color: #e8cf98; border-color: rgba(232, 207, 152, .45); }
+.sellall-card { max-width: 380px; }
+.sellall-title { font-size: 17px; font-weight: 700; color: #e8cf98; margin-bottom: 6px; }
+.sellall-desc { font-size: 13px; line-height: 1.65; color: #9aa3b5; margin-bottom: 12px; }
+.sellall-desc strong { color: #e6ebf3; }
+.sellall-opt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: #14171d;
+  border: 1px solid #2c313c;
+  cursor: pointer;
+  font-size: 13px;
+  color: #c9d0dc;
+}
+.sellall-opt input { width: 16px; height: 16px; accent-color: #e8cf98; }
+.sellall-opt em { font-style: normal; font-weight: 700; }
+.sellall-opt .q1 { color: #cfd3da; }
+.sellall-opt .q2 { color: #63c46c; }
+.sellall-gain { margin: 10px 0 4px; font-size: 13px; color: #e8cf98; min-height: 18px; }
