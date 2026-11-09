@@ -1204,7 +1204,8 @@
   }
 
   function skillLevelOf(side, skill) {
-    return side === "player" ? skillLevel(String(skill.id)) : 5;
+    // 怪物固定按 2 级技能计算（原来 5 级）
+    return side === "player" ? skillLevel(String(skill.id)) : 2;
   }
 
   function skillEffect(side, skill) {
@@ -1215,8 +1216,8 @@
   function skillMpCost(side, skill) {
     if (side !== "player") return 0;
     const base = Math.max(0, toInt(skill.mp, 0));
-    // 魔法大师等：mpCost 百分比降低
-    const cut = buffSumPct("player", "mpCost");
+    // 魔法大师等：mpCost 百分比降低（buff + 被动 pctStats 都算）
+    const cut = buffSumPct("player", "mpCost") + (passiveSkillPct().mpCost || 0);
     return Math.max(0, Math.round(base * (1 - cut / 100)));
   }
 
@@ -1553,8 +1554,9 @@
       const lv = skillLevelOf(side, s);
       const eff = (s.levels && s.levels[lv - 1]) || null;
       if (!eff || !eff.immune) continue;
+      // chance 存的是百分比（0-100），这里按百分比掷骰
       const chance = Number(eff.chance) || 0;
-      if (Math.random() < chance) {
+      if (Math.random() * 100 < chance) {
         pushLog("skill", `${esc(actorLabel(side))}使用了<b class="q${s.quality}">${esc(s.name)}</b>，免疫了本次伤害`);
         return true;
       }
@@ -1636,6 +1638,12 @@
       if (eff.heal.mpBase) {
         state.player.mp = Math.min(effMaxMp(), state.player.mp + eff.heal.mpBase);
         parts.push(`回复了<b class="num">${fmtHpMp(eff.heal.mpBase)}</b>点法力`);
+      }
+      // 按百分比回复法力（灵魂屏障）
+      if (eff.heal.mpPct) {
+        const mpAmt = Math.max(1, Math.floor(effMaxMp() * eff.heal.mpPct / 100));
+        state.player.mp = Math.min(effMaxMp(), state.player.mp + mpAmt);
+        parts.push(`回复了<b class="num">${fmtHpMp(mpAmt)}</b>点法力`);
       }
     }
 
@@ -4835,7 +4843,17 @@
     { key: "blackmarket", name: "黑市", slogan: "只要有钱...没有买不到的东西" },
     { key: "alchemy", name: "炼金工房", slogan: "想试试自己的运气吗？" },
   ];
-  const SHOP_REFRESH_MS = 12 * 3600 * 1000;   // 铁匠铺 / 黑市 12 小时刷新一次
+  // 铁匠铺 / 黑市：固定每天 12:00 和 24:00（本地时间）刷新
+  const SHOP_REFRESH_HOURS = [12, 24];
+  function nextShopRefreshAt(now = Date.now()) {
+    const d = new Date(now);
+    const y = d.getFullYear();
+    const m = d.getMonth();
+    const day = d.getDate();
+    const noon = new Date(y, m, day, 12, 0, 0, 0).getTime();          // 今天 12:00
+    const midnight = new Date(y, m, day + 1, 0, 0, 0, 0).getTime();   // 明天 00:00（= 今天 24:00）
+    return now < noon ? noon : midnight;
+  }
   // 铁匠铺按品质的定价区间
   const BLACKSMITH_PRICE = {
     2: [2000, 4000],
@@ -4875,7 +4893,7 @@
         items.push({ id: it.id, price: lo + Math.floor(Math.random() * (hi - lo + 1)), quality: q });
       }
     }
-    return { next: now + SHOP_REFRESH_MS, items };
+    return { next: nextShopRefreshAt(now), items };
   }
 
   // 取当前库存；过期（或没有）就重新生成并写档。key: "blacksmith" / "blackmarket"
@@ -4883,7 +4901,12 @@
     const now = Date.now();
     state.shopStock = state.shopStock || {};
     const s = state.shopStock[key];
-    if (s && Array.isArray(s.items) && s.items.length && Number(s.next) > now) return s;
+    const target = nextShopRefreshAt(now);
+    // 只有「刷新点正好是 12:00 / 24:00」且还没到点时才复用；
+    // 旧规则生成的库存（从生成时 +N 小时）直接按新规则重刷一次
+    if (s && Array.isArray(s.items) && s.items.length && Number(s.next) > now && Number(s.next) === target) {
+      return s;
+    }
     state.shopStock[key] = rollFn(now);
     saveState();
     return state.shopStock[key];
@@ -5022,7 +5045,7 @@
       g.price = Math.max(1, Math.round(Number(ITEMS[g.id].value) || 0)) * priceMult(ITEMS[g.id], true);
     }
 
-    return { next: now + SHOP_REFRESH_MS, items };
+    return { next: nextShopRefreshAt(now), items };
   }
 
   function openShopPanel() {

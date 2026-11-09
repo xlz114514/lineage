@@ -1,5 +1,5 @@
 window.GAME_DATA = {
- "generatedAt": "2026-11-07",
+ "generatedAt": "2026-11-09",
  "monsters": [
   {
    "id": "865",
@@ -83075,7 +83075,7 @@ window.GAME_DATA = {
   {
    "id": "1",
    "name": "防御提升",
-   "desc": "被动\n增加（1/2/3/4/5）防御等级",
+   "desc": "被动\n增加（5/10/15/20/25）防御等级",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -83093,39 +83093,39 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "def": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 3
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 4
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "def": 5
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 10
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 15
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 20
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 25
       }
      }
     }
@@ -83134,7 +83134,7 @@ window.GAME_DATA = {
   {
    "id": "2",
    "name": "神秘提升",
-   "desc": "被动\n增加（1/2/3/4/5）智力",
+   "desc": "被动\n增加（3/6/9/12/15）智力",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -83152,22 +83152,6 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "int": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "int": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "int": 3
       }
      }
@@ -83176,7 +83160,7 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "int": 4
+       "int": 6
       }
      }
     },
@@ -83184,7 +83168,23 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "int": 5
+       "int": 9
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "int": 12
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "int": 15
       }
      }
     }
@@ -83193,7 +83193,7 @@ window.GAME_DATA = {
   {
    "id": "3",
    "name": "暗影之牙",
-   "desc": "被动\n增加（1/2/3/4/5）攻击力和命中",
+   "desc": "被动\n增加（3/6/9/12/15）攻击力和命中",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -83211,24 +83211,6 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "atk": 1,
-       "hit": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "atk": 2,
-       "hit": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "atk": 3,
        "hit": 3
       }
@@ -83238,8 +83220,8 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "atk": 4,
-       "hit": 4
+       "atk": 6,
+       "hit": 6
       }
      }
     },
@@ -83247,8 +83229,26 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "atk": 5,
-       "hit": 5
+       "atk": 9,
+       "hit": 9
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "atk": 12,
+       "hit": 12
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "atk": 15,
+       "hit": 15
       }
      }
     }
@@ -83257,7 +83257,7 @@ window.GAME_DATA = {
   {
    "id": "4",
    "name": "生命的祝福",
-   "desc": "回合开始时有5%概率回复自己（10+1*智力/20+1*智力/30+1*智力/40+1*智力/50+1*智力）生命值",
+   "desc": "回合开始时有15%概率回复自己（10+1*智力/20+1*智力/30+1*智力/40+1*智力/50+1*智力）生命值",
    "kind": "每N回合",
    "mp": 20,
    "interval": 1,
@@ -83276,42 +83276,42 @@ window.GAME_DATA = {
       "base": 10,
       "int": 1
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
       "base": 20,
       "int": 1
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
       "base": 30,
       "int": 1
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
       "base": 40,
       "int": 1
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
       "base": 50,
       "int": 1
      },
-     "chance": 5
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "5",
    "name": "紧急照护",
-   "desc": "生命值低于50%时，回复（200/250/300/350/400）生命值（仅限一次）\n* 可在昏迷/沉默状态下使用",
+   "desc": "生命值低于50%时，回复（500/750/1000/1250/1500）生命值（仅限一次）\n* 可在昏迷/沉默状态下使用",
    "kind": "生命低于",
    "mp": 50,
    "interval": 0,
@@ -83327,27 +83327,27 @@ window.GAME_DATA = {
    "levels": [
     {
      "heal": {
-      "base": 200
+      "base": 500
      }
     },
     {
      "heal": {
-      "base": 250
+      "base": 750
      }
     },
     {
      "heal": {
-      "base": 300
+      "base": 1000
      }
     },
     {
      "heal": {
-      "base": 350
+      "base": 1250
      }
     },
     {
      "heal": {
-      "base": 400
+      "base": 1500
      }
     }
    ]
@@ -83409,7 +83409,7 @@ window.GAME_DATA = {
   {
    "id": "7",
    "name": "神射手",
-   "desc": "攻击时（1%/2%/3%/4%/5%）概率造成双倍伤害",
+   "desc": "攻击时（3%/6%/9%/12%/15%）概率造成双倍伤害",
    "kind": "攻击时",
    "mp": 30,
    "interval": 0,
@@ -83424,31 +83424,31 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 1,
-     "damage": {
-      "mult": 2
-     }
-    },
-    {
-     "chance": 2,
-     "damage": {
-      "mult": 2
-     }
-    },
-    {
      "chance": 3,
      "damage": {
       "mult": 2
      }
     },
     {
-     "chance": 4,
+     "chance": 6,
      "damage": {
       "mult": 2
      }
     },
     {
-     "chance": 5,
+     "chance": 9,
+     "damage": {
+      "mult": 2
+     }
+    },
+    {
+     "chance": 12,
+     "damage": {
+      "mult": 2
+     }
+    },
+    {
+     "chance": 15,
      "damage": {
       "mult": 2
      }
@@ -83458,7 +83458,7 @@ window.GAME_DATA = {
   {
    "id": "8",
    "name": "破坏:屏障(新)",
-   "desc": "攻击时5%概率使敌人降低（5/10/15/20/25）防御等级，持续3回合",
+   "desc": "攻击时15%概率使敌人降低（10/20/30/40/50）防御等级，持续3回合",
    "kind": "攻击时",
    "mp": 30,
    "interval": 0,
@@ -83476,28 +83476,10 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 3,
       "stats": {
-       "def": -5
-      }
-     },
-     "chance": 5
-    },
-    {
-     "enemy": {
-      "dur": 3,
-      "stats": {
        "def": -10
       }
      },
-     "chance": 5
-    },
-    {
-     "enemy": {
-      "dur": 3,
-      "stats": {
-       "def": -15
-      }
-     },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "enemy": {
@@ -83506,23 +83488,41 @@ window.GAME_DATA = {
        "def": -20
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "enemy": {
       "dur": 3,
       "stats": {
-       "def": -25
+       "def": -30
       }
      },
-     "chance": 5
+     "chance": 15.0
+    },
+    {
+     "enemy": {
+      "dur": 3,
+      "stats": {
+       "def": -40
+      }
+     },
+     "chance": 15.0
+    },
+    {
+     "enemy": {
+      "dur": 3,
+      "stats": {
+       "def": -50
+      }
+     },
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "9",
    "name": "破坏:停止",
-   "desc": "攻击时（2%/4%/6%/8%/10%）概率使敌人沉默，持续2回合",
+   "desc": "攻击时（3%/6%/9%/12%/15%）概率使敌人沉默，持续2回合",
    "kind": "攻击时",
    "mp": 30,
    "interval": 0,
@@ -83537,14 +83537,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 2,
-     "status": {
-      "name": "沉默",
-      "dur": 2
-     }
-    },
-    {
-     "chance": 4,
+     "chance": 3,
      "status": {
       "name": "沉默",
       "dur": 2
@@ -83558,14 +83551,21 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 8,
+     "chance": 9,
      "status": {
       "name": "沉默",
       "dur": 2
      }
     },
     {
-     "chance": 10,
+     "chance": 12,
+     "status": {
+      "name": "沉默",
+      "dur": 2
+     }
+    },
+    {
+     "chance": 15,
      "status": {
       "name": "沉默",
       "dur": 2
@@ -83576,7 +83576,7 @@ window.GAME_DATA = {
   {
    "id": "10",
    "name": "充能射击",
-   "desc": "攻击时5%概率回复（5/10/15/20/25）法力值",
+   "desc": "攻击时15%概率回复（5/10/15/20/25）法力值",
    "kind": "攻击时",
    "mp": 0,
    "interval": 0,
@@ -83595,42 +83595,42 @@ window.GAME_DATA = {
       "mp": true,
       "base": 5
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
       "mp": true,
       "base": 10
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
       "mp": true,
       "base": 15
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
       "mp": true,
       "base": 20
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
       "mp": true,
       "base": 25
      },
-     "chance": 5
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "11",
    "name": "增幅防御:专家",
-   "desc": "被动\n增加（1/2/3/4/5）点防御等级和伤害减免",
+   "desc": "被动\n增加（3/6/9/12/15）点防御等级和伤害减免",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -83648,24 +83648,6 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "def": 1,
-       "dr": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 2,
-       "dr": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "def": 3,
        "dr": 3
       }
@@ -83675,8 +83657,8 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "def": 4,
-       "dr": 4
+       "def": 6,
+       "dr": 6
       }
      }
     },
@@ -83684,8 +83666,26 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "def": 5,
-       "dr": 5
+       "def": 9,
+       "dr": 9
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 12,
+       "dr": 12
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 15,
+       "dr": 15
       }
      }
     }
@@ -83694,7 +83694,7 @@ window.GAME_DATA = {
   {
    "id": "12",
    "name": "猛烈攻击",
-   "desc": "攻击时10%概率造成（100+10*智力/120+11*智力/140+12*智力/160+13*智力/180+14*智力） 点伤害，并增加自己20攻击力，持续2回合",
+   "desc": "攻击时12%概率造成（100+10*智力/120+11*智力/140+12*智力/160+13*智力/180+14*智力） 点伤害，并增加自己20攻击力，持续2回合",
    "kind": "攻击时",
    "mp": 25,
    "interval": 0,
@@ -83719,7 +83719,7 @@ window.GAME_DATA = {
       "base": 100,
       "int": 10
      },
-     "chance": 10
+     "chance": 12
     },
     {
      "self": {
@@ -83732,7 +83732,7 @@ window.GAME_DATA = {
       "base": 120,
       "int": 11
      },
-     "chance": 10
+     "chance": 12
     },
     {
      "self": {
@@ -83745,7 +83745,7 @@ window.GAME_DATA = {
       "base": 140,
       "int": 12
      },
-     "chance": 10
+     "chance": 12
     },
     {
      "self": {
@@ -83758,7 +83758,7 @@ window.GAME_DATA = {
       "base": 160,
       "int": 13
      },
-     "chance": 10
+     "chance": 12
     },
     {
      "self": {
@@ -83771,14 +83771,14 @@ window.GAME_DATA = {
       "base": 180,
       "int": 14
      },
-     "chance": 10
+     "chance": 12
     }
    ]
   },
   {
    "id": "13",
    "name": "净化",
-   "desc": "生命值低于20%时，回复（8%/11%/14%/17%/20%）生命值（仅限一次）",
+   "desc": "生命值低于30%时，回复（8%/11%/14%/17%/20%）生命值（仅限一次）",
    "kind": "生命低于",
    "mp": 100,
    "interval": 0,
@@ -83822,7 +83822,7 @@ window.GAME_DATA = {
   {
    "id": "14",
    "name": "增幅防御",
-   "desc": "被动\n增加（1/2/3/4/5）伤害减免",
+   "desc": "被动\n增加（3/6/9/12/15）伤害减免",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -83840,22 +83840,6 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "dr": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "dr": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "dr": 3
       }
      }
@@ -83864,7 +83848,7 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "dr": 4
+       "dr": 6
       }
      }
     },
@@ -83872,7 +83856,23 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "dr": 5
+       "dr": 9
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dr": 12
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dr": 15
       }
      }
     }
@@ -83935,7 +83935,7 @@ window.GAME_DATA = {
   {
    "id": "16",
    "name": "冲击之晕(专家)",
-   "desc": "攻击时有（0.5%/1%/1.5%/2%/2.5%）晕眩敌人，持续1回合，并降低敌人（5/10/15/20/25）防御等级，持续2回合",
+   "desc": "攻击时有（1%/1.5%/2%/2.5%/3%）晕眩敌人，持续1回合，并降低敌人（10/20/30/40/50）防御等级，持续2回合",
    "kind": "攻击时",
    "mp": 25,
    "interval": 0,
@@ -83949,19 +83949,6 @@ window.GAME_DATA = {
     "1767"
    ],
    "levels": [
-    {
-     "chance": 0.5,
-     "enemy": {
-      "dur": 2,
-      "stats": {
-       "def": -5
-      }
-     },
-     "status": {
-      "name": "晕眩",
-      "dur": 1
-     }
-    },
     {
      "chance": 1,
      "enemy": {
@@ -83980,7 +83967,7 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 2,
       "stats": {
-       "def": -15
+       "def": -20
       }
      },
      "status": {
@@ -83993,7 +83980,7 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 2,
       "stats": {
-       "def": -20
+       "def": -30
       }
      },
      "status": {
@@ -84006,7 +83993,20 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 2,
       "stats": {
-       "def": -25
+       "def": -40
+      }
+     },
+     "status": {
+      "name": "晕眩",
+      "dur": 1
+     }
+    },
+    {
+     "chance": 3,
+     "enemy": {
+      "dur": 2,
+      "stats": {
+       "def": -50
       }
      },
      "status": {
@@ -84019,7 +84019,7 @@ window.GAME_DATA = {
   {
    "id": "17",
    "name": "黑手",
-   "desc": "/用暗黑之力向对象施展强烈的恐怖诅咒./\n战斗开始时，降低敌人（5/10/15/20/25）防御等级，持续3回合",
+   "desc": "/用暗黑之力向对象施展强烈的恐怖诅咒./\n战斗开始时，降低敌人（10/20/30/40/50）防御等级，持续3回合",
    "kind": "战斗开始时",
    "mp": 15,
    "interval": 0,
@@ -84037,23 +84037,7 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 3,
       "stats": {
-       "def": -5
-      }
-     }
-    },
-    {
-     "enemy": {
-      "dur": 3,
-      "stats": {
        "def": -10
-      }
-     }
-    },
-    {
-     "enemy": {
-      "dur": 3,
-      "stats": {
-       "def": -15
       }
      }
     },
@@ -84069,7 +84053,23 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 3,
       "stats": {
-       "def": -25
+       "def": -30
+      }
+     }
+    },
+    {
+     "enemy": {
+      "dur": 3,
+      "stats": {
+       "def": -40
+      }
+     }
+    },
+    {
+     "enemy": {
+      "dur": 3,
+      "stats": {
+       "def": -50
       }
      }
     }
@@ -84078,7 +84078,7 @@ window.GAME_DATA = {
   {
    "id": "18",
    "name": "圣结界",
-   "desc": "/形成魔幻屏障/\n战斗开始时，使自己伤害减免提高（10/20/30/40/50），持续3回合",
+   "desc": "/形成魔幻屏障/\n战斗开始时，使自己伤害减免提高（20/30/40/50/60），持续3回合",
    "kind": "战斗开始时",
    "mp": 50,
    "interval": 0,
@@ -84092,14 +84092,6 @@ window.GAME_DATA = {
     "1791"
    ],
    "levels": [
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
-       "dr": 10
-      }
-     }
-    },
     {
      "self": {
       "dur": 3,
@@ -84131,13 +84123,21 @@ window.GAME_DATA = {
        "dr": 50
       }
      }
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "dr": 60
+      }
+     }
     }
    ]
   },
   {
    "id": "19",
    "name": "神圣迅猛(古代)",
-   "desc": "被动\n力量和敏捷提高（1/2/3/4/5）",
+   "desc": "被动\n力量和敏捷提高（2/4/6/8/10）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -84155,26 +84155,8 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "str": 1,
-       "dex": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "str": 2,
        "dex": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "str": 3,
-       "dex": 3
       }
      }
     },
@@ -84191,8 +84173,26 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "str": 5,
-       "dex": 5
+       "str": 6,
+       "dex": 6
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "str": 8,
+       "dex": 8
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "str": 10,
+       "dex": 10
       }
      }
     }
@@ -84201,7 +84201,7 @@ window.GAME_DATA = {
   {
    "id": "20",
    "name": "高级治愈术",
-   "desc": "回合开始时，回复（5/10/15/20/25）HP",
+   "desc": "回合开始时，回复（15/20/25/30/35）HP",
    "kind": "每N回合",
    "mp": 15,
    "interval": 1,
@@ -84217,16 +84217,6 @@ window.GAME_DATA = {
    "levels": [
     {
      "heal": {
-      "base": 5
-     }
-    },
-    {
-     "heal": {
-      "base": 10
-     }
-    },
-    {
-     "heal": {
       "base": 15
      }
     },
@@ -84239,13 +84229,23 @@ window.GAME_DATA = {
      "heal": {
       "base": 25
      }
+    },
+    {
+     "heal": {
+      "base": 30
+     }
+    },
+    {
+     "heal": {
+      "base": 35
+     }
     }
    ]
   },
   {
    "id": "21",
    "name": "疾病术",
-   "desc": "/向对象施放诅咒使其衰弱./\n攻击时，有10%概率使敌人攻击力降低（5/10/15/20/25）点，持续2回合",
+   "desc": "/向对象施放诅咒使其衰弱./\n攻击时，有15%概率使敌人攻击力降低（10/15/20/25/30）点，持续2回合",
    "kind": "攻击时",
    "mp": 10,
    "interval": 0,
@@ -84263,19 +84263,10 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 2,
       "stats": {
-       "atk": -5
-      }
-     },
-     "chance": 10
-    },
-    {
-     "enemy": {
-      "dur": 2,
-      "stats": {
        "atk": -10
       }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "enemy": {
@@ -84284,7 +84275,7 @@ window.GAME_DATA = {
        "atk": -15
       }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "enemy": {
@@ -84293,7 +84284,7 @@ window.GAME_DATA = {
        "atk": -20
       }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "enemy": {
@@ -84302,14 +84293,23 @@ window.GAME_DATA = {
        "atk": -25
       }
      },
-     "chance": 10
+     "chance": 15.0
+    },
+    {
+     "enemy": {
+      "dur": 2,
+      "stats": {
+       "atk": -30
+      }
+     },
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "22",
    "name": "勇猛生命",
-   "desc": "被动\nHP最大值增加（50/75/100/125/150）",
+   "desc": "被动\nHP最大值增加（100/200/300/400/500）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -84327,22 +84327,6 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "hp": 50
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "hp": 75
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "hp": 100
       }
      }
@@ -84351,7 +84335,7 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "hp": 125
+       "hp": 200
       }
      }
     },
@@ -84359,7 +84343,23 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "hp": 150
+       "hp": 300
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "hp": 400
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "hp": 500
       }
      }
     }
@@ -84368,7 +84368,7 @@ window.GAME_DATA = {
   {
    "id": "23",
    "name": "勇猛爆击",
-   "desc": "被动\n暴击率增加（1%/2%/3%/4%/5%）",
+   "desc": "被动\n暴击率增加（3%/4%/5%/6%/7%）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -84385,7 +84385,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 1.0
+       "crit": 3
       },
       "dur": -1,
       "stats": {}
@@ -84394,7 +84394,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 2.0
+       "crit": 4
       },
       "dur": -1,
       "stats": {}
@@ -84403,7 +84403,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 3.0
+       "crit": 5
       },
       "dur": -1,
       "stats": {}
@@ -84412,7 +84412,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 4.0
+       "crit": 6
       },
       "dur": -1,
       "stats": {}
@@ -84421,7 +84421,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 5.0
+       "crit": 7
       },
       "dur": -1,
       "stats": {}
@@ -84589,7 +84589,7 @@ window.GAME_DATA = {
   {
    "id": "27",
    "name": "灵魂升华",
-   "desc": "被动\n增加（1/2/3/4/5）点精神",
+   "desc": "被动\n增加（3/4/5/6/7）点精神",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -84603,22 +84603,6 @@ window.GAME_DATA = {
     "1925"
    ],
    "levels": [
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "wis": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "wis": 2
-      }
-     }
-    },
     {
      "self": {
       "dur": -1,
@@ -84640,6 +84624,22 @@ window.GAME_DATA = {
       "dur": -1,
       "stats": {
        "wis": 5
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "wis": 6
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "wis": 7
       }
      }
     }
@@ -84702,7 +84702,7 @@ window.GAME_DATA = {
   {
    "id": "29",
    "name": "附魔强化",
-   "desc": "被动\n增加（1点智力/1点智力和敏捷/1点智力，敏捷和力量/1点智力，敏捷，力量和精神/1点智力，敏捷，力量，精神和体质）",
+   "desc": "被动\n增加（2点智力/2点智力和敏捷/2点智力，敏捷和力量/2点智力，敏捷，力量和精神/2点智力，敏捷，力量，精神和体质）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -84720,7 +84720,7 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "int": 1
+       "int": 2
       }
      }
     },
@@ -84728,8 +84728,8 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "int": 1,
-       "dex": 1
+       "int": 2,
+       "dex": 2
       }
      }
     },
@@ -84737,9 +84737,9 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "int": 1,
-       "dex": 1,
-       "str": 1
+       "int": 2,
+       "dex": 2,
+       "str": 2
       }
      }
     },
@@ -84747,10 +84747,10 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "int": 1,
-       "dex": 1,
-       "str": 1,
-       "wis": 1
+       "int": 2,
+       "dex": 2,
+       "str": 2,
+       "wis": 2
       }
      }
     },
@@ -84758,11 +84758,11 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "int": 1,
-       "dex": 1,
-       "str": 1,
-       "wis": 1,
-       "con": 1
+       "int": 2,
+       "dex": 2,
+       "str": 2,
+       "wis": 2,
+       "con": 2
       }
      }
     }
@@ -84869,7 +84869,7 @@ window.GAME_DATA = {
   {
    "id": "32",
    "name": "加速术",
-   "desc": "被动\n闪避等级增加（1/2/3/4/5）",
+   "desc": "被动\n闪避等级增加（2/4/6/8/10）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -84887,23 +84887,7 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "dodge": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "dodge": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "dodge": 3
       }
      }
     },
@@ -84919,7 +84903,23 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "dodge": 5
+       "dodge": 6
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dodge": 8
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dodge": 10
       }
      }
     }
@@ -84928,7 +84928,7 @@ window.GAME_DATA = {
   {
    "id": "33",
    "name": "神圣疾速",
-   "desc": "被动\n敏捷增加（1/2/3/4/5）",
+   "desc": "被动\n敏捷增加（3/4/5/6/7）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -84942,22 +84942,6 @@ window.GAME_DATA = {
     "1946"
    ],
    "levels": [
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "dex": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "dex": 2
-      }
-     }
-    },
     {
      "self": {
       "dur": -1,
@@ -84981,13 +84965,29 @@ window.GAME_DATA = {
        "dex": 5
       }
      }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dex": 6
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dex": 7
+      }
+     }
     }
    ]
   },
   {
    "id": "34",
    "name": "体力回复术",
-   "desc": "受到攻击时有5%概率回复自己（10+1*智力/20+2*智力/30+3*智力/40+4*智力/50+5*智力）生命值",
+   "desc": "受到攻击时有15%概率回复自己（10+1*智力/20+2*智力/30+3*智力/40+4*智力/50+5*智力）生命值",
    "kind": "受击时",
    "mp": 45,
    "interval": 0,
@@ -85006,42 +85006,42 @@ window.GAME_DATA = {
       "base": 10,
       "int": 1
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
       "base": 20,
       "int": 2
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
       "base": 30,
       "int": 3
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
       "base": 40,
       "int": 4
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
       "base": 50,
       "int": 5
      },
-     "chance": 5
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "35",
    "name": "幽冥防护",
-   "desc": "被动\n防御等级和魔抗提高（2/4/6/8/10）",
+   "desc": "被动\n防御等级和魔抗提高（5/10/15/20/25）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -85059,35 +85059,8 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "def": 2,
-       "mr": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 4,
-       "mr": 4
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 6,
-       "mr": 6
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 8,
-       "mr": 8
+       "def": 5,
+       "mr": 5
       }
      }
     },
@@ -85099,13 +85072,40 @@ window.GAME_DATA = {
        "mr": 10
       }
      }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 15,
+       "mr": 15
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 20,
+       "mr": 20
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 25,
+       "mr": 25
+      }
+     }
     }
    ]
   },
   {
    "id": "36",
    "name": "虚空力场",
-   "desc": "/使用暗黑力量启动『虚空的结界』./\n受到攻击时5%概率使伤害减免提高（5/10/15/20/25），持续3回合",
+   "desc": "/使用暗黑力量启动『虚空的结界』./\n受到攻击时15%概率使伤害减免提高（5/10/15/20/25），持续3回合",
    "kind": "受击时",
    "mp": 50,
    "interval": 0,
@@ -85126,7 +85126,7 @@ window.GAME_DATA = {
        "dr": 5
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "self": {
@@ -85135,7 +85135,7 @@ window.GAME_DATA = {
        "dr": 10
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "self": {
@@ -85144,7 +85144,7 @@ window.GAME_DATA = {
        "dr": 15
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "self": {
@@ -85153,7 +85153,7 @@ window.GAME_DATA = {
        "dr": 20
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "self": {
@@ -85162,14 +85162,14 @@ window.GAME_DATA = {
        "dr": 25
       }
      },
-     "chance": 5
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "37",
    "name": "暗黑之晕",
-   "desc": "/用暗黑之力让对方昏迷./\n攻击时有（0.3%/0.6%/0.9%/1.2%/1.5%）晕眩敌人，持续1回合，并降低敌人（5/10/15/20/25）魔抗，持续2回合",
+   "desc": "/用暗黑之力让对方昏迷./\n攻击时有（0.3%/0.6%/0.9%/1.2%/1.5%）晕眩敌人，持续1回合，并降低敌人（10/20/30/40/50）魔抗，持续2回合",
    "kind": "攻击时",
    "mp": 15,
    "interval": 0,
@@ -85188,7 +85188,7 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 2,
       "stats": {
-       "mr": -5
+       "mr": -10
       }
      },
      "status": {
@@ -85201,7 +85201,7 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 2,
       "stats": {
-       "mr": -10
+       "mr": -20
       }
      },
      "status": {
@@ -85214,7 +85214,7 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 2,
       "stats": {
-       "mr": -15
+       "mr": -30
       }
      },
      "status": {
@@ -85227,7 +85227,7 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 2,
       "stats": {
-       "mr": -20
+       "mr": -40
       }
      },
      "status": {
@@ -85240,7 +85240,7 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 2,
       "stats": {
-       "mr": -25
+       "mr": -50
       }
      },
      "status": {
@@ -85253,7 +85253,7 @@ window.GAME_DATA = {
   {
    "id": "38",
    "name": "黑暗之镜",
-   "desc": "受到攻击时有5%概率增加自己（5/10/15/20/25）魔抗，持续3回合",
+   "desc": "受到攻击时有15%概率增加自己（10/20/30/40/50）魔抗，持续3回合",
    "kind": "受击时",
    "mp": 15,
    "interval": 0,
@@ -85271,28 +85271,10 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "mr": 5
-      }
-     },
-     "chance": 5
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
        "mr": 10
       }
      },
-     "chance": 5
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
-       "mr": 15
-      }
-     },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "self": {
@@ -85301,23 +85283,41 @@ window.GAME_DATA = {
        "mr": 20
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "self": {
       "dur": 3,
       "stats": {
-       "mr": 25
+       "mr": 30
       }
      },
-     "chance": 5
+     "chance": 15.0
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "mr": 40
+      }
+     },
+     "chance": 15.0
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "mr": 50
+      }
+     },
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "39",
    "name": "神圣混乱",
-   "desc": "攻击时有5%概率使敌人命中降低（1/2/3/4/5），持续2回合",
+   "desc": "攻击时有15%概率使敌人命中降低（3/6/9/12/15），持续2回合",
    "kind": "攻击时",
    "mp": 15,
    "interval": 0,
@@ -85335,53 +85335,53 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 2,
       "stats": {
-       "hit": -1
-      }
-     },
-     "chance": 5
-    },
-    {
-     "enemy": {
-      "dur": 2,
-      "stats": {
-       "hit": -2
-      }
-     },
-     "chance": 5
-    },
-    {
-     "enemy": {
-      "dur": 2,
-      "stats": {
        "hit": -3
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "enemy": {
       "dur": 2,
       "stats": {
-       "hit": -4
+       "hit": -6
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "enemy": {
       "dur": 2,
       "stats": {
-       "hit": -5
+       "hit": -9
       }
      },
-     "chance": 5
+     "chance": 15.0
+    },
+    {
+     "enemy": {
+      "dur": 2,
+      "stats": {
+       "hit": -12
+      }
+     },
+     "chance": 15.0
+    },
+    {
+     "enemy": {
+      "dur": 2,
+      "stats": {
+       "hit": -15
+      }
+     },
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "40",
    "name": "锁链闪光(神秘)",
-   "desc": "回合开始时10%概率造成（100+5*智力/120+6*智力/140+7*智力/160+8*智力/180+9*智力） 点伤害，并提高自己5%暴击率，持续2回合",
+   "desc": "回合开始时15%概率造成（100+5*智力/120+6*智力/140+7*智力/160+8*智力/180+9*智力） 点伤害，并提高自己5%暴击率，持续2回合",
    "kind": "每N回合",
    "mp": 35,
    "interval": 1,
@@ -85406,7 +85406,7 @@ window.GAME_DATA = {
       "base": 100,
       "int": 5
      },
-     "chance": 10
+     "chance": 15
     },
     {
      "self": {
@@ -85419,7 +85419,7 @@ window.GAME_DATA = {
       "base": 120,
       "int": 6
      },
-     "chance": 10
+     "chance": 15
     },
     {
      "self": {
@@ -85432,7 +85432,7 @@ window.GAME_DATA = {
       "base": 140,
       "int": 7
      },
-     "chance": 10
+     "chance": 15
     },
     {
      "self": {
@@ -85445,7 +85445,7 @@ window.GAME_DATA = {
       "base": 160,
       "int": 8
      },
-     "chance": 10
+     "chance": 15
     },
     {
      "self": {
@@ -85458,14 +85458,14 @@ window.GAME_DATA = {
       "base": 180,
       "int": 9
      },
-     "chance": 10
+     "chance": 15
     }
    ]
   },
   {
    "id": "41",
    "name": "万磁之手",
-   "desc": "被动\n幸运增加（1/1/2/2/3）",
+   "desc": "被动\n幸运增加（1/2/3/4/5）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -85524,7 +85524,7 @@ window.GAME_DATA = {
   {
    "id": "42",
    "name": "烈炎武器",
-   "desc": "被动\n攻击力和暴击率提高（1/2/3/4/5）",
+   "desc": "被动\n攻击力和暴击率提高（3/4/5/6/7）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -85538,24 +85538,6 @@ window.GAME_DATA = {
     "1843"
    ],
    "levels": [
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "atk": 1,
-       "crit": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "atk": 2,
-       "crit": 2
-      }
-     }
-    },
     {
      "self": {
       "dur": -1,
@@ -85580,6 +85562,24 @@ window.GAME_DATA = {
       "stats": {
        "atk": 5,
        "crit": 5
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "atk": 6,
+       "crit": 6
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "atk": 7,
+       "crit": 7
       }
      }
     }
@@ -85652,7 +85652,7 @@ window.GAME_DATA = {
   {
    "id": "44",
    "name": "大地束缚",
-   "desc": "每3回合有（2%/4%/6%/8%/10%）晕眩敌人，持续1回合，并降低敌人（5/10/15/20/25）攻击力，持续3回合",
+   "desc": "每3回合有（3%/6%/9%/12%/15%）晕眩敌人，持续1回合，并降低敌人（10/20/30/40/50）攻击力，持续3回合",
    "kind": "每N回合",
    "mp": 35,
    "interval": 3,
@@ -85667,20 +85667,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 2,
-     "enemy": {
-      "dur": 3,
-      "stats": {
-       "atk": -5
-      }
-     },
-     "status": {
-      "name": "晕眩",
-      "dur": 1
-     }
-    },
-    {
-     "chance": 4,
+     "chance": 3,
      "enemy": {
       "dur": 3,
       "stats": {
@@ -85697,19 +85684,6 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 3,
       "stats": {
-       "atk": -15
-      }
-     },
-     "status": {
-      "name": "晕眩",
-      "dur": 1
-     }
-    },
-    {
-     "chance": 8,
-     "enemy": {
-      "dur": 3,
-      "stats": {
        "atk": -20
       }
      },
@@ -85719,11 +85693,37 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 10,
+     "chance": 9,
      "enemy": {
       "dur": 3,
       "stats": {
-       "atk": -25
+       "atk": -30
+      }
+     },
+     "status": {
+      "name": "晕眩",
+      "dur": 1
+     }
+    },
+    {
+     "chance": 12,
+     "enemy": {
+      "dur": 3,
+      "stats": {
+       "atk": -40
+      }
+     },
+     "status": {
+      "name": "晕眩",
+      "dur": 1
+     }
+    },
+    {
+     "chance": 15,
+     "enemy": {
+      "dur": 3,
+      "stats": {
+       "atk": -50
       }
      },
      "status": {
@@ -85736,7 +85736,7 @@ window.GAME_DATA = {
   {
    "id": "45",
    "name": "封印禁地",
-   "desc": "战斗开始时，（20%/40%/60%/80%/100%）概率沉默敌人，持续2回合",
+   "desc": "战斗开始时，（60%/70%/80%/90%/100%）概率沉默敌人，持续2回合",
    "kind": "战斗开始时",
    "mp": 40,
    "interval": 0,
@@ -85751,20 +85751,6 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 20,
-     "status": {
-      "name": "沉默",
-      "dur": 2
-     }
-    },
-    {
-     "chance": 40,
-     "status": {
-      "name": "沉默",
-      "dur": 2
-     }
-    },
-    {
      "chance": 60,
      "status": {
       "name": "沉默",
@@ -85772,7 +85758,21 @@ window.GAME_DATA = {
      }
     },
     {
+     "chance": 70,
+     "status": {
+      "name": "沉默",
+      "dur": 2
+     }
+    },
+    {
      "chance": 80,
+     "status": {
+      "name": "沉默",
+      "dur": 2
+     }
+    },
+    {
+     "chance": 90,
      "status": {
       "name": "沉默",
       "dur": 2
@@ -85790,7 +85790,7 @@ window.GAME_DATA = {
   {
    "id": "46",
    "name": "元素治愈",
-   "desc": "/以精灵之力回复体力和魔力,提升昏迷抗性一定时间./\n回合开始时，有5%概率回复（5/10/15/20/25）生命值和法力值，并提高（5/10/15/20/25）魔抗，持续2回合",
+   "desc": "/以精灵之力回复体力和魔力,提升昏迷抗性一定时间./\n回合开始时，有15%概率回复（15/20/25/30/35）生命值和法力值，并提高（15/20/25/30/35）魔抗，持续2回合",
    "kind": "每N回合",
    "mp": 50,
    "interval": 1,
@@ -85806,32 +85806,6 @@ window.GAME_DATA = {
    "levels": [
     {
      "heal": {
-      "base": 5,
-      "mp": true
-     },
-     "self": {
-      "dur": 2,
-      "stats": {
-       "mr": 5
-      }
-     },
-     "chance": 5
-    },
-    {
-     "heal": {
-      "base": 10,
-      "mp": true
-     },
-     "self": {
-      "dur": 2,
-      "stats": {
-       "mr": 10
-      }
-     },
-     "chance": 5
-    },
-    {
-     "heal": {
       "base": 15,
       "mp": true
      },
@@ -85841,7 +85815,7 @@ window.GAME_DATA = {
        "mr": 15
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
@@ -85854,7 +85828,7 @@ window.GAME_DATA = {
        "mr": 20
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
@@ -85867,7 +85841,33 @@ window.GAME_DATA = {
        "mr": 25
       }
      },
-     "chance": 5
+     "chance": 15.0
+    },
+    {
+     "heal": {
+      "base": 30,
+      "mp": true
+     },
+     "self": {
+      "dur": 2,
+      "stats": {
+       "mr": 30
+      }
+     },
+     "chance": 15.0
+    },
+    {
+     "heal": {
+      "base": 35,
+      "mp": true
+     },
+     "self": {
+      "dur": 2,
+      "stats": {
+       "mr": 35
+      }
+     },
+     "chance": 15.0
     }
    ]
   },
@@ -85928,7 +85928,7 @@ window.GAME_DATA = {
   {
    "id": "48",
    "name": "污浊之水",
-   "desc": "战斗开始时，敌人的HP回复下降（2/4/6/8/10）点",
+   "desc": "战斗开始时，敌人的HP回复下降（5/10/15/20/25）点",
    "kind": "战斗开始时",
    "mp": 35,
    "interval": 0,
@@ -85946,31 +85946,7 @@ window.GAME_DATA = {
      "enemy": {
       "dur": -1,
       "stats": {
-       "hpRegen": -2
-      }
-     }
-    },
-    {
-     "enemy": {
-      "dur": -1,
-      "stats": {
-       "hpRegen": -4
-      }
-     }
-    },
-    {
-     "enemy": {
-      "dur": -1,
-      "stats": {
-       "hpRegen": -6
-      }
-     }
-    },
-    {
-     "enemy": {
-      "dur": -1,
-      "stats": {
-       "hpRegen": -8
+       "hpRegen": -5
       }
      }
     },
@@ -85981,13 +85957,37 @@ window.GAME_DATA = {
        "hpRegen": -10
       }
      }
+    },
+    {
+     "enemy": {
+      "dur": -1,
+      "stats": {
+       "hpRegen": -15
+      }
+     }
+    },
+    {
+     "enemy": {
+      "dur": -1,
+      "stats": {
+       "hpRegen": -20
+      }
+     }
+    },
+    {
+     "enemy": {
+      "dur": -1,
+      "stats": {
+       "hpRegen": -25
+      }
+     }
     }
    ]
   },
   {
    "id": "49",
    "name": "魂体转换",
-   "desc": "被动\nHP最大值减少（20/30/40/50/60），MP最大值增加（20/30/40/50/60）",
+   "desc": "被动\nHP最大值减少（50/75/100/125/150），MP最大值增加（50/75/100/125/150）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -86005,33 +86005,6 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "hp": -20,
-       "mp": 20
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "hp": -30,
-       "mp": 30
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "hp": -40,
-       "mp": 40
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "hp": -50,
        "mp": 50
       }
@@ -86041,8 +86014,35 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "hp": -60,
-       "mp": 60
+       "hp": -75,
+       "mp": 75
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "hp": -100,
+       "mp": 100
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "hp": -125,
+       "mp": 125
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "hp": -150,
+       "mp": 150
       }
      }
     }
@@ -86105,7 +86105,7 @@ window.GAME_DATA = {
   {
    "id": "51",
    "name": "暴风神射",
-   "desc": "被动\n暴击率和命中增加（1/2/3/4/5）",
+   "desc": "被动\n暴击率和命中增加（3/4/5/6/7）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -86119,24 +86119,6 @@ window.GAME_DATA = {
     "2047"
    ],
    "levels": [
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "crit": 1,
-       "hit": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "crit": 2,
-       "hit": 2
-      }
-     }
-    },
     {
      "self": {
       "dur": -1,
@@ -86163,13 +86145,31 @@ window.GAME_DATA = {
        "hit": 5
       }
      }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "crit": 6,
+       "hit": 6
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "crit": 7,
+       "hit": 7
+      }
+     }
     }
    ]
   },
   {
    "id": "52",
    "name": "钢铁防护",
-   "desc": "被动\n防御等级和伤害减免增加（1/1/2/2/3）",
+   "desc": "被动\n防御等级和伤害减免增加（3/6/9/12/15）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -86187,44 +86187,44 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "def": 1,
-       "dr": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 1,
-       "dr": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 2,
-       "dr": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 2,
-       "dr": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "def": 3,
        "dr": 3
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 6,
+       "dr": 6
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 9,
+       "dr": 9
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 12,
+       "dr": 12
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 15,
+       "dr": 15
       }
      }
     }
@@ -86233,7 +86233,7 @@ window.GAME_DATA = {
   {
    "id": "53",
    "name": "海洋之箭",
-   "desc": "/借助水之精灵温迪妮的力量发射治愈之箭./\n攻击时有10%概率回复（5+1*智力/10+1*智力/15+1*智力/20+1*智力/25+1*智力）点生命",
+   "desc": "/借助水之精灵温迪妮的力量发射治愈之箭./\n攻击时有20%概率回复（5+1*智力/10+1*智力/15+1*智力/20+1*智力/25+1*智力）点生命",
    "kind": "攻击时",
    "mp": 15,
    "interval": 0,
@@ -86252,42 +86252,42 @@ window.GAME_DATA = {
       "base": 5,
       "int": 1
      },
-     "chance": 10
+     "chance": 20.0
     },
     {
      "heal": {
       "base": 10,
       "int": 1
      },
-     "chance": 10
+     "chance": 20.0
     },
     {
      "heal": {
       "base": 15,
       "int": 1
      },
-     "chance": 10
+     "chance": 20.0
     },
     {
      "heal": {
       "base": 20,
       "int": 1
      },
-     "chance": 10
+     "chance": 20.0
     },
     {
      "heal": {
       "base": 25,
       "int": 1
      },
-     "chance": 10
+     "chance": 20.0
     }
    ]
   },
   {
    "id": "54",
    "name": "水牢",
-   "desc": "每3回合有（3%/6%/9%/12%/15%）沉默敌人，持续2回合",
+   "desc": "每3回合有（5%/10%/15%/20%/25%）沉默敌人，持续2回合",
    "kind": "每N回合",
    "mp": 20,
    "interval": 3,
@@ -86302,28 +86302,14 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 3,
+     "chance": 5,
      "status": {
       "name": "沉默",
       "dur": 2
      }
     },
     {
-     "chance": 6,
-     "status": {
-      "name": "沉默",
-      "dur": 2
-     }
-    },
-    {
-     "chance": 9,
-     "status": {
-      "name": "沉默",
-      "dur": 2
-     }
-    },
-    {
-     "chance": 12,
+     "chance": 10,
      "status": {
       "name": "沉默",
       "dur": 2
@@ -86335,13 +86321,27 @@ window.GAME_DATA = {
       "name": "沉默",
       "dur": 2
      }
+    },
+    {
+     "chance": 20,
+     "status": {
+      "name": "沉默",
+      "dur": 2
+     }
+    },
+    {
+     "chance": 25,
+     "status": {
+      "name": "沉默",
+      "dur": 2
+     }
     }
    ]
   },
   {
    "id": "55",
    "name": "精灵疾速",
-   "desc": "被动\n敏捷和力量增加（1/1/2/2/3）",
+   "desc": "被动\n敏捷和力量增加（3/4/5/6/7）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -86359,44 +86359,44 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "str": 1,
-       "dex": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "str": 1,
-       "dex": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "str": 2,
-       "dex": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "str": 2,
-       "dex": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "str": 3,
        "dex": 3
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "str": 4,
+       "dex": 4
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "str": 5,
+       "dex": 5
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "str": 6,
+       "dex": 6
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "str": 7,
+       "dex": 7
       }
      }
     }
@@ -86405,7 +86405,7 @@ window.GAME_DATA = {
   {
    "id": "56",
    "name": "精灵重力(精神)",
-   "desc": "被动\nHP回复和MP回复增加（1/1/2/2/3）",
+   "desc": "被动\nHP回复和MP回复增加（3/6/9/12/15）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -86423,44 +86423,44 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "hpRegen": 1,
-       "mpRegen": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "hpRegen": 1,
-       "mpRegen": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "hpRegen": 2,
-       "mpRegen": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "hpRegen": 2,
-       "mpRegen": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "hpRegen": 3,
        "mpRegen": 3
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "hpRegen": 6,
+       "mpRegen": 6
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "hpRegen": 9,
+       "mpRegen": 9
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "hpRegen": 12,
+       "mpRegen": 12
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "hpRegen": 15,
+       "mpRegen": 15
       }
      }
     }
@@ -86469,7 +86469,7 @@ window.GAME_DATA = {
   {
    "id": "57",
    "name": "魔法去除",
-   "desc": "攻击时15%概率降低敌人（5/10/15/20/25）魔抗，持续3回合",
+   "desc": "攻击时15%概率降低敌人（10/20/30/40/50）魔抗，持续3回合",
    "kind": "攻击时",
    "mp": 30,
    "interval": 0,
@@ -86487,25 +86487,7 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 3,
       "stats": {
-       "mr": -5
-      }
-     },
-     "chance": 15
-    },
-    {
-     "enemy": {
-      "dur": 3,
-      "stats": {
        "mr": -10
-      }
-     },
-     "chance": 15
-    },
-    {
-     "enemy": {
-      "dur": 3,
-      "stats": {
-       "mr": -15
       }
      },
      "chance": 15
@@ -86523,7 +86505,25 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 3,
       "stats": {
-       "mr": -25
+       "mr": -30
+      }
+     },
+     "chance": 15
+    },
+    {
+     "enemy": {
+      "dur": 3,
+      "stats": {
+       "mr": -40
+      }
+     },
+     "chance": 15
+    },
+    {
+     "enemy": {
+      "dur": 3,
+      "stats": {
+       "mr": -50
       }
      },
      "chance": 15
@@ -86533,7 +86533,7 @@ window.GAME_DATA = {
   {
    "id": "58",
    "name": "火之防护",
-   "desc": "受到伤害时，有15%概率增加（3/6/9/12/15）防御等级，持续3回合",
+   "desc": "受到伤害时，有15%概率增加（10/20/30/40/50）防御等级，持续3回合",
    "kind": "受击时",
    "mp": 25,
    "interval": 0,
@@ -86551,7 +86551,7 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "def": 3
+       "def": 10
       }
      },
      "chance": 15
@@ -86560,7 +86560,7 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "def": 6
+       "def": 20
       }
      },
      "chance": 15
@@ -86569,7 +86569,7 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "def": 9
+       "def": 30
       }
      },
      "chance": 15
@@ -86578,7 +86578,7 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "def": 12
+       "def": 40
       }
      },
      "chance": 15
@@ -86587,7 +86587,7 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "def": 15
+       "def": 50
       }
      },
      "chance": 15
@@ -86597,7 +86597,7 @@ window.GAME_DATA = {
   {
    "id": "59",
    "name": "燃烧斗志:命运",
-   "desc": "攻击时有10%概率增加（5/10/15/20/25）攻击力和（1/2/3/4/5）暴击率，持续3回合",
+   "desc": "攻击时有15%概率增加（10/20/30/40/50）攻击力和（3/4/5/6/7）暴击率，持续3回合",
    "kind": "攻击时",
    "mp": 25,
    "interval": 0,
@@ -86615,31 +86615,11 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "atk": 5,
-       "crit": 1
-      }
-     },
-     "chance": 10
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
        "atk": 10,
-       "crit": 2
-      }
-     },
-     "chance": 10
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
-       "atk": 15,
        "crit": 3
       }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "self": {
@@ -86649,24 +86629,44 @@ window.GAME_DATA = {
        "crit": 4
       }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "self": {
       "dur": 3,
       "stats": {
-       "atk": 25,
+       "atk": 30,
        "crit": 5
       }
      },
-     "chance": 10
+     "chance": 15.0
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "atk": 40,
+       "crit": 6
+      }
+     },
+     "chance": 15.0
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "atk": 50,
+       "crit": 7
+      }
+     },
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "60",
    "name": "暗影恢复",
-   "desc": "/以黑精灵之力,恢复施术者的体力,并暂时提升回避力/\n受到攻击时有5%概率回复（10+1*智力/15+1.5*智力/20+2*智力/25+2.5*智力/30+3*智力）点生命值，并提高（1/2/3/4/5）闪避等级，持续3回合",
+   "desc": "/以黑精灵之力,恢复施术者的体力,并暂时提升回避力/\n受到攻击时有15%概率回复（10+1*智力/15+1.5*智力/20+2*智力/25+2.5*智力/30+3*智力）点生命值，并提高（3/6/9/12/15）闪避等级，持续3回合",
    "kind": "受击时",
    "mp": 50,
    "interval": 0,
@@ -86688,10 +86688,10 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "dodge": 1
+       "dodge": 3
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
@@ -86701,10 +86701,10 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "dodge": 2
+       "dodge": 6
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
@@ -86714,10 +86714,10 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "dodge": 3
+       "dodge": 9
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
@@ -86727,10 +86727,10 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "dodge": 4
+       "dodge": 12
       }
      },
-     "chance": 5
+     "chance": 15.0
     },
     {
      "heal": {
@@ -86740,17 +86740,17 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "dodge": 5
+       "dodge": 15
       }
      },
-     "chance": 5
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "61",
    "name": "暗影加速",
-   "desc": "被动\n敏捷和智力增加（1/1/2/2/3）",
+   "desc": "被动\n敏捷和智力增加（3/4/5/6/7）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -86768,44 +86768,44 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "dex": 1,
-       "int": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "dex": 1,
-       "int": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "dex": 2,
-       "int": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "dex": 2,
-       "int": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "dex": 3,
        "int": 3
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dex": 4,
+       "int": 4
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dex": 5,
+       "int": 5
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dex": 6,
+       "int": 6
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dex": 7,
+       "int": 7
       }
      }
     }
@@ -86814,7 +86814,7 @@ window.GAME_DATA = {
   {
    "id": "62",
    "name": "双重打击",
-   "desc": "/依照指定的几率让施术者装备的武器套用2倍伤害的效果./\n攻击时（0.5%/1%/1.5%/2%/2.5%）概率造成双倍伤害",
+   "desc": "/依照指定的几率让施术者装备的武器套用2倍伤害的效果./\n攻击时（1%/2%/3%/4%/5%）概率造成双倍伤害",
    "kind": "攻击时",
    "mp": 30,
    "interval": 0,
@@ -86829,19 +86829,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 0.5,
-     "damage": {
-      "mult": 2
-     }
-    },
-    {
      "chance": 1,
-     "damage": {
-      "mult": 2
-     }
-    },
-    {
-     "chance": 1.5,
      "damage": {
       "mult": 2
      }
@@ -86853,7 +86841,19 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 2.5,
+     "chance": 3,
+     "damage": {
+      "mult": 2
+     }
+    },
+    {
+     "chance": 4,
+     "damage": {
+      "mult": 2
+     }
+    },
+    {
+     "chance": 5,
      "damage": {
       "mult": 2
      }
@@ -86863,7 +86863,7 @@ window.GAME_DATA = {
   {
    "id": "63",
    "name": "燃烧斗志",
-   "desc": "攻击时有10%概率增加（5/10/15/20/25）攻击力，持续3回合",
+   "desc": "攻击时有15%概率增加（10/20/30/40/50）攻击力，持续3回合",
    "kind": "攻击时",
    "mp": 20,
    "interval": 0,
@@ -86881,28 +86881,10 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "atk": 5
-      }
-     },
-     "chance": 10
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
        "atk": 10
       }
      },
-     "chance": 10
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
-       "atk": 15
-      }
-     },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "self": {
@@ -86911,23 +86893,41 @@ window.GAME_DATA = {
        "atk": 20
       }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "self": {
       "dur": 3,
       "stats": {
-       "atk": 25
+       "atk": 30
       }
      },
-     "chance": 10
+     "chance": 15.0
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "atk": 40
+      }
+     },
+     "chance": 15.0
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "atk": 50
+      }
+     },
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "64",
    "name": "暗黑盲咒",
-   "desc": "攻击时，有10%概率使敌人命中率降低（1/2/3/4/5）点，持续2回合",
+   "desc": "攻击时，有15%概率使敌人命中率降低（3/6/9/12/15）点，持续2回合",
    "kind": "攻击时",
    "mp": 20,
    "interval": 0,
@@ -86945,53 +86945,53 @@ window.GAME_DATA = {
      "enemy": {
       "dur": 2,
       "stats": {
-       "hit": -1
-      }
-     },
-     "chance": 10
-    },
-    {
-     "enemy": {
-      "dur": 2,
-      "stats": {
-       "hit": -2
-      }
-     },
-     "chance": 10
-    },
-    {
-     "enemy": {
-      "dur": 2,
-      "stats": {
        "hit": -3
       }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "enemy": {
       "dur": 2,
       "stats": {
-       "hit": -4
+       "hit": -6
       }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "enemy": {
       "dur": 2,
       "stats": {
-       "hit": -5
+       "hit": -9
       }
      },
-     "chance": 10
+     "chance": 15.0
+    },
+    {
+     "enemy": {
+      "dur": 2,
+      "stats": {
+       "hit": -12
+      }
+     },
+     "chance": 15.0
+    },
+    {
+     "enemy": {
+      "dur": 2,
+      "stats": {
+       "hit": -15
+      }
+     },
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "65",
    "name": "暗影躲藏",
-   "desc": "/用黑暗精灵的力量隐藏在黑暗中./\n战斗开始时，提高（5/10/15/20/25）闪避等级，持续1回合",
+   "desc": "/用黑暗精灵的力量隐藏在黑暗中./\n战斗开始时，提高（10/20/30/40/50）闪避等级，持续2回合",
    "kind": "战斗开始时",
    "mp": 30,
    "interval": 0,
@@ -87009,23 +87009,7 @@ window.GAME_DATA = {
      "self": {
       "dur": 1,
       "stats": {
-       "dodge": 5
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": 1,
-      "stats": {
        "dodge": 10
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": 1,
-      "stats": {
-       "dodge": 15
       }
      }
     },
@@ -87041,7 +87025,23 @@ window.GAME_DATA = {
      "self": {
       "dur": 1,
       "stats": {
-       "dodge": 25
+       "dodge": 30
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": 1,
+      "stats": {
+       "dodge": 40
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": 1,
+      "stats": {
+       "dodge": 50
       }
      }
     }
@@ -87050,7 +87050,7 @@ window.GAME_DATA = {
   {
    "id": "66",
    "name": "暗影闪避",
-   "desc": "/提升施术者的回避力./\n被动\n闪避等级提高（1/2/3/4/5）",
+   "desc": "/提升施术者的回避力./\n被动\n闪避等级提高（3/4/5/6/7）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -87064,22 +87064,6 @@ window.GAME_DATA = {
     "2084"
    ],
    "levels": [
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "dodge": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "dodge": 2
-      }
-     }
-    },
     {
      "self": {
       "dur": -1,
@@ -87103,13 +87087,29 @@ window.GAME_DATA = {
        "dodge": 5
       }
      }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dodge": 6
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dodge": 7
+      }
+     }
     }
    ]
   },
   {
    "id": "67",
    "name": "强化:护卫毁灭",
-   "desc": "攻击时有10%概率使敌人防御等级和伤害减免降低（2%/4%/6%/8%/10%），持续3回合",
+   "desc": "攻击时有15%概率使敌人防御等级和伤害减免降低（5%/10%/15%/20%/25%），持续3回合",
    "kind": "攻击时",
    "mp": 30,
    "interval": 0,
@@ -87126,8 +87126,8 @@ window.GAME_DATA = {
     {
      "enemy": {
       "pctStats": {
-       "def": -2.0,
-       "dr": -2.0
+       "def": -5,
+       "dr": -5
       },
       "dur": 3,
       "stats": {}
@@ -87137,8 +87137,8 @@ window.GAME_DATA = {
     {
      "enemy": {
       "pctStats": {
-       "def": -4.0,
-       "dr": -4.0
+       "def": -10,
+       "dr": -10
       },
       "dur": 3,
       "stats": {}
@@ -87148,8 +87148,8 @@ window.GAME_DATA = {
     {
      "enemy": {
       "pctStats": {
-       "def": -6.0,
-       "dr": -6.0
+       "def": -15,
+       "dr": -15
       },
       "dur": 3,
       "stats": {}
@@ -87159,8 +87159,8 @@ window.GAME_DATA = {
     {
      "enemy": {
       "pctStats": {
-       "def": -8.0,
-       "dr": -8.0
+       "def": -20,
+       "dr": -20
       },
       "dur": 3,
       "stats": {}
@@ -87170,8 +87170,8 @@ window.GAME_DATA = {
     {
      "enemy": {
       "pctStats": {
-       "def": -10.0,
-       "dr": -10.0
+       "def": -25,
+       "dr": -25
       },
       "dur": 3,
       "stats": {}
@@ -87183,7 +87183,7 @@ window.GAME_DATA = {
   {
    "id": "68",
    "name": "恐惧无助",
-   "desc": "/使敌人对你感到恐惧/\n攻击时10%概率使敌人命中和闪避等级降低（2/4/6/8/10）",
+   "desc": "/使敌人对你感到恐惧/\n攻击时15%概率使敌人命中和闪避等级降低（5/10/15/20/25）",
    "kind": "攻击时",
    "mp": 30,
    "interval": 0,
@@ -87199,65 +87199,60 @@ window.GAME_DATA = {
    "levels": [
     {
      "enemy": {
-      "pctStats": {
-       "dodge": -2.0,
-       "hit": -2.0
-      },
       "dur": 3,
-      "stats": {}
+      "stats": {
+       "hit": -5,
+       "dodge": -5
+      }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "enemy": {
-      "pctStats": {
-       "dodge": -4.0,
-       "hit": -4.0
-      },
       "dur": 3,
-      "stats": {}
+      "stats": {
+       "hit": -10,
+       "dodge": -10
+      }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "enemy": {
-      "pctStats": {
-       "dodge": -6.0,
-       "hit": -6.0
-      },
       "dur": 3,
-      "stats": {}
+      "stats": {
+       "hit": -15,
+       "dodge": -15
+      }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "enemy": {
-      "pctStats": {
-       "dodge": -8.0,
-       "hit": -8.0
-      },
       "dur": 3,
-      "stats": {}
+      "stats": {
+       "hit": -20,
+       "dodge": -20
+      }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "enemy": {
-      "pctStats": {
-       "dodge": -10.0,
-       "hit": -10.0
-      },
       "dur": 3,
-      "stats": {}
+      "stats": {
+       "hit": -25,
+       "dodge": -25
+      }
      },
-     "chance": 10
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "69",
    "name": "护卫毁灭",
-   "desc": "攻击时有10%概率使敌人防御等级降低（2%/4%/6%/8%/10%），持续3回合",
+   "desc": "攻击时有15%概率使敌人防御等级降低（5%/10%/15%/20%/25%），持续3回合",
    "kind": "攻击时",
    "mp": 15,
    "interval": 0,
@@ -87274,7 +87269,7 @@ window.GAME_DATA = {
     {
      "enemy": {
       "pctStats": {
-       "def": -2.0
+       "def": -5
       },
       "dur": 3,
       "stats": {}
@@ -87284,7 +87279,7 @@ window.GAME_DATA = {
     {
      "enemy": {
       "pctStats": {
-       "def": -4.0
+       "def": -10
       },
       "dur": 3,
       "stats": {}
@@ -87294,7 +87289,7 @@ window.GAME_DATA = {
     {
      "enemy": {
       "pctStats": {
-       "def": -6.0
+       "def": -15
       },
       "dur": 3,
       "stats": {}
@@ -87304,7 +87299,7 @@ window.GAME_DATA = {
     {
      "enemy": {
       "pctStats": {
-       "def": -8.0
+       "def": -20
       },
       "dur": 3,
       "stats": {}
@@ -87314,7 +87309,7 @@ window.GAME_DATA = {
     {
      "enemy": {
       "pctStats": {
-       "def": -10.0
+       "def": -25
       },
       "dur": 3,
       "stats": {}
@@ -87326,7 +87321,7 @@ window.GAME_DATA = {
   {
    "id": "70",
    "name": "觉醒:林德拜尔",
-   "desc": "被动\n魔抗增加（5/10/15/20/25）",
+   "desc": "被动\n魔抗增加（10/20/30/40/50）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -87344,23 +87339,7 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "mr": 5
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "mr": 10
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "mr": 15
       }
      }
     },
@@ -87376,7 +87355,23 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "mr": 25
+       "mr": 30
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "mr": 40
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "mr": 50
       }
      }
     }
@@ -87449,7 +87444,7 @@ window.GAME_DATA = {
   {
    "id": "72",
    "name": "觉醒:安塔瑞斯",
-   "desc": "被动\n体质增加（1/2/3/4/5）",
+   "desc": "被动\n体质增加（3/4/5/6/7）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -87463,22 +87458,6 @@ window.GAME_DATA = {
     "2066"
    ],
    "levels": [
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "con": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "con": 2
-      }
-     }
-    },
     {
      "self": {
       "dur": -1,
@@ -87502,13 +87481,29 @@ window.GAME_DATA = {
        "con": 5
       }
      }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "con": 6
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "con": 7
+      }
+     }
     }
    ]
   },
   {
    "id": "73",
    "name": "觉醒:法利昂",
-   "desc": "被动\n最大MP增加（15/30/45/60/75）",
+   "desc": "被动\n最大MP增加（30/45/60/75/90）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -87522,14 +87517,6 @@ window.GAME_DATA = {
     "2068"
    ],
    "levels": [
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "mp": 15
-      }
-     }
-    },
     {
      "self": {
       "dur": -1,
@@ -87561,13 +87548,21 @@ window.GAME_DATA = {
        "mp": 75
       }
      }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "mp": 90
+      }
+     }
     }
    ]
   },
   {
    "id": "75",
    "name": "勇猛盔甲",
-   "desc": "被动\n防御等级增加（1%/2%/3%/4%/5%）",
+   "desc": "被动\n防御等级增加（5%/10%/15%/20%/25%）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -87584,7 +87579,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "def": 1.0
+       "def": 5
       },
       "dur": -1,
       "stats": {}
@@ -87593,7 +87588,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "def": 2.0
+       "def": 10
       },
       "dur": -1,
       "stats": {}
@@ -87602,7 +87597,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "def": 3.0
+       "def": 15
       },
       "dur": -1,
       "stats": {}
@@ -87611,7 +87606,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "def": 4.0
+       "def": 20
       },
       "dur": -1,
       "stats": {}
@@ -87620,7 +87615,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "def": 5.0
+       "def": 25
       },
       "dur": -1,
       "stats": {}
@@ -87631,7 +87626,7 @@ window.GAME_DATA = {
   {
    "id": "77",
    "name": "暗影冲刺",
-   "desc": "战斗开始时，提高（1/2/3/4/5）点敏捷，持续3回合",
+   "desc": "战斗开始时，提高（5/10/15/20/25）点敏捷，持续3回合",
    "kind": "战斗开始时",
    "mp": 30,
    "interval": 0,
@@ -87649,39 +87644,39 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "dex": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
-       "dex": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
-       "dex": 3
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
-       "dex": 4
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
        "dex": 5
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "dex": 10
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "dex": 15
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "dex": 20
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "dex": 25
       }
      }
     }
@@ -87690,7 +87685,7 @@ window.GAME_DATA = {
   {
    "id": "78",
    "name": "团结",
-   "desc": "被动\n经验值获得增加（1%/2%/3%/4%/5%）",
+   "desc": "被动\n经验值获得增加（10%/15%/20%/25%/30%）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -87707,7 +87702,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "expBonus": 1.0
+       "expBonus": 10
       },
       "dur": -1,
       "stats": {}
@@ -87716,7 +87711,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "expBonus": 2.0
+       "expBonus": 15
       },
       "dur": -1,
       "stats": {}
@@ -87725,7 +87720,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "expBonus": 3.0
+       "expBonus": 20
       },
       "dur": -1,
       "stats": {}
@@ -87734,7 +87729,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "expBonus": 4.0
+       "expBonus": 25
       },
       "dur": -1,
       "stats": {}
@@ -87743,7 +87738,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "expBonus": 5.0
+       "expBonus": 30
       },
       "dur": -1,
       "stats": {}
@@ -87754,7 +87749,7 @@ window.GAME_DATA = {
   {
    "id": "81",
    "name": "幽魂变身",
-   "desc": "被动\n攻击力提高（1%/2%/3%/4%/5%）",
+   "desc": "被动\n攻击力提高（3%/6%/9%/12%/15%）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -87771,7 +87766,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "atk": 1.0
+       "atk": 3
       },
       "dur": -1,
       "stats": {}
@@ -87780,7 +87775,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "atk": 2.0
+       "atk": 6
       },
       "dur": -1,
       "stats": {}
@@ -87789,7 +87784,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "atk": 3.0
+       "atk": 9
       },
       "dur": -1,
       "stats": {}
@@ -87798,7 +87793,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "atk": 4.0
+       "atk": 12
       },
       "dur": -1,
       "stats": {}
@@ -87807,7 +87802,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "atk": 5.0
+       "atk": 15
       },
       "dur": -1,
       "stats": {}
@@ -87818,7 +87813,7 @@ window.GAME_DATA = {
   {
    "id": "84",
    "name": "超载充能",
-   "desc": "/積蓄雷电之力,暫时进入超负荷状态./\n被攻击时，有10%概率提高（3/6/9/12/15）HP回复，持续3回合",
+   "desc": "/積蓄雷电之力,暫时进入超负荷状态./\n被攻击时，有15%概率提高（30/45/60/75/90）HP回复，持续3回合",
    "kind": "攻击时",
    "mp": 30,
    "interval": 0,
@@ -87836,53 +87831,53 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "hpRegen": 3
+       "hpRegen": 30
       }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "self": {
       "dur": 3,
       "stats": {
-       "hpRegen": 6
+       "hpRegen": 45
       }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "self": {
       "dur": 3,
       "stats": {
-       "hpRegen": 9
+       "hpRegen": 60
       }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "self": {
       "dur": 3,
       "stats": {
-       "hpRegen": 12
+       "hpRegen": 75
       }
      },
-     "chance": 10
+     "chance": 15.0
     },
     {
      "self": {
       "dur": 3,
       "stats": {
-       "hpRegen": 15
+       "hpRegen": 90
       }
      },
-     "chance": 10
+     "chance": 15.0
     }
    ]
   },
   {
    "id": "86",
    "name": "魔法相消术",
-   "desc": "每3回合，有（6%/12%/18%/24%/30%）概率沉默敌人，持续2回合",
+   "desc": "每3回合，有（10%/15%/20%/25%/30%）概率沉默敌人，持续3回合",
    "kind": "每N回合",
    "mp": 40,
    "interval": 3,
@@ -87897,28 +87892,28 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 6,
+     "chance": 10,
      "status": {
       "name": "沉默",
       "dur": 2
      }
     },
     {
-     "chance": 12,
+     "chance": 15,
      "status": {
       "name": "沉默",
       "dur": 2
      }
     },
     {
-     "chance": 18,
+     "chance": 20,
      "status": {
       "name": "沉默",
       "dur": 2
      }
     },
     {
-     "chance": 24,
+     "chance": 25,
      "status": {
       "name": "沉默",
       "dur": 2
@@ -87936,7 +87931,7 @@ window.GAME_DATA = {
   {
    "id": "88",
    "name": "神圣保护",
-   "desc": "被动\n精神增加（1/2/3/4/5），最大HP增加（10/20/30/40/50）",
+   "desc": "被动\n精神增加（3/4/5/6/7），最大HP增加（100/150/200/250/300）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -87954,26 +87949,8 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "wis": 1,
-       "hp": 10
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "wis": 2,
-       "hp": 20
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "wis": 3,
-       "hp": 30
+       "hp": 100
       }
      }
     },
@@ -87982,7 +87959,7 @@ window.GAME_DATA = {
       "dur": -1,
       "stats": {
        "wis": 4,
-       "hp": 40
+       "hp": 150
       }
      }
     },
@@ -87991,7 +87968,25 @@ window.GAME_DATA = {
       "dur": -1,
       "stats": {
        "wis": 5,
-       "hp": 50
+       "hp": 200
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "wis": 6,
+       "hp": 250
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "wis": 7,
+       "hp": 300
       }
      }
     }
@@ -88000,7 +87995,7 @@ window.GAME_DATA = {
   {
    "id": "89",
    "name": "全部治愈术",
-   "desc": "每3回合，回复（40+2*智力/50+2*智力/60+2*智力/70+2*智力/80+2*智力）点生命值",
+   "desc": "每3回合，回复（40+3*智力/50+4*智力/60+5*智力/70+6*智力/80+7*智力）点生命值",
    "kind": "每N回合",
    "mp": 50,
    "interval": 3,
@@ -88049,7 +88044,7 @@ window.GAME_DATA = {
   {
    "id": "90",
    "name": "神谕",
-   "desc": "/得到神谕並克服弱点./\n被动\n防御等级和魔抗增加（1%/2%/3%/4%/5%）",
+   "desc": "/得到神谕並克服弱点./\n被动\n防御等级和魔抗增加（3%/6%/9%/12%/15%）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -88066,8 +88061,8 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "def": 1.0,
-       "mr": 1.0
+       "def": 3,
+       "mr": 3
       },
       "dur": -1,
       "stats": {}
@@ -88076,8 +88071,8 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "def": 2.0,
-       "mr": 2.0
+       "def": 6,
+       "mr": 6
       },
       "dur": -1,
       "stats": {}
@@ -88086,8 +88081,8 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "def": 3.0,
-       "mr": 3.0
+       "def": 9,
+       "mr": 9
       },
       "dur": -1,
       "stats": {}
@@ -88096,8 +88091,8 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "def": 4.0,
-       "mr": 4.0
+       "def": 12,
+       "mr": 12
       },
       "dur": -1,
       "stats": {}
@@ -88106,8 +88101,8 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "def": 5.0,
-       "mr": 5.0
+       "def": 15,
+       "mr": 15
       },
       "dur": -1,
       "stats": {}
@@ -88118,7 +88113,7 @@ window.GAME_DATA = {
   {
    "id": "91",
    "name": "冲刺",
-   "desc": "/瞬间高速移动./\n战斗开始时，暴击率提高（1%/2%/3%/4%/5%），持续3回合",
+   "desc": "/瞬间高速移动./\n战斗开始时，暴击率提高（5%/10%/15%/20%/25%），持续3回合",
    "kind": "战斗开始时",
    "mp": 30,
    "interval": 0,
@@ -88135,7 +88130,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 1.0
+       "crit": 5
       },
       "dur": 3,
       "stats": {}
@@ -88144,7 +88139,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 2.0
+       "crit": 10
       },
       "dur": 3,
       "stats": {}
@@ -88153,7 +88148,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 3.0
+       "crit": 15
       },
       "dur": 3,
       "stats": {}
@@ -88162,7 +88157,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 4.0
+       "crit": 20
       },
       "dur": 3,
       "stats": {}
@@ -88171,7 +88166,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 5.0
+       "crit": 25
       },
       "dur": 3,
       "stats": {}
@@ -88256,7 +88251,7 @@ window.GAME_DATA = {
   {
    "id": "93",
    "name": "狂袭",
-   "desc": "攻击时有10%概率对敌人造成（20+2*智力/30+2*智力/40+2*智力/50+2*智力/60+2*智力）点伤害并减少10防御等级，持续3回合",
+   "desc": "攻击时有15%概率对敌人造成（20+2*智力/30+2*智力/40+2*智力/50+2*智力/60+2*智力）点伤害并减少25防御等级，持续3回合",
    "kind": "攻击时",
    "mp": 30,
    "interval": 0,
@@ -88275,11 +88270,11 @@ window.GAME_DATA = {
       "base": 20,
       "int": 2
      },
-     "chance": 10,
+     "chance": 15,
      "enemy": {
       "dur": 3,
       "stats": {
-       "def": -10
+       "def": -25
       }
      }
     },
@@ -88288,11 +88283,11 @@ window.GAME_DATA = {
       "base": 30,
       "int": 2
      },
-     "chance": 10,
+     "chance": 15,
      "enemy": {
       "dur": 3,
       "stats": {
-       "def": -10
+       "def": -25
       }
      }
     },
@@ -88301,11 +88296,11 @@ window.GAME_DATA = {
       "base": 40,
       "int": 2
      },
-     "chance": 10,
+     "chance": 15,
      "enemy": {
       "dur": 3,
       "stats": {
-       "def": -10
+       "def": -25
       }
      }
     },
@@ -88314,11 +88309,11 @@ window.GAME_DATA = {
       "base": 50,
       "int": 2
      },
-     "chance": 10,
+     "chance": 15,
      "enemy": {
       "dur": 3,
       "stats": {
-       "def": -10
+       "def": -25
       }
      }
     },
@@ -88327,11 +88322,11 @@ window.GAME_DATA = {
       "base": 60,
       "int": 2
      },
-     "chance": 10,
+     "chance": 15,
      "enemy": {
       "dur": 3,
       "stats": {
-       "def": -10
+       "def": -25
       }
      }
     }
@@ -88340,7 +88335,7 @@ window.GAME_DATA = {
   {
    "id": "94",
    "name": "反射保护罩",
-   "desc": "/用安塔拉斯的力量保护施术者./\n被动\n伤害减免增加（1/2/3/4/5），最大HP增加（10/20/30/40/50）",
+   "desc": "/用安塔拉斯的力量保护施术者./\n被动\n伤害减免增加（3/4/5/6/7），最大HP增加（50/100/150/200/250）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -88358,26 +88353,8 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "dr": 1,
-       "hp": 10
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "dr": 2,
-       "hp": 20
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "dr": 3,
-       "hp": 30
+       "hp": 50
       }
      }
     },
@@ -88386,7 +88363,7 @@ window.GAME_DATA = {
       "dur": -1,
       "stats": {
        "dr": 4,
-       "hp": 40
+       "hp": 100
       }
      }
     },
@@ -88395,7 +88372,25 @@ window.GAME_DATA = {
       "dur": -1,
       "stats": {
        "dr": 5,
-       "hp": 50
+       "hp": 150
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dr": 6,
+       "hp": 200
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "dr": 7,
+       "hp": 250
       }
      }
     }
@@ -88404,7 +88399,7 @@ window.GAME_DATA = {
   {
    "id": "95",
    "name": "复仇屏障",
-   "desc": "战斗开始后，增加（1/2/3/4/5）闪避等级和（2%/4%/6%/8%/10%）攻击力，持续3回合",
+   "desc": "战斗开始后，增加（5/10/15/20/25）闪避等级和（5%/10%/15%/20%/25%）攻击力，持续3回合",
    "kind": "战斗开始时",
    "mp": 40,
    "interval": 0,
@@ -88422,54 +88417,54 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "pctStats": {
-       "atk": 2.0
-      },
-      "stats": {
-       "dodge": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": 3,
-      "pctStats": {
-       "atk": 4.0
-      },
-      "stats": {
-       "dodge": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": 3,
-      "pctStats": {
-       "atk": 6.0
-      },
-      "stats": {
-       "dodge": 3
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": 3,
-      "pctStats": {
-       "atk": 8.0
-      },
-      "stats": {
-       "dodge": 4
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": 3,
-      "pctStats": {
-       "atk": 10.0
+       "atk": 5
       },
       "stats": {
        "dodge": 5
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": 3,
+      "pctStats": {
+       "atk": 10
+      },
+      "stats": {
+       "dodge": 10
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": 3,
+      "pctStats": {
+       "atk": 15
+      },
+      "stats": {
+       "dodge": 15
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": 3,
+      "pctStats": {
+       "atk": 20
+      },
+      "stats": {
+       "dodge": 20
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": 3,
+      "pctStats": {
+       "atk": 25
+      },
+      "stats": {
+       "dodge": 25
       }
      }
     }
@@ -88478,7 +88473,7 @@ window.GAME_DATA = {
   {
    "id": "96",
    "name": "死亡狙击",
-   "desc": "/自动狙击对象,造成巨大伤害/\n每10回合，对目标造成（100+10*智力/120+12*智力/140+14*智力/160+16*智力/180+18*智力）点伤害",
+   "desc": "/自动狙击对象,造成巨大伤害/\n每10回合，对目标造成（200+10*智力/300+12*智力/400+14*智力/500+16*智力/600+18*智力）点伤害",
    "kind": "每N回合",
    "mp": 50,
    "interval": 10,
@@ -88494,31 +88489,31 @@ window.GAME_DATA = {
    "levels": [
     {
      "damage": {
-      "base": 100,
+      "base": 200,
       "int": 10
      }
     },
     {
      "damage": {
-      "base": 120,
+      "base": 300,
       "int": 12
      }
     },
     {
      "damage": {
-      "base": 140,
+      "base": 400,
       "int": 14
      }
     },
     {
      "damage": {
-      "base": 160,
+      "base": 500,
       "int": 16
      }
     },
     {
      "damage": {
-      "base": 180,
+      "base": 600,
       "int": 18
      }
     }
@@ -88581,7 +88576,7 @@ window.GAME_DATA = {
   {
    "id": "98",
    "name": "勇猛武器",
-   "desc": "被动\n攻击力和命中增加（1/2/3/4/5）",
+   "desc": "被动\n攻击力和命中增加（3%/6%/9%/12%/15%）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -88598,25 +88593,8 @@ window.GAME_DATA = {
     {
      "self": {
       "dur": -1,
-      "stats": {
-       "atk": 1,
-       "hit": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "atk": 2,
-       "hit": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
+      "stats": {},
+      "pctStats": {
        "atk": 3,
        "hit": 3
       }
@@ -88625,18 +88603,40 @@ window.GAME_DATA = {
     {
      "self": {
       "dur": -1,
-      "stats": {
-       "atk": 4,
-       "hit": 4
+      "stats": {},
+      "pctStats": {
+       "atk": 6,
+       "hit": 6
       }
      }
     },
     {
      "self": {
       "dur": -1,
-      "stats": {
-       "atk": 5,
-       "hit": 5
+      "stats": {},
+      "pctStats": {
+       "atk": 9,
+       "hit": 9
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {},
+      "pctStats": {
+       "atk": 12,
+       "hit": 12
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {},
+      "pctStats": {
+       "atk": 15,
+       "hit": 15
       }
      }
     }
@@ -88645,7 +88645,7 @@ window.GAME_DATA = {
   {
    "id": "99",
    "name": "黑暗之盾",
-   "desc": "受到伤害时，15%概率提高（1/2/3/4/5）点防御等级和HP回复，持续3回合",
+   "desc": "受到伤害时，15%概率提高（5/10/15/20/25）点防御等级和HP回复，持续3回合",
    "kind": "受击时",
    "mp": 20,
    "interval": 0,
@@ -88663,48 +88663,48 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "def": 1,
-       "hpRegen": 1
-      }
-     },
-     "chance": 15
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
-       "def": 2,
-       "hpRegen": 2
-      }
-     },
-     "chance": 15
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
-       "def": 3,
-       "hpRegen": 3
-      }
-     },
-     "chance": 15
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
-       "def": 4,
-       "hpRegen": 4
-      }
-     },
-     "chance": 15
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
        "def": 5,
        "hpRegen": 5
+      }
+     },
+     "chance": 15
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "def": 10,
+       "hpRegen": 10
+      }
+     },
+     "chance": 15
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "def": 15,
+       "hpRegen": 15
+      }
+     },
+     "chance": 15
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "def": 20,
+       "hpRegen": 20
+      }
+     },
+     "chance": 15
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "def": 25,
+       "hpRegen": 25
       }
      },
      "chance": 15
@@ -88714,7 +88714,7 @@ window.GAME_DATA = {
   {
    "id": "103",
    "name": "龙之铠甲",
-   "desc": "受到攻击时，有15%概率增加（1/2/3/4/5）闪避等级，持续3回合",
+   "desc": "受到攻击时，有15%概率增加（3/6/9/12/15）闪避等级，持续3回合",
    "kind": "受击时",
    "mp": 10,
    "interval": 0,
@@ -88732,24 +88732,6 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "dodge": 1
-      }
-     },
-     "chance": 15
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
-       "dodge": 2
-      }
-     },
-     "chance": 15
-    },
-    {
-     "self": {
-      "dur": 3,
-      "stats": {
        "dodge": 3
       }
      },
@@ -88759,7 +88741,7 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "dodge": 4
+       "dodge": 6
       }
      },
      "chance": 15
@@ -88768,7 +88750,25 @@ window.GAME_DATA = {
      "self": {
       "dur": 3,
       "stats": {
-       "dodge": 5
+       "dodge": 9
+      }
+     },
+     "chance": 15
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "dodge": 12
+      }
+     },
+     "chance": 15
+    },
+    {
+     "self": {
+      "dur": 3,
+      "stats": {
+       "dodge": 15
       }
      },
      "chance": 15
@@ -88778,7 +88778,7 @@ window.GAME_DATA = {
   {
    "id": "104",
    "name": "幻影之刃",
-   "desc": "战斗开始时，使敌人攻击力增加（2/4/6/8/10），防御等级减少（2/4/6/8/10）",
+   "desc": "战斗开始时，使敌人攻击力增加（10/20/30/40/50），防御等级减少（20/40/60/80/100）",
    "kind": "战斗开始时",
    "mp": 13,
    "interval": 0,
@@ -88796,44 +88796,44 @@ window.GAME_DATA = {
      "enemy": {
       "dur": -1,
       "stats": {
-       "atk": 2,
-       "def": -2
-      }
-     }
-    },
-    {
-     "enemy": {
-      "dur": -1,
-      "stats": {
-       "atk": 4,
-       "def": -4
-      }
-     }
-    },
-    {
-     "enemy": {
-      "dur": -1,
-      "stats": {
-       "atk": 6,
-       "def": -6
-      }
-     }
-    },
-    {
-     "enemy": {
-      "dur": -1,
-      "stats": {
-       "atk": 8,
-       "def": -8
-      }
-     }
-    },
-    {
-     "enemy": {
-      "dur": -1,
-      "stats": {
        "atk": 10,
-       "def": -10
+       "def": -20
+      }
+     }
+    },
+    {
+     "enemy": {
+      "dur": -1,
+      "stats": {
+       "atk": 20,
+       "def": -40
+      }
+     }
+    },
+    {
+     "enemy": {
+      "dur": -1,
+      "stats": {
+       "atk": 30,
+       "def": -60
+      }
+     }
+    },
+    {
+     "enemy": {
+      "dur": -1,
+      "stats": {
+       "atk": 40,
+       "def": -80
+      }
+     }
+    },
+    {
+     "enemy": {
+      "dur": -1,
+      "stats": {
+       "atk": 50,
+       "def": -100
       }
      }
     }
@@ -88911,7 +88911,7 @@ window.GAME_DATA = {
   {
    "id": "106",
    "name": "尖刺盔甲",
-   "desc": "被动\n防御等级和攻击力增加（1/2/3/4/5）",
+   "desc": "被动\n防御等级和攻击力增加（5/10/15/20/25）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -88929,44 +88929,44 @@ window.GAME_DATA = {
      "self": {
       "dur": -1,
       "stats": {
-       "def": 1,
-       "atk": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 2,
-       "atk": 2
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 3,
-       "atk": 3
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "def": 4,
-       "atk": 4
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
        "def": 5,
        "atk": 5
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 10,
+       "atk": 10
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 15,
+       "atk": 15
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 20,
+       "atk": 20
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "def": 25,
+       "atk": 25
       }
      }
     }
@@ -88975,7 +88975,7 @@ window.GAME_DATA = {
   {
    "id": "107",
    "name": "坚固盔甲",
-   "desc": "被动\n回避等级增加（3/4/5/6/7），攻击力降低（1/2/3/4/5）",
+   "desc": "被动\n回避等级增加（3/6/9/12/15），攻击力降低（3/6/9/12/15）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -89039,7 +89039,7 @@ window.GAME_DATA = {
   {
    "id": "108",
    "name": "强力无所遁形术",
-   "desc": "/找出隐藏的对象/\n被动\n命中率增加（1/2/3/4/5），幸运增加1",
+   "desc": "/找出隐藏的对象/\n被动\n命中率增加（3/4/5/6/7），幸运增加1",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -89053,24 +89053,6 @@ window.GAME_DATA = {
     "1793"
    ],
    "levels": [
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "hit": 1,
-       "luk": 1
-      }
-     }
-    },
-    {
-     "self": {
-      "dur": -1,
-      "stats": {
-       "hit": 2,
-       "luk": 1
-      }
-     }
-    },
     {
      "self": {
       "dur": -1,
@@ -89097,13 +89079,31 @@ window.GAME_DATA = {
        "luk": 1
       }
      }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "hit": 6,
+       "luk": 1
+      }
+     }
+    },
+    {
+     "self": {
+      "dur": -1,
+      "stats": {
+       "hit": 7,
+       "luk": 1
+      }
+     }
     }
    ]
   },
   {
    "id": "109",
    "name": "暗黑之眼",
-   "desc": "攻击时15%概率提高（1%/2%/3%/4%/5%）暴击率，持续3回合",
+   "desc": "攻击时15%概率提高（3%/6%/9%/12%/15%）暴击率，持续3回合",
    "kind": "攻击时",
    "mp": 15,
    "interval": 0,
@@ -89120,7 +89120,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 1.0
+       "crit": 3
       },
       "dur": 3,
       "stats": {}
@@ -89130,7 +89130,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 2.0
+       "crit": 6
       },
       "dur": 3,
       "stats": {}
@@ -89140,7 +89140,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 3.0
+       "crit": 9
       },
       "dur": 3,
       "stats": {}
@@ -89150,7 +89150,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 4.0
+       "crit": 12
       },
       "dur": 3,
       "stats": {}
@@ -89160,7 +89160,7 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 5.0
+       "crit": 15
       },
       "dur": 3,
       "stats": {}
@@ -89172,7 +89172,7 @@ window.GAME_DATA = {
   {
    "id": "111",
    "name": "重击之矢",
-   "desc": "被动\n每10回合，对目标造成（50+5*智力/60+6*智力/70+7*智力/80+8*智力/90+9*智力）点伤害并回复自身50HP和30MP",
+   "desc": "被动\n每10回合，对目标造成（150+5*智力/250+6*智力/350+7*智力/450+8*智力/550+9*智力）点伤害并回复自身500HP和200MP",
    "kind": "每N回合",
    "mp": 40,
    "interval": 10,
@@ -89188,52 +89188,52 @@ window.GAME_DATA = {
    "levels": [
     {
      "damage": {
-      "base": 50,
+      "base": 150,
       "int": 5
      },
      "heal": {
-      "base": 50,
-      "mpBase": 30
+      "base": 500,
+      "mpBase": 200
      }
     },
     {
      "damage": {
-      "base": 60,
+      "base": 250,
       "int": 6
      },
      "heal": {
-      "base": 50,
-      "mpBase": 30
+      "base": 500,
+      "mpBase": 200
      }
     },
     {
      "damage": {
-      "base": 70,
+      "base": 350,
       "int": 7
      },
      "heal": {
-      "base": 50,
-      "mpBase": 30
+      "base": 500,
+      "mpBase": 200
      }
     },
     {
      "damage": {
-      "base": 80,
+      "base": 450,
       "int": 8
      },
      "heal": {
-      "base": 50,
-      "mpBase": 30
+      "base": 500,
+      "mpBase": 200
      }
     },
     {
      "damage": {
-      "base": 90,
+      "base": 550,
       "int": 9
      },
      "heal": {
-      "base": 50,
-      "mpBase": 30
+      "base": 500,
+      "mpBase": 200
      }
     }
    ]
@@ -89241,7 +89241,7 @@ window.GAME_DATA = {
   {
    "id": "112",
    "name": "火焰之剑",
-   "desc": "/挥舞烈焰之剑/\n攻击时（20%/40%/60%/80%/100%）概率造成2*智力点伤害",
+   "desc": "/挥舞烈焰之剑/\n攻击时（60%/70%/80%/90%/100%）概率造成2*智力点伤害",
    "kind": "攻击时",
    "mp": 27,
    "interval": 0,
@@ -89259,25 +89259,25 @@ window.GAME_DATA = {
      "damage": {
       "int": 2
      },
-     "chance": 20
-    },
-    {
-     "damage": {
-      "int": 2
-     },
-     "chance": 40
-    },
-    {
-     "damage": {
-      "int": 2
-     },
      "chance": 60
     },
     {
      "damage": {
       "int": 2
      },
+     "chance": 70
+    },
+    {
+     "damage": {
+      "int": 2
+     },
      "chance": 80
+    },
+    {
+     "damage": {
+      "int": 2
+     },
+     "chance": 90
     },
     {
      "damage": {
@@ -89290,7 +89290,7 @@ window.GAME_DATA = {
   {
    "id": "160",
    "name": "天外救星",
-   "desc": "被动\n/成为超越专注极限的战术大师/\n暴击时，回复（5/10/15/20/25）HP和MP",
+   "desc": "被动\n/成为超越专注极限的战术大师/\n暴击时，回复（10/20/30/40/50）HP和MP",
    "kind": "攻击时",
    "mp": 0,
    "interval": 0,
@@ -89306,31 +89306,31 @@ window.GAME_DATA = {
    "levels": [
     {
      "heal": {
-      "base": 5,
+      "base": 10,
       "hp": 5
      }
     },
     {
      "heal": {
-      "base": 10,
+      "base": 20,
       "hp": 10
      }
     },
     {
      "heal": {
-      "base": 15,
+      "base": 30,
       "hp": 15
      }
     },
     {
      "heal": {
-      "base": 20,
+      "base": 40,
       "hp": 20
      }
     },
     {
      "heal": {
-      "base": 25,
+      "base": 50,
       "hp": 25
      }
     }
@@ -89339,7 +89339,7 @@ window.GAME_DATA = {
   {
    "id": "161",
    "name": "破坏盔甲:命运",
-   "desc": "/强化破坏盔甲的效果/\n攻击时30%概率使敌人护甲等级降低（5/10/15/20/25），持续3回合",
+   "desc": "/强化破坏盔甲的效果/\n攻击时30%概率使敌人护甲等级降低（10/20/30/40/50），持续3回合",
    "kind": "攻击时",
    "mp": 30,
    "interval": 0,
@@ -89357,25 +89357,7 @@ window.GAME_DATA = {
      "chance": 30,
      "enemy": {
       "stats": {
-       "def": -5
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 30,
-     "enemy": {
-      "stats": {
        "def": -10
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 30,
-     "enemy": {
-      "stats": {
-       "def": -15
       },
       "dur": 3
      }
@@ -89393,7 +89375,25 @@ window.GAME_DATA = {
      "chance": 30,
      "enemy": {
       "stats": {
-       "def": -25
+       "def": -30
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 30,
+     "enemy": {
+      "stats": {
+       "def": -40
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 30,
+     "enemy": {
+      "stats": {
+       "def": -50
       },
       "dur": 3
      }
@@ -89403,7 +89403,7 @@ window.GAME_DATA = {
   {
    "id": "162",
    "name": "精灵之翼靴",
-   "desc": "/穿上蕴含精灵王力量的魔法鞋/\n每回合开始时，有25%概率使敏捷增加（2/4/6/8/10），持续3回合",
+   "desc": "/穿上蕴含精灵王力量的魔法鞋/\n每回合开始时，有25%概率使敏捷增加（3/6/9/12/15），持续3回合",
    "kind": "每N回合",
    "mp": 30,
    "interval": 0,
@@ -89421,50 +89421,50 @@ window.GAME_DATA = {
      "chance": 25,
      "interval": 1,
      "self": {
-      "pctStats": {
-       "dex": 2
-      },
-      "dur": 3
+      "dur": 3,
+      "stats": {
+       "dex": 3
+      }
      }
     },
     {
      "chance": 25,
      "interval": 1,
      "self": {
-      "pctStats": {
-       "dex": 4
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 25,
-     "interval": 1,
-     "self": {
-      "pctStats": {
+      "dur": 3,
+      "stats": {
        "dex": 6
-      },
-      "dur": 3
+      }
      }
     },
     {
      "chance": 25,
      "interval": 1,
      "self": {
-      "pctStats": {
-       "dex": 8
-      },
-      "dur": 3
+      "dur": 3,
+      "stats": {
+       "dex": 9
+      }
      }
     },
     {
      "chance": 25,
      "interval": 1,
      "self": {
-      "pctStats": {
-       "dex": 10
-      },
-      "dur": 3
+      "dur": 3,
+      "stats": {
+       "dex": 12
+      }
+     }
+    },
+    {
+     "chance": 25,
+     "interval": 1,
+     "self": {
+      "dur": 3,
+      "stats": {
+       "dex": 15
+      }
      }
     }
    ]
@@ -89526,7 +89526,7 @@ window.GAME_DATA = {
   {
    "id": "164",
    "name": "灵魂屏障",
-   "desc": "/MP绝对回复量提升；受到致命伤害时，生成与MP成比例的护盾保护施术者。/\nMP回复增加（1/2/3/4/5），生命值低于30%时，回复（5%/10%/15%/20%/25%）法力值",
+   "desc": "/MP绝对回复量提升；受到致命伤害时，生成与MP成比例的护盾保护施术者。/\nMP回复增加（3/6/9/12/15），生命值低于30%时，回复（5%/10%/15%/20%/25%）法力值",
    "kind": "被动",
    "mp": 30,
    "interval": 0,
@@ -89542,27 +89542,32 @@ window.GAME_DATA = {
    "levels": [
     {
      "heal": {
-      "mpBase": 1
+      "mpBase": 3,
+      "mpPct": 5
      }
     },
     {
      "heal": {
-      "mpBase": 2
+      "mpBase": 6,
+      "mpPct": 10
      }
     },
     {
      "heal": {
-      "mpBase": 3
+      "mpBase": 9,
+      "mpPct": 15
      }
     },
     {
      "heal": {
-      "mpBase": 4
+      "mpBase": 12,
+      "mpPct": 20
      }
     },
     {
      "heal": {
-      "mpBase": 5
+      "mpBase": 15,
+      "mpPct": 25
      }
     }
    ]
@@ -89881,33 +89886,48 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "stats": {
-      "wis": 3,
-      "mp": 25
+     "self": {
+      "stats": {
+       "wis": 3,
+       "mp": 25
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "wis": 4,
-      "mp": 30
+     "self": {
+      "stats": {
+       "wis": 4,
+       "mp": 30
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "wis": 5,
-      "mp": 35
+     "self": {
+      "stats": {
+       "wis": 5,
+       "mp": 35
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "wis": 6,
-      "mp": 40
+     "self": {
+      "stats": {
+       "wis": 6,
+       "mp": 40
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "wis": 7,
-      "mp": 45
+     "self": {
+      "stats": {
+       "wis": 7,
+       "mp": 45
+      },
+      "dur": -1
      }
     }
    ]
@@ -89915,7 +89935,7 @@ window.GAME_DATA = {
   {
    "id": "170",
    "name": "热血沸腾",
-   "desc": "/HP回复上升，按比例提升减免/\nHP回复和伤害减免增加（3/4/5/6/7）",
+   "desc": "/HP回复上升，按比例提升减免/\nHP回复和伤害减免增加（5/10/15/20/25）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -89930,33 +89950,48 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "stats": {
-      "hpRegen": 3,
-      "dr": 3
+     "self": {
+      "stats": {
+       "hpRegen": 5,
+       "dr": 5
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "hpRegen": 4,
-      "dr": 4
+     "self": {
+      "stats": {
+       "hpRegen": 10,
+       "dr": 10
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "hpRegen": 5,
-      "dr": 5
+     "self": {
+      "stats": {
+       "hpRegen": 15,
+       "dr": 15
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "hpRegen": 6,
-      "dr": 6
+     "self": {
+      "stats": {
+       "hpRegen": 20,
+       "dr": 20
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "hpRegen": 7,
-      "dr": 7
+     "self": {
+      "stats": {
+       "hpRegen": 25,
+       "dr": 25
+      },
+      "dur": -1
      }
     }
    ]
@@ -89964,7 +89999,7 @@ window.GAME_DATA = {
   {
    "id": "171",
    "name": "水牢:精神",
-   "desc": "每2回合有（5%/10%/15%/20%/25%）沉默敌人，持续2回合",
+   "desc": "每3回合有（10%/20%/30%/40%/50%）沉默敌人，持续2回合",
    "kind": "每N回合",
    "mp": 45,
    "interval": 0,
@@ -89979,23 +90014,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 5,
-     "interval": 2,
-     "status": {
-      "name": "沉默",
-      "dur": 2
-     }
-    },
-    {
      "chance": 10,
-     "interval": 2,
-     "status": {
-      "name": "沉默",
-      "dur": 2
-     }
-    },
-    {
-     "chance": 15,
      "interval": 2,
      "status": {
       "name": "沉默",
@@ -90011,7 +90030,23 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 25,
+     "chance": 30,
+     "interval": 2,
+     "status": {
+      "name": "沉默",
+      "dur": 2
+     }
+    },
+    {
+     "chance": 40,
+     "interval": 2,
+     "status": {
+      "name": "沉默",
+      "dur": 2
+     }
+    },
+    {
+     "chance": 50,
      "interval": 2,
      "status": {
       "name": "沉默",
@@ -90023,7 +90058,7 @@ window.GAME_DATA = {
   {
    "id": "172",
    "name": "龙之精通:致命",
-   "desc": "/以奥拉奇里亚之力觉醒/\n暴击率提高（1%/2%/3%/4%/5%），暴击伤害提高（2%/4%/6%/8%/10%）",
+   "desc": "/以奥拉奇里亚之力觉醒/\n暴击率提高（3%/6%/9%/12%/15%），暴击伤害提高（5%/10%/15%/20%/25%）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -90038,33 +90073,53 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "pctStats": {
-      "crit": 1,
-      "critDmg": 2
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "crit": 3,
+       "critDmg": 5
+      }
      }
     },
     {
-     "pctStats": {
-      "crit": 2,
-      "critDmg": 4
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "crit": 6,
+       "critDmg": 10
+      }
      }
     },
     {
-     "pctStats": {
-      "crit": 3,
-      "critDmg": 6
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "crit": 9,
+       "critDmg": 15
+      }
      }
     },
     {
-     "pctStats": {
-      "crit": 4,
-      "critDmg": 8
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "crit": 12,
+       "critDmg": 20
+      }
      }
     },
     {
-     "pctStats": {
-      "crit": 5,
-      "critDmg": 10
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "crit": 15,
+       "critDmg": 25
+      }
      }
     }
    ]
@@ -90072,7 +90127,7 @@ window.GAME_DATA = {
   {
    "id": "173",
    "name": "黑暗之星",
-   "desc": "/召唤强大的暗黑流星雨，给于范围伤害. 变为暗黑状态/\n回合开始时，有15%概率造成（100+7*智力/120+8*智力/140+9*智力/160+10*智力/180+11*智力）点伤害，并使敌人命中降低5点，持续3回合",
+   "desc": "/召唤强大的暗黑流星雨，给于范围伤害. 变为暗黑状态/\n回合开始时，有15%概率造成（100+7*智力/120+8*智力/140+9*智力/160+10*智力/180+11*智力）点伤害，并使敌人命中降低15点，持续3回合",
    "kind": "每N回合",
    "mp": 90,
    "interval": 0,
@@ -90095,7 +90150,7 @@ window.GAME_DATA = {
      },
      "enemy": {
       "stats": {
-       "hit": -5
+       "hit": -15
       },
       "dur": 3
      }
@@ -90109,7 +90164,7 @@ window.GAME_DATA = {
      },
      "enemy": {
       "stats": {
-       "hit": -5
+       "hit": -15
       },
       "dur": 3
      }
@@ -90123,7 +90178,7 @@ window.GAME_DATA = {
      },
      "enemy": {
       "stats": {
-       "hit": -5
+       "hit": -15
       },
       "dur": 3
      }
@@ -90137,7 +90192,7 @@ window.GAME_DATA = {
      },
      "enemy": {
       "stats": {
-       "hit": -5
+       "hit": -15
       },
       "dur": 3
      }
@@ -90151,7 +90206,7 @@ window.GAME_DATA = {
      },
      "enemy": {
       "stats": {
-       "hit": -5
+       "hit": -15
       },
       "dur": 3
      }
@@ -90210,7 +90265,7 @@ window.GAME_DATA = {
   {
    "id": "175",
    "name": "王者之剑:大师",
-   "desc": "每5回合，对敌人造成（40+4*智力/60+6*智力/80+8*智力/100+10*智力/120+12*智力）点伤害并70%概率晕眩，持续1回合",
+   "desc": "每5回合，对敌人造成（140+4*智力/260+6*智力/380+8*智力/500+10*智力/620+12*智力）点伤害并70%概率晕眩，持续1回合",
    "kind": "每N回合",
    "mp": 75,
    "interval": 0,
@@ -90227,7 +90282,7 @@ window.GAME_DATA = {
     {
      "interval": 5,
      "damage": {
-      "base": 40,
+      "base": 140,
       "int": 4
      },
      "chance": 70,
@@ -90239,7 +90294,7 @@ window.GAME_DATA = {
     {
      "interval": 5,
      "damage": {
-      "base": 60,
+      "base": 260,
       "int": 6
      },
      "chance": 70,
@@ -90251,7 +90306,7 @@ window.GAME_DATA = {
     {
      "interval": 5,
      "damage": {
-      "base": 80,
+      "base": 380,
       "int": 8
      },
      "chance": 70,
@@ -90263,7 +90318,7 @@ window.GAME_DATA = {
     {
      "interval": 5,
      "damage": {
-      "base": 100,
+      "base": 500,
       "int": 10
      },
      "chance": 70,
@@ -90275,7 +90330,7 @@ window.GAME_DATA = {
     {
      "interval": 5,
      "damage": {
-      "base": 120,
+      "base": 620,
       "int": 12
      },
      "chance": 70,
@@ -90289,7 +90344,7 @@ window.GAME_DATA = {
   {
    "id": "176",
    "name": "帝国引力",
-   "desc": "/发动弱化敌人的灵气/\n战斗开始时，敌人的护甲等级和魔抗降低（5/10/15/20/25）",
+   "desc": "/发动弱化敌人的灵气/\n战斗开始时，敌人的护甲等级和魔抗降低（10/20/30/40/50）",
    "kind": "战斗开始时",
    "mp": 45,
    "interval": 0,
@@ -90306,8 +90361,8 @@ window.GAME_DATA = {
     {
      "enemy": {
       "stats": {
-       "def": -3,
-       "mr": -3
+       "def": -10,
+       "mr": -10
       },
       "dur": 3
      }
@@ -90315,8 +90370,8 @@ window.GAME_DATA = {
     {
      "enemy": {
       "stats": {
-       "def": -6,
-       "mr": -6
+       "def": -20,
+       "mr": -20
       },
       "dur": 3
      }
@@ -90324,8 +90379,8 @@ window.GAME_DATA = {
     {
      "enemy": {
       "stats": {
-       "def": -9,
-       "mr": -9
+       "def": -30,
+       "mr": -30
       },
       "dur": 3
      }
@@ -90333,8 +90388,8 @@ window.GAME_DATA = {
     {
      "enemy": {
       "stats": {
-       "def": -12,
-       "mr": -12
+       "def": -40,
+       "mr": -40
       },
       "dur": 3
      }
@@ -90342,8 +90397,8 @@ window.GAME_DATA = {
     {
      "enemy": {
       "stats": {
-       "def": -15,
-       "mr": -15
+       "def": -50,
+       "mr": -50
       },
       "dur": 3
      }
@@ -90353,7 +90408,7 @@ window.GAME_DATA = {
   {
    "id": "177",
    "name": "神圣保护:预言",
-   "desc": "被动\n/强化神圣保护的效果/\n精神增加（3/4/5/6/7），最大HP增加（30/50/70/90/110）",
+   "desc": "被动\n/强化神圣保护的效果/\n精神增加（3/6/9/12/15），最大HP增加（100/200/300/400/500）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -90368,33 +90423,48 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "stats": {
-      "wis": 3,
-      "hp": 30
+     "self": {
+      "stats": {
+       "wis": 3,
+       "hp": 100
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "wis": 4,
-      "hp": 50
+     "self": {
+      "stats": {
+       "wis": 6,
+       "hp": 200
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "wis": 5,
-      "hp": 70
+     "self": {
+      "stats": {
+       "wis": 9,
+       "hp": 300
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "wis": 6,
-      "hp": 90
+     "self": {
+      "stats": {
+       "wis": 12,
+       "hp": 400
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "wis": 7,
-      "hp": 110
+     "self": {
+      "stats": {
+       "wis": 15,
+       "hp": 500
+      },
+      "dur": -1
      }
     }
    ]
@@ -90402,7 +90472,7 @@ window.GAME_DATA = {
   {
    "id": "178",
    "name": "魔法消除(精神)",
-   "desc": "每3回合，有（6%/12%/18%/24%/30%）概率沉默敌人，持续2回合，并减少15魔抗",
+   "desc": "每3回合，有（12%/18%/24%/30%/36%）概率沉默敌人，持续2回合，并减少25魔抗",
    "kind": "每N回合",
    "mp": 60,
    "interval": 0,
@@ -90417,20 +90487,6 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 6,
-     "interval": 3,
-     "status": {
-      "name": "沉默",
-      "dur": 2
-     },
-     "enemy": {
-      "stats": {
-       "mr": -15
-      },
-      "dur": 3
-     }
-    },
-    {
      "chance": 12,
      "interval": 3,
      "status": {
@@ -90439,7 +90495,7 @@ window.GAME_DATA = {
      },
      "enemy": {
       "stats": {
-       "mr": -15
+       "mr": -25
       },
       "dur": 3
      }
@@ -90453,7 +90509,7 @@ window.GAME_DATA = {
      },
      "enemy": {
       "stats": {
-       "mr": -15
+       "mr": -25
       },
       "dur": 3
      }
@@ -90467,7 +90523,7 @@ window.GAME_DATA = {
      },
      "enemy": {
       "stats": {
-       "mr": -15
+       "mr": -25
       },
       "dur": 3
      }
@@ -90481,7 +90537,21 @@ window.GAME_DATA = {
      },
      "enemy": {
       "stats": {
-       "mr": -15
+       "mr": -25
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 36,
+     "interval": 3,
+     "status": {
+      "name": "沉默",
+      "dur": 2
+     },
+     "enemy": {
+      "stats": {
+       "mr": -25
       },
       "dur": 3
      }
@@ -90491,7 +90561,7 @@ window.GAME_DATA = {
   {
    "id": "179",
    "name": "防御提升:士兵",
-   "desc": "被动\n护甲等级，伤害减免和闪避等级增加（1/2/3/4/5）",
+   "desc": "被动\n护甲等级，伤害减免和闪避等级增加（5/10/15/20/25）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -90506,38 +90576,53 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "stats": {
-      "def": 1,
-      "dr": 1,
-      "dodge": 1
+     "self": {
+      "stats": {
+       "def": 5,
+       "dr": 5,
+       "dodge": 5
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "def": 2,
-      "dr": 2,
-      "dodge": 2
+     "self": {
+      "stats": {
+       "def": 10,
+       "dr": 10,
+       "dodge": 10
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "def": 3,
-      "dr": 3,
-      "dodge": 3
+     "self": {
+      "stats": {
+       "def": 15,
+       "dr": 15,
+       "dodge": 15
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "def": 4,
-      "dr": 4,
-      "dodge": 4
+     "self": {
+      "stats": {
+       "def": 20,
+       "dr": 20,
+       "dodge": 20
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "def": 5,
-      "dr": 5,
-      "dodge": 5
+     "self": {
+      "stats": {
+       "def": 25,
+       "dr": 25,
+       "dodge": 25
+      },
+      "dur": -1
      }
     }
    ]
@@ -90545,7 +90630,7 @@ window.GAME_DATA = {
   {
    "id": "180",
    "name": "屠宰者(强化)",
-   "desc": "攻击力增加（1%/2%/3%/4%/5%），攻击时有20%概率使自己攻击力增加（2%/4%/6%/8%/10%），持续2回合",
+   "desc": "攻击力增加（3%/6%/9%/12%/15%），攻击时有20%概率使自己攻击力增加（3%/6%/9%/12%/15%），持续2回合",
    "kind": "被动",
    "mp": 40,
    "interval": 0,
@@ -90560,28 +90645,48 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "pctStats": {
-      "atk": 1
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "atk": 3
+      }
      }
     },
     {
-     "pctStats": {
-      "atk": 2
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "atk": 6
+      }
      }
     },
     {
-     "pctStats": {
-      "atk": 3
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "atk": 9
+      }
      }
     },
     {
-     "pctStats": {
-      "atk": 4
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "atk": 12
+      }
      }
     },
     {
-     "pctStats": {
-      "atk": 5
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "atk": 15
+      }
      }
     }
    ]
@@ -90589,7 +90694,7 @@ window.GAME_DATA = {
   {
    "id": "181",
    "name": "流星雨:古代",
-   "desc": "/强化流星雨伤害与范围增加/\n每3回合，有60%概率造成（120+9*智力/140+10*智力/160+11*智力/180+12*智力/200+13*智力）点伤害",
+   "desc": "/强化流星雨伤害与范围增加/\n每3回合，有100%概率造成（120+9*智力/140+10*智力/160+11*智力/180+12*智力/200+13*智力）点伤害",
    "kind": "每N回合",
    "mp": 110,
    "interval": 0,
@@ -90604,7 +90709,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 60,
+     "chance": 100.0,
      "interval": 3,
      "damage": {
       "base": 120,
@@ -90612,7 +90717,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 60,
+     "chance": 100.0,
      "interval": 3,
      "damage": {
       "base": 140,
@@ -90620,7 +90725,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 60,
+     "chance": 100.0,
      "interval": 3,
      "damage": {
       "base": 160,
@@ -90628,7 +90733,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 60,
+     "chance": 100.0,
      "interval": 3,
      "damage": {
       "base": 180,
@@ -90636,7 +90741,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 60,
+     "chance": 100.0,
      "interval": 3,
      "damage": {
       "base": 200,
@@ -90648,7 +90753,7 @@ window.GAME_DATA = {
   {
    "id": "182",
    "name": "魔法相消术(古代)",
-   "desc": "每3回合，有（8%/16%/24%/32%/40%）概率沉默敌人，持续2回合",
+   "desc": "每3回合，有（18%/26%/34%/42%/60%）概率沉默敌人，持续2回合",
    "kind": "每N回合",
    "mp": 120,
    "interval": 0,
@@ -90663,7 +90768,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 8,
+     "chance": 18,
      "interval": 3,
      "status": {
       "name": "沉默",
@@ -90671,7 +90776,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 16,
+     "chance": 26,
      "interval": 3,
      "status": {
       "name": "沉默",
@@ -90679,7 +90784,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 24,
+     "chance": 34,
      "interval": 3,
      "status": {
       "name": "沉默",
@@ -90687,7 +90792,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 32,
+     "chance": 42,
      "interval": 3,
      "status": {
       "name": "沉默",
@@ -90695,7 +90800,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 40,
+     "chance": 60,
      "interval": 3,
      "status": {
       "name": "沉默",
@@ -90707,7 +90812,7 @@ window.GAME_DATA = {
   {
    "id": "183",
    "name": "龙之冲击",
-   "desc": "/以龙之力让对方晕眩/\n受到攻击时，有（1%/2%/3%/4%/5%）概率晕眩敌人，持续1回合",
+   "desc": "/以龙之力让对方晕眩/\n受到攻击时，有（3%/6%/9%/12%/15%）概率晕眩敌人，持续1回合",
    "kind": "受击时",
    "mp": 50,
    "interval": 0,
@@ -90722,20 +90827,6 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 1,
-     "status": {
-      "name": "晕眩",
-      "dur": 1
-     }
-    },
-    {
-     "chance": 2,
-     "status": {
-      "name": "晕眩",
-      "dur": 1
-     }
-    },
-    {
      "chance": 3,
      "status": {
       "name": "晕眩",
@@ -90743,14 +90834,28 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 4,
+     "chance": 6,
      "status": {
       "name": "晕眩",
       "dur": 1
      }
     },
     {
-     "chance": 5,
+     "chance": 9,
+     "status": {
+      "name": "晕眩",
+      "dur": 1
+     }
+    },
+    {
+     "chance": 12,
+     "status": {
+      "name": "晕眩",
+      "dur": 1
+     }
+    },
+    {
+     "chance": 15,
      "status": {
       "name": "晕眩",
       "dur": 1
@@ -90761,7 +90866,7 @@ window.GAME_DATA = {
   {
    "id": "184",
    "name": "回避力",
-   "desc": "/用锁链剑采取防御架式，弹开物理攻击/\n回避等级增加（1/2/3/4/5），回避时，回避等级增加（1/2/3/4/5），持续2回合",
+   "desc": "/用锁链剑采取防御架式，弹开物理攻击/\n回避等级增加（5/10/15/20/25），回避时，回避等级增加（5/10/15/20/25），持续2回合",
    "kind": "被动",
    "mp": 45,
    "interval": 0,
@@ -90776,28 +90881,43 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "stats": {
-      "dodge": 1
+     "self": {
+      "stats": {
+       "dodge": 5
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 2
+     "self": {
+      "stats": {
+       "dodge": 10
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 3
+     "self": {
+      "stats": {
+       "dodge": 15
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 4
+     "self": {
+      "stats": {
+       "dodge": 20
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 5
+     "self": {
+      "stats": {
+       "dodge": 25
+      },
+      "dur": -1
      }
     }
    ]
@@ -90805,7 +90925,7 @@ window.GAME_DATA = {
   {
    "id": "185",
    "name": "附魔武器:混乱Lv3",
-   "desc": "/附魔武器:强化混乱效果/\n攻击时，15%概率使敌人力量敏捷智力精神属性下降（1/2/3/4/5）点，持续3回合",
+   "desc": "/附魔武器:强化混乱效果/\n攻击时，15%概率使敌人力量敏捷智力精神属性下降（3/6/9/12/15）点，持续3回合",
    "kind": "攻击时",
    "mp": 40,
    "interval": 0,
@@ -90823,30 +90943,6 @@ window.GAME_DATA = {
      "chance": 15,
      "enemy": {
       "stats": {
-       "str": -1,
-       "dex": -1,
-       "int": -1,
-       "wis": -1
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 15,
-     "enemy": {
-      "stats": {
-       "str": -2,
-       "dex": -2,
-       "int": -2,
-       "wis": -2
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 15,
-     "enemy": {
-      "stats": {
        "str": -3,
        "dex": -3,
        "int": -3,
@@ -90859,10 +90955,10 @@ window.GAME_DATA = {
      "chance": 15,
      "enemy": {
       "stats": {
-       "str": -4,
-       "dex": -4,
-       "int": -4,
-       "wis": -4
+       "str": -6,
+       "dex": -6,
+       "int": -6,
+       "wis": -6
       },
       "dur": 3
      }
@@ -90871,10 +90967,34 @@ window.GAME_DATA = {
      "chance": 15,
      "enemy": {
       "stats": {
-       "str": -5,
-       "dex": -5,
-       "int": -5,
-       "wis": -5
+       "str": -9,
+       "dex": -9,
+       "int": -9,
+       "wis": -9
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15,
+     "enemy": {
+      "stats": {
+       "str": -12,
+       "dex": -12,
+       "int": -12,
+       "wis": -12
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15,
+     "enemy": {
+      "stats": {
+       "str": -15,
+       "dex": -15,
+       "int": -15,
+       "wis": -15
       },
       "dur": 3
      }
@@ -90884,7 +91004,7 @@ window.GAME_DATA = {
   {
    "id": "186",
    "name": "究极光裂术:古代",
-   "desc": "/强化究极光裂术/\n攻击时，有3%概率造成（350+6*智力/450+12*智力/550+18*智力/650+24*智力/750+30*智力）点伤害",
+   "desc": "/强化究极光裂术/\n攻击时，有10%概率造成（350+6*智力/450+12*智力/550+18*智力/650+24*智力/750+30*智力）点伤害",
    "kind": "攻击时",
    "mp": 200,
    "interval": 0,
@@ -90899,35 +91019,35 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 3,
+     "chance": 10.0,
      "damage": {
       "base": 350,
       "int": 6
      }
     },
     {
-     "chance": 3,
+     "chance": 10.0,
      "damage": {
       "base": 450,
       "int": 12
      }
     },
     {
-     "chance": 3,
+     "chance": 10.0,
      "damage": {
       "base": 550,
       "int": 18
      }
     },
     {
-     "chance": 3,
+     "chance": 10.0,
      "damage": {
       "base": 650,
       "int": 24
      }
     },
     {
-     "chance": 3,
+     "chance": 10.0,
      "damage": {
       "base": 750,
       "int": 30
@@ -90938,7 +91058,7 @@ window.GAME_DATA = {
   {
    "id": "187",
    "name": "古代启示",
-   "desc": "/领悟古代魔法知识/\n智力和MP回复增加（3/4/5/6/7）",
+   "desc": "/领悟古代魔法知识/\n智力和MP回复增加（5/10/15/20/25）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -90953,33 +91073,48 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "stats": {
-      "int": 1,
-      "mpRegen": 1
+     "self": {
+      "stats": {
+       "int": 5,
+       "mpRegen": 5
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "int": 2,
-      "mpRegen": 2
+     "self": {
+      "stats": {
+       "int": 10,
+       "mpRegen": 10
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "int": 3,
-      "mpRegen": 3
+     "self": {
+      "stats": {
+       "int": 15,
+       "mpRegen": 15
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "int": 4,
-      "mpRegen": 4
+     "self": {
+      "stats": {
+       "int": 20,
+       "mpRegen": 20
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "int": 5,
-      "mpRegen": 5
+     "self": {
+      "stats": {
+       "int": 25,
+       "mpRegen": 25
+      },
+      "dur": -1
      }
     }
    ]
@@ -90987,7 +91122,7 @@ window.GAME_DATA = {
   {
    "id": "188",
    "name": "绝对屏障",
-   "desc": "/形成保护的结界后一定时间内为接近无敌的状态/\n受击时，有1%概率增加（20/40/60/80/100）的护甲等级和伤害减免",
+   "desc": "/形成保护的结界后一定时间内为接近无敌的状态/\n受击时，有5%概率增加（20/40/60/80/100）的护甲等级和伤害减免，持续3回合",
    "kind": "受击时",
    "mp": 120,
    "interval": 0,
@@ -91002,7 +91137,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 1,
+     "chance": 5.0,
      "self": {
       "stats": {
        "def": 20,
@@ -91012,7 +91147,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 1,
+     "chance": 5.0,
      "self": {
       "stats": {
        "def": 40,
@@ -91022,7 +91157,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 1,
+     "chance": 5.0,
      "self": {
       "stats": {
        "def": 60,
@@ -91032,7 +91167,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 1,
+     "chance": 5.0,
      "self": {
       "stats": {
        "def": 80,
@@ -91042,7 +91177,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 1,
+     "chance": 5.0,
      "self": {
       "stats": {
        "def": 100,
@@ -91056,7 +91191,7 @@ window.GAME_DATA = {
   {
    "id": "189",
    "name": "究极光裂术",
-   "desc": "/巨枪贯穿后造成庞大伤害/\n攻击时，有2%概率造成（300+5*智力/400+10*智力/500+15*智力/600+20*智力/700+25*智力）点伤害",
+   "desc": "/巨枪贯穿后造成庞大伤害/\n攻击时，有5%概率造成（300+5*智力/400+10*智力/500+15*智力/600+20*智力/700+25*智力）点伤害",
    "kind": "攻击时",
    "mp": 150,
    "interval": 0,
@@ -91071,35 +91206,35 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 2,
+     "chance": 5.0,
      "damage": {
       "base": 300,
       "int": 5
      }
     },
     {
-     "chance": 2,
+     "chance": 5.0,
      "damage": {
       "base": 400,
       "int": 10
      }
     },
     {
-     "chance": 2,
+     "chance": 5.0,
      "damage": {
       "base": 500,
       "int": 15
      }
     },
     {
-     "chance": 2,
+     "chance": 5.0,
      "damage": {
       "base": 600,
       "int": 20
      }
     },
     {
-     "chance": 2,
+     "chance": 5.0,
      "damage": {
       "base": 700,
       "int": 25
@@ -91110,7 +91245,7 @@ window.GAME_DATA = {
   {
    "id": "191",
    "name": "暗黑咒术",
-   "desc": "/留下标记并支配对象的影子/\n回合开始时，有10%概率使敌人闪避等级减少（2/4/6/8/10），持续3回合",
+   "desc": "/留下标记并支配对象的影子/\n回合开始时，有15%概率使敌人闪避等级减少（5/10/15/20/25），持续3回合",
    "kind": "每N回合",
    "mp": 30,
    "interval": 0,
@@ -91125,51 +91260,51 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 10,
+     "chance": 15.0,
      "interval": 1,
      "enemy": {
       "stats": {
-       "dodge": -2
+       "dodge": -5
       },
       "dur": 3
      }
     },
     {
-     "chance": 10,
-     "interval": 1,
-     "enemy": {
-      "stats": {
-       "dodge": -4
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 10,
-     "interval": 1,
-     "enemy": {
-      "stats": {
-       "dodge": -6
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 10,
-     "interval": 1,
-     "enemy": {
-      "stats": {
-       "dodge": -8
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 10,
+     "chance": 15.0,
      "interval": 1,
      "enemy": {
       "stats": {
        "dodge": -10
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15.0,
+     "interval": 1,
+     "enemy": {
+      "stats": {
+       "dodge": -15
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15.0,
+     "interval": 1,
+     "enemy": {
+      "stats": {
+       "dodge": -20
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15.0,
+     "interval": 1,
+     "enemy": {
+      "stats": {
+       "dodge": -25
       },
       "dur": 3
      }
@@ -91179,7 +91314,7 @@ window.GAME_DATA = {
   {
    "id": "192",
    "name": "强化:恐惧无助",
-   "desc": "/强化恐惧效果/\n攻击时15%概率使敌人命中和闪避等级降低（3/6/9/12/15），持续3回合",
+   "desc": "/强化恐惧效果/\n攻击时15%概率使敌人命中和闪避等级降低（5/10/15/20/25），持续3回合",
    "kind": "攻击时",
    "mp": 35,
    "interval": 0,
@@ -91197,8 +91332,8 @@ window.GAME_DATA = {
      "chance": 15,
      "enemy": {
       "stats": {
-       "hit": -3,
-       "dodge": -3
+       "hit": -5,
+       "dodge": -5
       },
       "dur": 3
      }
@@ -91207,28 +91342,8 @@ window.GAME_DATA = {
      "chance": 15,
      "enemy": {
       "stats": {
-       "hit": -6,
-       "dodge": -6
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 15,
-     "enemy": {
-      "stats": {
-       "hit": -9,
-       "dodge": -9
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 15,
-     "enemy": {
-      "stats": {
-       "hit": -12,
-       "dodge": -12
+       "hit": -10,
+       "dodge": -10
       },
       "dur": 3
      }
@@ -91242,13 +91357,33 @@ window.GAME_DATA = {
       },
       "dur": 3
      }
+    },
+    {
+     "chance": 15,
+     "enemy": {
+      "stats": {
+       "hit": -20,
+       "dodge": -20
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15,
+     "enemy": {
+      "stats": {
+       "hit": -25,
+       "dodge": -25
+      },
+      "dur": 3
+     }
     }
    ]
   },
   {
    "id": "193",
    "name": "魔法大师",
-   "desc": "被动\n/透过大魔法书而变成超越魔法极限的强力法师/\nMP消耗降低（10%/12.5%/15%/17.5%/20%）",
+   "desc": "被动\n/透过大魔法书而变成超越魔法极限的强力法师/\nMP消耗降低（10%/15%/20%/25%/30%）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -91263,28 +91398,48 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "pctStats": {
-      "mpCost": -3
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "mpCost": -10
+      }
      }
     },
     {
-     "pctStats": {
-      "mpCost": -6
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "mpCost": -15
+      }
      }
     },
     {
-     "pctStats": {
-      "mpCost": -9
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "mpCost": -20
+      }
      }
     },
     {
-     "pctStats": {
-      "mpCost": -12
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "mpCost": -25
+      }
      }
     },
     {
-     "pctStats": {
-      "mpCost": -15
+     "self": {
+      "stats": {},
+      "dur": -1,
+      "pctStats": {
+       "mpCost": -30
+      }
      }
     }
    ]
@@ -91292,7 +91447,7 @@ window.GAME_DATA = {
   {
    "id": "194",
    "name": "神圣追赶者",
-   "desc": "/「光之追击」/\n攻击时有20%概率使命中率和智力增加（2/4/6/8/10），持续3回合",
+   "desc": "/「光之追击」/\n攻击时有25%概率使命中率和智力增加（5/10/15/20/25），持续3回合",
    "kind": "攻击时",
    "mp": 40,
    "interval": 0,
@@ -91307,51 +91462,51 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 20,
+     "chance": 25,
      "self": {
       "stats": {
-       "hit": 2,
-       "int": 2
+       "hit": 5,
+       "int": 5
       },
       "dur": 3
      }
     },
     {
-     "chance": 20,
-     "self": {
-      "stats": {
-       "hit": 4,
-       "int": 4
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 20,
-     "self": {
-      "stats": {
-       "hit": 6,
-       "int": 6
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 20,
-     "self": {
-      "stats": {
-       "hit": 8,
-       "int": 8
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 20,
+     "chance": 25,
      "self": {
       "stats": {
        "hit": 10,
        "int": 10
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 25,
+     "self": {
+      "stats": {
+       "hit": 15,
+       "int": 15
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 25,
+     "self": {
+      "stats": {
+       "hit": 20,
+       "int": 20
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 25,
+     "self": {
+      "stats": {
+       "hit": 25,
+       "int": 25
       },
       "dur": 3
      }
@@ -91361,7 +91516,7 @@ window.GAME_DATA = {
   {
    "id": "195",
    "name": "流星雨",
-   "desc": "/召唤陨石对对象周围造成伤害/\n每3回合，有50%概率造成（100+7*智力/120+8*智力/140+9*智力/160+10*智力/180+11*智力）点伤害",
+   "desc": "/召唤陨石对对象周围造成伤害/\n每3回合，有70%概率造成（100+7*智力/120+8*智力/140+9*智力/160+10*智力/180+11*智力）点伤害",
    "kind": "每N回合",
    "mp": 70,
    "interval": 0,
@@ -91376,7 +91531,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 50,
+     "chance": 70.0,
      "interval": 3,
      "damage": {
       "base": 100,
@@ -91384,7 +91539,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 50,
+     "chance": 70.0,
      "interval": 3,
      "damage": {
       "base": 120,
@@ -91392,7 +91547,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 50,
+     "chance": 70.0,
      "interval": 3,
      "damage": {
       "base": 140,
@@ -91400,7 +91555,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 50,
+     "chance": 70.0,
      "interval": 3,
      "damage": {
       "base": 160,
@@ -91408,7 +91563,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 50,
+     "chance": 70.0,
      "interval": 3,
      "damage": {
       "base": 180,
@@ -91459,7 +91614,7 @@ window.GAME_DATA = {
   {
    "id": "197",
    "name": "破坏:屏障",
-   "desc": "/发射一颗魔法子弹，使对象的防御失效/\n攻击时10%概率使敌人降低（5/10/15/20/25）防御等级，持续3回合",
+   "desc": "/发射一颗魔法子弹，使对象的防御失效/\n攻击时15%概率使敌人降低（20/40/60/80/100）防御等级，持续3回合",
    "kind": "攻击时",
    "mp": 35,
    "interval": 0,
@@ -91474,34 +91629,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 10,
-     "enemy": {
-      "stats": {
-       "def": -5
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 10,
-     "enemy": {
-      "stats": {
-       "def": -10
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 10,
-     "enemy": {
-      "stats": {
-       "def": -15
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 10,
+     "chance": 15.0,
      "enemy": {
       "stats": {
        "def": -20
@@ -91510,10 +91638,37 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 10,
+     "chance": 15.0,
      "enemy": {
       "stats": {
-       "def": -25
+       "def": -40
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15.0,
+     "enemy": {
+      "stats": {
+       "def": -60
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15.0,
+     "enemy": {
+      "stats": {
+       "def": -80
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15.0,
+     "enemy": {
+      "stats": {
+       "def": -100
       },
       "dur": 3
      }
@@ -91523,7 +91678,7 @@ window.GAME_DATA = {
   {
    "id": "198",
    "name": "魔法弹:魔法相消术",
-   "desc": "/发射蕴含魔法的子弹/\n攻击时（3%/6%/9%/12%/15%）概率使敌人沉默，持续2回合",
+   "desc": "/发射蕴含魔法的子弹/\n攻击时（5%/10%/15%/20%/25%）概率使敌人沉默，持续2回合",
    "kind": "攻击时",
    "mp": 45,
    "interval": 0,
@@ -91538,28 +91693,14 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 3,
+     "chance": 5,
      "status": {
       "name": "沉默",
       "dur": 2
      }
     },
     {
-     "chance": 6,
-     "status": {
-      "name": "沉默",
-      "dur": 2
-     }
-    },
-    {
-     "chance": 9,
-     "status": {
-      "name": "沉默",
-      "dur": 2
-     }
-    },
-    {
-     "chance": 12,
+     "chance": 10,
      "status": {
       "name": "沉默",
       "dur": 2
@@ -91571,13 +91712,27 @@ window.GAME_DATA = {
       "name": "沉默",
       "dur": 2
      }
+    },
+    {
+     "chance": 20,
+     "status": {
+      "name": "沉默",
+      "dur": 2
+     }
+    },
+    {
+     "chance": 25,
+     "status": {
+      "name": "沉默",
+      "dur": 2
+     }
     }
    ]
   },
   {
    "id": "199",
    "name": "三重矢(精神)",
-   "desc": "/迅速地连续发射3支箭/\n攻击时有15%概率造成（20+4*敏捷/40+4*敏捷/60+4*敏捷/80+4*敏捷/100+4*敏捷）点伤害",
+   "desc": "/迅速地连续发射3支箭/\n攻击时有25%概率造成（20+4*敏捷/40+4*敏捷/60+4*敏捷/80+4*敏捷/100+4*敏捷）点伤害",
    "kind": "攻击时",
    "mp": 55,
    "interval": 0,
@@ -91592,35 +91747,35 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 15,
+     "chance": 25.0,
      "damage": {
       "base": 20,
       "dex": 4
      }
     },
     {
-     "chance": 15,
+     "chance": 25.0,
      "damage": {
       "base": 40,
       "dex": 4
      }
     },
     {
-     "chance": 15,
+     "chance": 25.0,
      "damage": {
       "base": 60,
       "dex": 4
      }
     },
     {
-     "chance": 15,
+     "chance": 25.0,
      "damage": {
       "base": 80,
       "dex": 4
      }
     },
     {
-     "chance": 15,
+     "chance": 25.0,
      "damage": {
       "base": 100,
       "dex": 4
@@ -91631,7 +91786,7 @@ window.GAME_DATA = {
   {
    "id": "200",
    "name": "快速射击(士兵)",
-   "desc": "/强化快速射击，快速连发子弹/\n攻击时有15%概率造成（100+2*敏捷/150+2*敏捷/200+2*敏捷/250+2*敏捷/300+2*敏捷）点伤害",
+   "desc": "/强化快速射击，快速连发子弹/\n攻击时有25%概率造成（100+2*敏捷/150+2*敏捷/200+2*敏捷/250+2*敏捷/300+2*敏捷）点伤害",
    "kind": "攻击时",
    "mp": 50,
    "interval": 0,
@@ -91646,35 +91801,35 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 15,
+     "chance": 25.0,
      "damage": {
       "base": 100,
       "dex": 2
      }
     },
     {
-     "chance": 15,
+     "chance": 25.0,
      "damage": {
       "base": 150,
       "dex": 2
      }
     },
     {
-     "chance": 15,
+     "chance": 25.0,
      "damage": {
       "base": 200,
       "dex": 2
      }
     },
     {
-     "chance": 15,
+     "chance": 25.0,
      "damage": {
       "base": 250,
       "dex": 2
      }
     },
     {
-     "chance": 15,
+     "chance": 25.0,
      "damage": {
       "base": 300,
       "dex": 2
@@ -91685,7 +91840,7 @@ window.GAME_DATA = {
   {
    "id": "201",
    "name": "神圣狂袭(预言)",
-   "desc": "攻击时，有50%概率造成（20+2*智力/30+3*智力/40+4*智力/50+5*智力/60+6*智力）点伤害",
+   "desc": "攻击时，有70%概率造成（20+2*智力/30+3*智力/40+4*智力/50+5*智力/60+6*智力）点伤害",
    "kind": "攻击时",
    "mp": 45,
    "interval": 0,
@@ -91700,35 +91855,35 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 50,
+     "chance": 70.0,
      "damage": {
       "base": 20,
       "int": 2
      }
     },
     {
-     "chance": 50,
+     "chance": 70.0,
      "damage": {
       "base": 30,
       "int": 3
      }
     },
     {
-     "chance": 50,
+     "chance": 70.0,
      "damage": {
       "base": 40,
       "int": 4
      }
     },
     {
-     "chance": 50,
+     "chance": 70.0,
      "damage": {
       "base": 50,
       "int": 5
      }
     },
     {
-     "chance": 50,
+     "chance": 70.0,
      "damage": {
       "base": 60,
       "int": 6
@@ -91739,7 +91894,7 @@ window.GAME_DATA = {
   {
    "id": "202",
    "name": "暗影冲刺:命运",
-   "desc": "/发动黑精灵之力/\n战斗开始时，提高（2/4/6/8/10）点敏捷，持续3回合",
+   "desc": "/发动黑精灵之力/\n战斗开始时，提高（5/10/15/20/25）点敏捷，持续5回合",
    "kind": "战斗开始时",
    "mp": 25,
    "interval": 0,
@@ -91756,31 +91911,7 @@ window.GAME_DATA = {
     {
      "self": {
       "stats": {
-       "dex": 2
-      },
-      "dur": 3
-     }
-    },
-    {
-     "self": {
-      "stats": {
-       "dex": 4
-      },
-      "dur": 3
-     }
-    },
-    {
-     "self": {
-      "stats": {
-       "dex": 6
-      },
-      "dur": 3
-     }
-    },
-    {
-     "self": {
-      "stats": {
-       "dex": 8
+       "dex": 5
       },
       "dur": 3
      }
@@ -91792,13 +91923,37 @@ window.GAME_DATA = {
       },
       "dur": 3
      }
+    },
+    {
+     "self": {
+      "stats": {
+       "dex": 15
+      },
+      "dur": 3
+     }
+    },
+    {
+     "self": {
+      "stats": {
+       "dex": 20
+      },
+      "dur": 3
+     }
+    },
+    {
+     "self": {
+      "stats": {
+       "dex": 25
+      },
+      "dur": 3
+     }
     }
    ]
   },
   {
    "id": "203",
    "name": "毒性精通:命运",
-   "desc": "/释放剧毒/\n回合开始时造成（10+1*敏捷/20+2*敏捷/30+3*敏捷/40+4*敏捷/50+5*敏捷）点伤害",
+   "desc": "/释放剧毒/\n回合开始时造成（30+1*敏捷/60+2*敏捷/90+3*敏捷/120+4*敏捷/150+5*敏捷）点伤害",
    "kind": "每N回合",
    "mp": 50,
    "interval": 0,
@@ -91815,35 +91970,35 @@ window.GAME_DATA = {
     {
      "interval": 1,
      "damage": {
-      "base": 10,
+      "base": 30,
       "dex": 1
      }
     },
     {
      "interval": 1,
      "damage": {
-      "base": 20,
+      "base": 60,
       "dex": 2
      }
     },
     {
      "interval": 1,
      "damage": {
-      "base": 30,
+      "base": 90,
       "dex": 3
      }
     },
     {
      "interval": 1,
      "damage": {
-      "base": 40,
+      "base": 120,
       "dex": 4
      }
     },
     {
      "interval": 1,
      "damage": {
-      "base": 50,
+      "base": 150,
       "dex": 5
      }
     }
@@ -91852,7 +92007,7 @@ window.GAME_DATA = {
   {
    "id": "204",
    "name": "盖亚",
-   "desc": "/以泰坦的再生能力，连续恢复HP/\nHP低于50%时，回复自身（2%/4%/6%/8%/10%）HP，并提高（5/10/15/20/25）HP回复，持续3回合",
+   "desc": "/以泰坦的再生能力，连续恢复HP/\nHP低于50%时，回复自身（5%/10%/15%/20%/25%）HP，并提高（30/60/90/120/150）HP回复，持续3回合",
    "kind": "生命低于",
    "mp": 60,
    "interval": 0,
@@ -91868,44 +92023,11 @@ window.GAME_DATA = {
    "levels": [
     {
      "heal": {
-      "pct": 2
+      "pct": 5
      },
      "self": {
       "stats": {
-       "hpRegen": 5
-      },
-      "dur": 3
-     }
-    },
-    {
-     "heal": {
-      "pct": 4
-     },
-     "self": {
-      "stats": {
-       "hpRegen": 10
-      },
-      "dur": 3
-     }
-    },
-    {
-     "heal": {
-      "pct": 6
-     },
-     "self": {
-      "stats": {
-       "hpRegen": 15
-      },
-      "dur": 3
-     }
-    },
-    {
-     "heal": {
-      "pct": 8
-     },
-     "self": {
-      "stats": {
-       "hpRegen": 20
+       "hpRegen": 30
       },
       "dur": 3
      }
@@ -91916,7 +92038,40 @@ window.GAME_DATA = {
      },
      "self": {
       "stats": {
-       "hpRegen": 25
+       "hpRegen": 60
+      },
+      "dur": 3
+     }
+    },
+    {
+     "heal": {
+      "pct": 15
+     },
+     "self": {
+      "stats": {
+       "hpRegen": 90
+      },
+      "dur": 3
+     }
+    },
+    {
+     "heal": {
+      "pct": 20
+     },
+     "self": {
+      "stats": {
+       "hpRegen": 120
+      },
+      "dur": 3
+     }
+    },
+    {
+     "heal": {
+      "pct": 25
+     },
+     "self": {
+      "stats": {
+       "hpRegen": 150
       },
       "dur": 3
      }
@@ -91926,7 +92081,7 @@ window.GAME_DATA = {
   {
    "id": "205",
    "name": "亡命之徒:上升",
-   "desc": "/伤害转换效果/\n暴击时（20%/40%/60%/80%/100%）概率回复2%生命值",
+   "desc": "/伤害转换效果/\n暴击时（20%/40%/60%/80%/100%）概率回复3%生命值",
    "kind": "攻击时",
    "mp": 25,
    "interval": 0,
@@ -91975,7 +92130,7 @@ window.GAME_DATA = {
   {
    "id": "206",
    "name": "泰坦:上升",
-   "desc": "暴击和体质提高（1/2/3/4/5）",
+   "desc": "暴击和体质提高（5/10/15/20/25）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -91990,43 +92145,58 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "pctStats": {
-      "crit": 1
-     },
-     "stats": {
-      "con": 1
+     "self": {
+      "stats": {
+       "con": 5
+      },
+      "pctStats": {
+       "crit": 5
+      },
+      "dur": -1
      }
     },
     {
-     "pctStats": {
-      "crit": 2
-     },
-     "stats": {
-      "con": 2
+     "self": {
+      "stats": {
+       "con": 10
+      },
+      "pctStats": {
+       "crit": 10
+      },
+      "dur": -1
      }
     },
     {
-     "pctStats": {
-      "crit": 3
-     },
-     "stats": {
-      "con": 3
+     "self": {
+      "stats": {
+       "con": 15
+      },
+      "pctStats": {
+       "crit": 15
+      },
+      "dur": -1
      }
     },
     {
-     "pctStats": {
-      "crit": 4
-     },
-     "stats": {
-      "con": 4
+     "self": {
+      "stats": {
+       "con": 20
+      },
+      "pctStats": {
+       "crit": 20
+      },
+      "dur": -1
      }
     },
     {
-     "pctStats": {
-      "crit": 5
-     },
-     "stats": {
-      "con": 5
+     "self": {
+      "stats": {
+       "con": 25
+      },
+      "pctStats": {
+       "crit": 25
+      },
+      "dur": -1
      }
     }
    ]
@@ -92034,7 +92204,7 @@ window.GAME_DATA = {
   {
    "id": "207",
    "name": "泰坦:致命",
-   "desc": "/攻击时依指定概率发动“护盾粉碎”，破坏对象的护盾/\n攻击时有2%概率使敌人护甲等级降低（20/40/60/80/100），持续3回合",
+   "desc": "/攻击时依指定概率发动“护盾粉碎”，破坏对象的护盾/\n攻击时有5%概率使敌人护甲等级降低（30/60/90/120/150），持续3回合",
    "kind": "攻击时",
    "mp": 30,
    "interval": 0,
@@ -92049,25 +92219,16 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 2,
+     "chance": 5.0,
      "enemy": {
       "stats": {
-       "def": -20
+       "def": -30
       },
       "dur": 3
      }
     },
     {
-     "chance": 2,
-     "enemy": {
-      "stats": {
-       "def": -40
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 2,
+     "chance": 5.0,
      "enemy": {
       "stats": {
        "def": -60
@@ -92076,19 +92237,28 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 2,
+     "chance": 5.0,
      "enemy": {
       "stats": {
-       "def": -80
+       "def": -90
       },
       "dur": 3
      }
     },
     {
-     "chance": 2,
+     "chance": 5.0,
      "enemy": {
       "stats": {
-       "def": -100
+       "def": -120
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 5.0,
+     "enemy": {
+      "stats": {
+       "def": -150
       },
       "dur": 3
      }
@@ -92098,7 +92268,7 @@ window.GAME_DATA = {
   {
    "id": "208",
    "name": "冲击之晕:大师",
-   "desc": "/强化冲击之晕（专家）效果/\n攻击时有（1%/2%/3%/4%/5%）晕眩敌人，持续1回合，并降低敌人（5/10/15/20/25）防御等级，持续3回合",
+   "desc": "/强化冲击之晕（专家）效果/\n攻击时有（3%/4%/5%/6%/7%）晕眩敌人，持续1回合，并降低敌人（15/30/45/60/75）防御等级，持续3回合",
    "kind": "攻击时",
    "mp": 60,
    "interval": 0,
@@ -92112,32 +92282,6 @@ window.GAME_DATA = {
     "1637"
    ],
    "levels": [
-    {
-     "chance": 1,
-     "status": {
-      "name": "晕眩",
-      "dur": 1
-     },
-     "enemy": {
-      "stats": {
-       "def": -5
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 2,
-     "status": {
-      "name": "晕眩",
-      "dur": 1
-     },
-     "enemy": {
-      "stats": {
-       "def": -10
-      },
-      "dur": 3
-     }
-    },
     {
      "chance": 3,
      "status": {
@@ -92159,7 +92303,7 @@ window.GAME_DATA = {
      },
      "enemy": {
       "stats": {
-       "def": -20
+       "def": -30
       },
       "dur": 3
      }
@@ -92172,7 +92316,33 @@ window.GAME_DATA = {
      },
      "enemy": {
       "stats": {
-       "def": -25
+       "def": -45
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 6,
+     "status": {
+      "name": "晕眩",
+      "dur": 1
+     },
+     "enemy": {
+      "stats": {
+       "def": -60
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 7,
+     "status": {
+      "name": "晕眩",
+      "dur": 1
+     },
+     "enemy": {
+      "stats": {
+       "def": -75
       },
       "dur": 3
      }
@@ -92182,7 +92352,7 @@ window.GAME_DATA = {
   {
    "id": "209",
    "name": "反击屏障:大师",
-   "desc": "闪避等级和HP回复提高（2/4/6/8/10）",
+   "desc": "闪避等级和HP回复提高（5/10/15/20/25）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -92197,33 +92367,48 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "stats": {
-      "dodge": 3,
-      "hpRegen": 3
+     "self": {
+      "stats": {
+       "dodge": 5,
+       "hpRegen": 5
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 4,
-      "hpRegen": 4
+     "self": {
+      "stats": {
+       "dodge": 10,
+       "hpRegen": 10
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 5,
-      "hpRegen": 5
+     "self": {
+      "stats": {
+       "dodge": 15,
+       "hpRegen": 15
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 6,
-      "hpRegen": 6
+     "self": {
+      "stats": {
+       "dodge": 20,
+       "hpRegen": 20
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 7,
-      "hpRegen": 7
+     "self": {
+      "stats": {
+       "dodge": 25,
+       "hpRegen": 25
+      },
+      "dur": -1
      }
     }
    ]
@@ -92231,7 +92416,7 @@ window.GAME_DATA = {
   {
    "id": "211",
    "name": "净化:大师",
-   "desc": "回合开始时有10%概率回复（1%/2%/3%/4%/5%）生命值并增加（1/2/3/4/5）伤害减免，持续3回合",
+   "desc": "回合开始时有15%概率回复（3%/4%/5%/6%/7%）生命值并增加（5/10/15/20/25）伤害减免，持续3回合",
    "kind": "每N回合",
    "mp": 30,
    "interval": 0,
@@ -92246,66 +92431,71 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 10,
+     "chance": 15,
      "interval": 1,
      "heal": {
-      "pct": 1
-     },
-     "self": {
-      "stats": {
-       "dr": 1
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 10,
-     "interval": 1,
-     "heal": {
-      "pct": 2
-     },
-     "self": {
-      "stats": {
-       "dr": 2
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 10,
-     "interval": 1,
-     "heal": {
-      "pct": 3
-     },
-     "self": {
-      "stats": {
-       "dr": 3
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 10,
-     "interval": 1,
-     "heal": {
-      "pct": 4
-     },
-     "self": {
-      "stats": {
-       "dr": 4
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 10,
-     "interval": 1,
-     "heal": {
-      "pct": 5
+      "pct": 3,
+      "base": 5
      },
      "self": {
       "stats": {
        "dr": 5
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15,
+     "interval": 1,
+     "heal": {
+      "pct": 4,
+      "base": 10
+     },
+     "self": {
+      "stats": {
+       "dr": 10
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15,
+     "interval": 1,
+     "heal": {
+      "pct": 5,
+      "base": 15
+     },
+     "self": {
+      "stats": {
+       "dr": 15
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15,
+     "interval": 1,
+     "heal": {
+      "pct": 6,
+      "base": 20
+     },
+     "self": {
+      "stats": {
+       "dr": 20
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 15,
+     "interval": 1,
+     "heal": {
+      "pct": 7,
+      "base": 25
+     },
+     "self": {
+      "stats": {
+       "dr": 25
       },
       "dur": 3
      }
@@ -92315,7 +92505,7 @@ window.GAME_DATA = {
   {
    "id": "212",
    "name": "幽魂闪避:安魂曲",
-   "desc": "/让身体全部亡灵化，屏障回避力反击增加/\n防御等级下降（3/6/9/12/15），回避等级增加（3/6/9/12/15）",
+   "desc": "/让身体全部亡灵化，屏障回避力反击增加/\n防御等级下降（10/20/30/40/50），回避等级增加（10/20/30/40/50）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -92330,33 +92520,48 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "stats": {
-      "def": -3,
-      "dodge": 3
+     "self": {
+      "stats": {
+       "def": -10,
+       "dodge": 10
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "def": -6,
-      "dodge": 6
+     "self": {
+      "stats": {
+       "def": -20,
+       "dodge": 20
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "def": -9,
-      "dodge": 9
+     "self": {
+      "stats": {
+       "def": -30,
+       "dodge": 30
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "def": -12,
-      "dodge": 12
+     "self": {
+      "stats": {
+       "def": -40,
+       "dodge": 40
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "def": -15,
-      "dodge": 15
+     "self": {
+      "stats": {
+       "def": -50,
+       "dodge": 50
+      },
+      "dur": -1
      }
     }
    ]
@@ -92364,7 +92569,7 @@ window.GAME_DATA = {
   {
    "id": "213",
    "name": "幽魂反击:日蚀",
-   "desc": "/强化幽魂反击(安魂曲)效果/ 生命值低于50%时，对敌人造成（100+5*智力/120+6*智力/140+7*智力/160+8*智力/180+9*智力）点伤害",
+   "desc": "/强化幽魂反击(安魂曲)效果/ 生命值低于50%时，对敌人造成（200+5*智力/320+6*智力/440+7*智力/560+8*智力/680+9*智力）点伤害",
    "kind": "生命低于",
    "mp": 50,
    "interval": 0,
@@ -92380,31 +92585,31 @@ window.GAME_DATA = {
    "levels": [
     {
      "damage": {
-      "base": 100,
+      "base": 200,
       "int": 5
      }
     },
     {
      "damage": {
-      "base": 120,
+      "base": 320,
       "int": 6
      }
     },
     {
      "damage": {
-      "base": 140,
+      "base": 440,
       "int": 7
      }
     },
     {
      "damage": {
-      "base": 160,
+      "base": 560,
       "int": 8
      }
     },
     {
      "damage": {
-      "base": 180,
+      "base": 680,
       "int": 9
      }
     }
@@ -92413,7 +92618,7 @@ window.GAME_DATA = {
   {
    "id": "214",
    "name": "死亡晕击:安魂曲",
-   "desc": "/强化死亡晕击/\n生命值低于50%时，有（60%/70%/80%/90%/100%）晕眩敌人，持续2回合",
+   "desc": "/强化死亡晕击/\n生命值低于50%时，有（60%/70%/80%/90%/100%）晕眩敌人，持续3回合",
    "kind": "生命低于",
    "mp": 60,
    "interval": 0,
@@ -92467,7 +92672,7 @@ window.GAME_DATA = {
   {
    "id": "215",
    "name": "黑暗之镜:复仇者",
-   "desc": "/凝聚强大的黑暗之力，强化黑暗之镜效果/\n受到攻击时有10%概率增加自己（10/15/20/25/30）魔抗，持续3回合",
+   "desc": "/凝聚强大的黑暗之力，强化黑暗之镜效果/\n受到攻击时有25%概率增加自己（20/40/60/80/100）魔抗，持续3回合",
    "kind": "受击时",
    "mp": 20,
    "interval": 0,
@@ -92482,25 +92687,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 10,
-     "self": {
-      "stats": {
-       "mr": 10
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 10,
-     "self": {
-      "stats": {
-       "mr": 15
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 10,
+     "chance": 25.0,
      "self": {
       "stats": {
        "mr": 20
@@ -92509,19 +92696,37 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 10,
+     "chance": 25.0,
      "self": {
       "stats": {
-       "mr": 25
+       "mr": 40
       },
       "dur": 3
      }
     },
     {
-     "chance": 10,
+     "chance": 25.0,
      "self": {
       "stats": {
-       "mr": 30
+       "mr": 60
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 25.0,
+     "self": {
+      "stats": {
+       "mr": 80
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 25.0,
+     "self": {
+      "stats": {
+       "mr": 100
       },
       "dur": 3
      }
@@ -92531,7 +92736,7 @@ window.GAME_DATA = {
   {
    "id": "216",
    "name": "变形怪王",
-   "desc": "/增加黑暗力量，觉醒为虚空的君主/\n力量敏捷智力精神体质全部增加（1/2/3/4/5）",
+   "desc": "/增加黑暗力量，觉醒为虚空的君主/\n力量敏捷智力精神体质全部增加（3/6/9/12/15）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -92546,48 +92751,63 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "stats": {
-      "str": 1,
-      "dex": 1,
-      "int": 1,
-      "wis": 1,
-      "con": 1
+     "self": {
+      "stats": {
+       "str": 3,
+       "dex": 3,
+       "int": 3,
+       "wis": 3,
+       "con": 3
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "str": 2,
-      "dex": 2,
-      "int": 2,
-      "wis": 2,
-      "con": 2
+     "self": {
+      "stats": {
+       "str": 6,
+       "dex": 6,
+       "int": 6,
+       "wis": 6,
+       "con": 6
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "str": 3,
-      "dex": 3,
-      "int": 3,
-      "wis": 3,
-      "con": 3
+     "self": {
+      "stats": {
+       "str": 9,
+       "dex": 9,
+       "int": 9,
+       "wis": 9,
+       "con": 9
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "str": 4,
-      "dex": 4,
-      "int": 4,
-      "wis": 4,
-      "con": 4
+     "self": {
+      "stats": {
+       "str": 12,
+       "dex": 12,
+       "int": 12,
+       "wis": 12,
+       "con": 12
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "str": 5,
-      "dex": 5,
-      "int": 5,
-      "wis": 5,
-      "con": 5
+     "self": {
+      "stats": {
+       "str": 15,
+       "dex": 15,
+       "int": 15,
+       "wis": 15,
+       "con": 15
+      },
+      "dur": -1
      }
     }
    ]
@@ -92595,7 +92815,7 @@ window.GAME_DATA = {
   {
    "id": "217",
    "name": "占据",
-   "desc": "/朝着前方快速突进/\n战斗开始时，使敌人命中降低（2/4/6/8/10），持续2回合",
+   "desc": "/朝着前方快速突进/\n战斗开始时，使敌人命中降低（10/20/30/40/50），持续2回合",
    "kind": "战斗开始时",
    "mp": 8,
    "interval": 0,
@@ -92612,39 +92832,39 @@ window.GAME_DATA = {
     {
      "enemy": {
       "stats": {
-       "hit": -2
-      },
-      "dur": 2
-     }
-    },
-    {
-     "enemy": {
-      "stats": {
-       "hit": -4
-      },
-      "dur": 2
-     }
-    },
-    {
-     "enemy": {
-      "stats": {
-       "hit": -6
-      },
-      "dur": 2
-     }
-    },
-    {
-     "enemy": {
-      "stats": {
-       "hit": -8
-      },
-      "dur": 2
-     }
-    },
-    {
-     "enemy": {
-      "stats": {
        "hit": -10
+      },
+      "dur": 2
+     }
+    },
+    {
+     "enemy": {
+      "stats": {
+       "hit": -20
+      },
+      "dur": 2
+     }
+    },
+    {
+     "enemy": {
+      "stats": {
+       "hit": -30
+      },
+      "dur": 2
+     }
+    },
+    {
+     "enemy": {
+      "stats": {
+       "hit": -40
+      },
+      "dur": 2
+     }
+    },
+    {
+     "enemy": {
+      "stats": {
+       "hit": -50
       },
       "dur": 2
      }
@@ -92654,7 +92874,7 @@ window.GAME_DATA = {
   {
    "id": "218",
    "name": "泰坦:魔法",
-   "desc": "闪避等级和魔抗增加（1/2/3/4/5）",
+   "desc": "闪避等级和魔抗增加（3/6/9/12/15）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -92669,33 +92889,48 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "stats": {
-      "dodge": 1,
-      "mr": 1
+     "self": {
+      "stats": {
+       "dodge": 3,
+       "mr": 3
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 2,
-      "mr": 2
+     "self": {
+      "stats": {
+       "dodge": 6,
+       "mr": 6
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 3,
-      "mr": 3
+     "self": {
+      "stats": {
+       "dodge": 9,
+       "mr": 9
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 4,
-      "mr": 4
+     "self": {
+      "stats": {
+       "dodge": 12,
+       "mr": 12
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 5,
-      "mr": 5
+     "self": {
+      "stats": {
+       "dodge": 15,
+       "mr": 15
+      },
+      "dur": -1
      }
     }
    ]
@@ -92762,7 +92997,7 @@ window.GAME_DATA = {
   {
    "id": "234",
    "name": "闪电攻击(神秘)",
-   "desc": "/闪电攻击效果强化/\n攻击时12%概率造成（40+2*智力/50+3*智力/60+4*智力/70+5*智力/80+6*智力）点伤害",
+   "desc": "/闪电攻击效果强化/\n攻击时18%概率造成（40+2*智力/50+3*智力/60+4*智力/70+5*智力/80+6*智力）点伤害",
    "kind": "攻击时",
    "mp": 35,
    "interval": 0,
@@ -92777,35 +93012,35 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 12,
+     "chance": 18.0,
      "damage": {
       "base": 40,
       "int": 2
      }
     },
     {
-     "chance": 12,
+     "chance": 18.0,
      "damage": {
       "base": 50,
       "int": 3
      }
     },
     {
-     "chance": 12,
+     "chance": 18.0,
      "damage": {
       "base": 60,
       "int": 4
      }
     },
     {
-     "chance": 12,
+     "chance": 18.0,
      "damage": {
       "base": 70,
       "int": 5
      }
     },
     {
-     "chance": 12,
+     "chance": 18.0,
      "damage": {
       "base": 80,
       "int": 6
@@ -92816,7 +93051,7 @@ window.GAME_DATA = {
   {
    "id": "235",
    "name": "雷霆标记(神秘)",
-   "desc": "/强化闪雷标记效果/\n攻击时有15%概率使敌人攻击力降低（2%/4%/6%/8%/10%），持续2回合",
+   "desc": "/强化闪雷标记效果/\n攻击时有15%概率使敌人攻击力降低（5%/10%/15%/20%/25%），持续2回合",
    "kind": "攻击时",
    "mp": 32,
    "interval": 0,
@@ -92834,36 +93069,10 @@ window.GAME_DATA = {
      "chance": 15,
      "enemy": {
       "pctStats": {
-       "atk": -2
+       "atk": -5
       },
-      "dur": 2
-     }
-    },
-    {
-     "chance": 15,
-     "enemy": {
-      "pctStats": {
-       "atk": -4
-      },
-      "dur": 2
-     }
-    },
-    {
-     "chance": 15,
-     "enemy": {
-      "pctStats": {
-       "atk": -6
-      },
-      "dur": 2
-     }
-    },
-    {
-     "chance": 15,
-     "enemy": {
-      "pctStats": {
-       "atk": -8
-      },
-      "dur": 2
+      "dur": 2,
+      "stats": {}
      }
     },
     {
@@ -92872,7 +93081,38 @@ window.GAME_DATA = {
       "pctStats": {
        "atk": -10
       },
-      "dur": 2
+      "dur": 2,
+      "stats": {}
+     }
+    },
+    {
+     "chance": 15,
+     "enemy": {
+      "pctStats": {
+       "atk": -15
+      },
+      "dur": 2,
+      "stats": {}
+     }
+    },
+    {
+     "chance": 15,
+     "enemy": {
+      "pctStats": {
+       "atk": -20
+      },
+      "dur": 2,
+      "stats": {}
+     }
+    },
+    {
+     "chance": 15,
+     "enemy": {
+      "pctStats": {
+       "atk": -25
+      },
+      "dur": 2,
+      "stats": {}
      }
     }
    ]
@@ -92880,7 +93120,7 @@ window.GAME_DATA = {
   {
    "id": "236",
    "name": "雷电盔甲(神秘)",
-   "desc": "/强化雷电盔甲效果/\n战斗开始时，护甲等级和攻击力提高（2%/4%/6%/8%/10%），持续2回合",
+   "desc": "/强化雷电盔甲效果/\n战斗开始时，护甲等级和攻击力提高（10%/20%/30%/40%/50%），持续2回合",
    "kind": "战斗开始时",
    "mp": 27,
    "interval": 0,
@@ -92897,46 +93137,51 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "def": 2,
-       "atk": 2
-      },
-      "dur": 2
-     }
-    },
-    {
-     "self": {
-      "pctStats": {
-       "def": 4,
-       "atk": 4
-      },
-      "dur": 2
-     }
-    },
-    {
-     "self": {
-      "pctStats": {
-       "def": 6,
-       "atk": 6
-      },
-      "dur": 2
-     }
-    },
-    {
-     "self": {
-      "pctStats": {
-       "def": 8,
-       "atk": 8
-      },
-      "dur": 2
-     }
-    },
-    {
-     "self": {
-      "pctStats": {
        "def": 10,
        "atk": 10
       },
-      "dur": 2
+      "dur": 2,
+      "stats": {}
+     }
+    },
+    {
+     "self": {
+      "pctStats": {
+       "def": 20,
+       "atk": 20
+      },
+      "dur": 2,
+      "stats": {}
+     }
+    },
+    {
+     "self": {
+      "pctStats": {
+       "def": 30,
+       "atk": 30
+      },
+      "dur": 2,
+      "stats": {}
+     }
+    },
+    {
+     "self": {
+      "pctStats": {
+       "def": 40,
+       "atk": 40
+      },
+      "dur": 2,
+      "stats": {}
+     }
+    },
+    {
+     "self": {
+      "pctStats": {
+       "def": 50,
+       "atk": 50
+      },
+      "dur": 2,
+      "stats": {}
      }
     }
    ]
@@ -92944,7 +93189,7 @@ window.GAME_DATA = {
   {
    "id": "238",
    "name": "幽魂盔甲(安魂曲)",
-   "desc": "/强化亡灵盔甲，增加施术者的防御力和抗性/\n被动\n防御等级和魔抗增加（1/2/3/4/5），最大HP增加（20/40/60/80/100）",
+   "desc": "/强化亡灵盔甲，增加施术者的防御力和抗性/\n被动\n防御等级和魔抗增加（5/10/15/20/25），最大HP增加（100/200/300/400/500）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -92959,38 +93204,53 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "stats": {
-      "def": 1,
-      "mr": 1,
-      "hp": 20
+     "self": {
+      "stats": {
+       "def": 5,
+       "mr": 5,
+       "hp": 100
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "def": 2,
-      "mr": 2,
-      "hp": 40
+     "self": {
+      "stats": {
+       "def": 10,
+       "mr": 10,
+       "hp": 200
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "def": 3,
-      "mr": 3,
-      "hp": 60
+     "self": {
+      "stats": {
+       "def": 15,
+       "mr": 15,
+       "hp": 300
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "def": 4,
-      "mr": 4,
-      "hp": 80
+     "self": {
+      "stats": {
+       "def": 20,
+       "mr": 20,
+       "hp": 400
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "def": 5,
-      "mr": 5,
-      "hp": 100
+     "self": {
+      "stats": {
+       "def": 25,
+       "mr": 25,
+       "hp": 500
+      },
+      "dur": -1
      }
     }
    ]
@@ -92998,7 +93258,7 @@ window.GAME_DATA = {
   {
    "id": "239",
    "name": "幽魂反击(安魂曲)",
-   "desc": "/强化幽魂反击(安魂曲)效果/ 生命值低于50%时，对敌人造成（50+2*智力/60+3*智力/70+4*智力/80+5*智力/90+6*智力）点伤害",
+   "desc": "/强化幽魂反击(安魂曲)效果/ 生命值低于50%时，对敌人造成（150+2*智力/160+3*智力/170+4*智力/180+5*智力/190+6*智力）点伤害",
    "kind": "生命低于",
    "mp": 35,
    "interval": 0,
@@ -93014,31 +93274,31 @@ window.GAME_DATA = {
    "levels": [
     {
      "damage": {
-      "base": 50,
+      "base": 150,
       "int": 2
      }
     },
     {
      "damage": {
-      "base": 60,
+      "base": 160,
       "int": 3
      }
     },
     {
      "damage": {
-      "base": 70,
+      "base": 170,
       "int": 4
      }
     },
     {
      "damage": {
-      "base": 80,
+      "base": 180,
       "int": 5
      }
     },
     {
      "damage": {
-      "base": 90,
+      "base": 190,
       "int": 6
      }
     }
@@ -93047,7 +93307,7 @@ window.GAME_DATA = {
   {
    "id": "240",
    "name": "死亡暴击(安魂曲)",
-   "desc": "生命值低于50%时，提高（3%/6%/9%/12%/15%）暴击率，持续3回合",
+   "desc": "生命值低于50%时，提高（10%/20%/30%/40%/50%）暴击率，持续3回合",
    "kind": "生命低于",
    "mp": 30,
    "interval": 0,
@@ -93064,41 +93324,46 @@ window.GAME_DATA = {
     {
      "self": {
       "pctStats": {
-       "crit": 3
+       "crit": 10
       },
-      "dur": 3
+      "dur": 3,
+      "stats": {}
      }
     },
     {
      "self": {
       "pctStats": {
-       "crit": 6
+       "crit": 20
       },
-      "dur": 3
+      "dur": 3,
+      "stats": {}
      }
     },
     {
      "self": {
       "pctStats": {
-       "crit": 9
+       "crit": 30
       },
-      "dur": 3
+      "dur": 3,
+      "stats": {}
      }
     },
     {
      "self": {
       "pctStats": {
-       "crit": 12
+       "crit": 40
       },
-      "dur": 3
+      "dur": 3,
+      "stats": {}
      }
     },
     {
      "self": {
       "pctStats": {
-       "crit": 15
+       "crit": 50
       },
-      "dur": 3
+      "dur": 3,
+      "stats": {}
      }
     }
    ]
@@ -93106,7 +93371,7 @@ window.GAME_DATA = {
   {
    "id": "244",
    "name": "暗黑之魂(复仇者)",
-   "desc": "/强化暗黑之魂效果./\n每3回合，造成（10+2*智力/20+2*智力/30+2*智力/40+2*智力/50+2*智力）点伤害并回复等量生命值",
+   "desc": "/强化暗黑之魂效果./\n每3回合，造成（20+2*智力/40+2*智力/60+2*智力/80+2*智力/100+2*智力）点伤害并回复等量生命值",
    "kind": "每N回合",
    "mp": 65,
    "interval": 0,
@@ -93123,33 +93388,11 @@ window.GAME_DATA = {
     {
      "interval": 3,
      "damage": {
-      "base": 10,
-      "int": 2
-     },
-     "heal": {
-      "base": 10,
-      "int": 2
-     }
-    },
-    {
-     "interval": 3,
-     "damage": {
       "base": 20,
       "int": 2
      },
      "heal": {
       "base": 20,
-      "int": 2
-     }
-    },
-    {
-     "interval": 3,
-     "damage": {
-      "base": 30,
-      "int": 2
-     },
-     "heal": {
-      "base": 30,
       "int": 2
      }
     },
@@ -93167,11 +93410,33 @@ window.GAME_DATA = {
     {
      "interval": 3,
      "damage": {
-      "base": 50,
+      "base": 60,
       "int": 2
      },
      "heal": {
-      "base": 50,
+      "base": 60,
+      "int": 2
+     }
+    },
+    {
+     "interval": 3,
+     "damage": {
+      "base": 80,
+      "int": 2
+     },
+     "heal": {
+      "base": 80,
+      "int": 2
+     }
+    },
+    {
+     "interval": 3,
+     "damage": {
+      "base": 100,
+      "int": 2
+     },
+     "heal": {
+      "base": 100,
       "int": 2
      }
     }
@@ -93180,7 +93445,7 @@ window.GAME_DATA = {
   {
    "id": "246",
    "name": "亡灵诅咒",
-   "desc": "/攻击时依指定几率赋予敌人致命的不死属性/\n攻击时有20%概率使敌人护甲等级降低（10/15/20/25/30），持续3回合，同时增加等量攻击力，持续3回合",
+   "desc": "/攻击时依指定几率赋予敌人致命的不死属性/\n攻击时有25%概率使敌人护甲等级降低（10/20/30/40/50），持续3回合，同时增加等量攻击力，持续3回合",
    "kind": "攻击时",
    "mp": 30,
    "interval": 0,
@@ -93195,7 +93460,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 20,
+     "chance": 25.0,
      "enemy": {
       "stats": {
        "def": -10
@@ -93210,7 +93475,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 20,
+     "chance": 25.0,
      "enemy": {
       "stats": {
        "def": -15
@@ -93225,7 +93490,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 20,
+     "chance": 25.0,
      "enemy": {
       "stats": {
        "def": -20
@@ -93240,7 +93505,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 20,
+     "chance": 25.0,
      "enemy": {
       "stats": {
        "def": -25
@@ -93255,7 +93520,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 20,
+     "chance": 25.0,
      "enemy": {
       "stats": {
        "def": -30
@@ -93274,7 +93539,7 @@ window.GAME_DATA = {
   {
    "id": "254",
    "name": "咆啸",
-   "desc": "/对周围造成范围伤害/\n攻击时5%概率造成（20+2*力量/30+2*力量/40+2*力量/50+2*力量/60+2*力量）点伤害",
+   "desc": "/对周围造成范围伤害/\n攻击时15%概率造成（20+2*力量/30+2*力量/40+2*力量/50+2*力量/60+2*力量）点伤害",
    "kind": "攻击时",
    "mp": 14,
    "interval": 0,
@@ -93289,35 +93554,35 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 5,
+     "chance": 15.0,
      "damage": {
       "base": 20,
       "str": 2
      }
     },
     {
-     "chance": 5,
+     "chance": 15.0,
      "damage": {
       "base": 30,
       "str": 2
      }
     },
     {
-     "chance": 5,
+     "chance": 15.0,
      "damage": {
       "base": 40,
       "str": 2
      }
     },
     {
-     "chance": 5,
+     "chance": 15.0,
      "damage": {
       "base": 50,
       "str": 2
      }
     },
     {
-     "chance": 5,
+     "chance": 15.0,
      "damage": {
       "base": 60,
       "str": 2
@@ -93328,7 +93593,7 @@ window.GAME_DATA = {
   {
    "id": "257",
    "name": "死亡方块",
-   "desc": "/打开命运的方块/\n生命值低于50%时，提高（1/2/3/4/5）点幸运，持续3回合",
+   "desc": "/打开命运的方块/\n生命值低于50%时，提高（1/2/3/4/5）点幸运，持续5回合",
    "kind": "生命低于",
    "mp": 1,
    "interval": 0,
@@ -93387,7 +93652,7 @@ window.GAME_DATA = {
   {
    "id": "258",
    "name": "反击屏障(专家)",
-   "desc": "闪避等级和HP回复提高（3/4/5/6/7）",
+   "desc": "闪避等级和HP回复提高（3/6/9/12/15）",
    "kind": "被动",
    "mp": 0,
    "interval": 0,
@@ -93402,33 +93667,48 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "stats": {
-      "dodge": 1,
-      "hpRegen": 1
+     "self": {
+      "stats": {
+       "dodge": 3,
+       "hpRegen": 3
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 2,
-      "hpRegen": 2
+     "self": {
+      "stats": {
+       "dodge": 6,
+       "hpRegen": 6
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 3,
-      "hpRegen": 3
+     "self": {
+      "stats": {
+       "dodge": 9,
+       "hpRegen": 9
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 4,
-      "hpRegen": 4
+     "self": {
+      "stats": {
+       "dodge": 12,
+       "hpRegen": 12
+      },
+      "dur": -1
      }
     },
     {
-     "stats": {
-      "dodge": 5,
-      "hpRegen": 5
+     "self": {
+      "stats": {
+       "dodge": 15,
+       "hpRegen": 15
+      },
+      "dur": -1
      }
     }
    ]
@@ -93451,24 +93731,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 0.05,
-     "status": {
-      "name": "晕眩",
-      "dur": 1
-     },
-     "enemy": {
-      "stats": {
-       "str": -5,
-       "dex": -5,
-       "int": -5,
-       "wis": -5,
-       "con": -5
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 0.1,
+     "chance": 5,
      "status": {
       "name": "晕眩",
       "dur": 1
@@ -93485,24 +93748,7 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 0.15,
-     "status": {
-      "name": "晕眩",
-      "dur": 1
-     },
-     "enemy": {
-      "stats": {
-       "str": -15,
-       "dex": -15,
-       "int": -15,
-       "wis": -15,
-       "con": -15
-      },
-      "dur": 3
-     }
-    },
-    {
-     "chance": 0.2,
+     "chance": 10,
      "status": {
       "name": "晕眩",
       "dur": 1
@@ -93519,18 +93765,52 @@ window.GAME_DATA = {
      }
     },
     {
-     "chance": 0.25,
+     "chance": 15,
      "status": {
       "name": "晕眩",
       "dur": 1
      },
      "enemy": {
       "stats": {
-       "str": -25,
-       "dex": -25,
-       "int": -25,
-       "wis": -25,
-       "con": -25
+       "str": -30,
+       "dex": -30,
+       "int": -30,
+       "wis": -30,
+       "con": -30
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 20,
+     "status": {
+      "name": "晕眩",
+      "dur": 1
+     },
+     "enemy": {
+      "stats": {
+       "str": -40,
+       "dex": -40,
+       "int": -40,
+       "wis": -40,
+       "con": -40
+      },
+      "dur": 3
+     }
+    },
+    {
+     "chance": 25,
+     "status": {
+      "name": "晕眩",
+      "dur": 1
+     },
+     "enemy": {
+      "stats": {
+       "str": -50,
+       "dex": -50,
+       "int": -50,
+       "wis": -50,
+       "con": -50
       },
       "dur": 3
      }
@@ -93555,21 +93835,7 @@ window.GAME_DATA = {
    ],
    "levels": [
     {
-     "chance": 0.05,
-     "self": {
-      "stats": {
-       "str": 5,
-       "dex": 5,
-       "int": 5,
-       "wis": 5,
-       "con": 5
-      },
-      "dur": 3
-     },
-     "immune": true
-    },
-    {
-     "chance": 0.1,
+     "chance": 5,
      "self": {
       "stats": {
        "str": 10,
@@ -93583,21 +93849,7 @@ window.GAME_DATA = {
      "immune": true
     },
     {
-     "chance": 0.15,
-     "self": {
-      "stats": {
-       "str": 15,
-       "dex": 15,
-       "int": 15,
-       "wis": 15,
-       "con": 15
-      },
-      "dur": 3
-     },
-     "immune": true
-    },
-    {
-     "chance": 0.2,
+     "chance": 10,
      "self": {
       "stats": {
        "str": 20,
@@ -93611,14 +93863,42 @@ window.GAME_DATA = {
      "immune": true
     },
     {
-     "chance": 0.25,
+     "chance": 15,
      "self": {
       "stats": {
-       "str": 25,
-       "dex": 25,
-       "int": 25,
-       "wis": 25,
-       "con": 25
+       "str": 30,
+       "dex": 30,
+       "int": 30,
+       "wis": 30,
+       "con": 30
+      },
+      "dur": 3
+     },
+     "immune": true
+    },
+    {
+     "chance": 20,
+     "self": {
+      "stats": {
+       "str": 40,
+       "dex": 40,
+       "int": 40,
+       "wis": 40,
+       "con": 40
+      },
+      "dur": 3
+     },
+     "immune": true
+    },
+    {
+     "chance": 25,
+     "self": {
+      "stats": {
+       "str": 50,
+       "dex": 50,
+       "int": 50,
+       "wis": 50,
+       "con": 50
       },
       "dur": 3
      },
